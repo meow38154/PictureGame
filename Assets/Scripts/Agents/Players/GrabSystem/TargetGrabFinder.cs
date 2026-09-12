@@ -1,5 +1,4 @@
 ﻿using CoreSystem.GrabSystem;
-using CoreSystem.Triggers;
 using UnityEngine;
 
 namespace Agents.Players.GrabSystem
@@ -8,23 +7,62 @@ namespace Agents.Players.GrabSystem
     {
         [SerializeField] private float clickPointRadius = 0.5f;
         [SerializeField] private LayerMask grabbableLayerMask;
-        [SerializeField] private ColliderTrigger trigger;
-        
+        [SerializeField] private Transform grabIntersectionPointTrm;
+        [SerializeField] private float grabIntersection = 1f;
+
+        private readonly Collider2D[] _results = new Collider2D[8];
+
         public bool TryFindObject(out IGrabbable grabbable)
         {
-            Vector2 mousePos = Utility.GetMouseWorldPosition();
-            
-            Collider2D col = Physics2D.OverlapCircle(mousePos, clickPointRadius, grabbableLayerMask);
+            grabbable = null;
 
-            if (col == null)
+            Vector2 mousePos = Utility.GetMouseWorldPosition();
+
+            int count = Physics2D.OverlapCircle(
+                mousePos,
+                clickPointRadius,
+                new ContactFilter2D
+                {
+                    useLayerMask = true,
+                    layerMask = grabbableLayerMask
+                },
+                _results
+            );
+
+            float closestDistance = float.MaxValue;
+
+            for (int i = 0; i < count; i++)
             {
-                grabbable = null;
-                return false;
+                Collider2D col = _results[i];
+
+                if (col == null)
+                    continue;
+
+                IGrabbable target = col.GetComponentInParent<IGrabbable>();
+
+                if (target == null)
+                    continue;
+
+                Vector2 closestPoint = col.ClosestPoint(grabIntersectionPointTrm.position);
+                float distance = Vector2.Distance(grabIntersectionPointTrm.position, closestPoint);
+
+                if (distance > grabIntersection)
+                    continue;
+
+                if (distance >= closestDistance)
+                    continue;
+
+                closestDistance = distance;
+                grabbable = target;
             }
 
-            grabbable = col.GetComponent<IGrabbable>();
-            
             return grabbable != null;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.blueViolet;
+            Gizmos.DrawWireSphere(grabIntersectionPointTrm.position, grabIntersection);
         }
     }
 }

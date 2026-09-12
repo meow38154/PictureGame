@@ -5,7 +5,7 @@ namespace CoreSystem.GrabSystem
     public interface IGrabbable
     {
         Transform Transform { get; }
-        Transform Pivot { get; }
+        Vector2 Pivot { get; }
         Rigidbody2D Rigidbody { get; }
         
         void OnGrabbed();

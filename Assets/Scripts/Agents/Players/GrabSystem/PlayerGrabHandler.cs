@@ -6,9 +6,6 @@ namespace Agents.Players.GrabSystem
 {
     public class PlayerGrabHandler : MonoBehaviour, IPlayerGrabHandler
     {
-        [SerializeField] private float moveDuration = 0.2f;
-        [SerializeField] private Ease grabEase = Ease.OutCubic;
-
         private IGrabbable _current;
 
         private Transform _originalParent;
@@ -34,7 +31,7 @@ namespace Agents.Players.GrabSystem
             target.Transform.SetParent(grabParent, true); 
             
             target.OnGrabbed();
-        }
+        } 
 
         public void Release()
         {
@@ -48,7 +45,6 @@ namespace Agents.Players.GrabSystem
             released.Transform.SetParent(_originalParent, true);
             
             released.Rigidbody.bodyType = _originalBodyType;
-            
             released.OnReleased();
         }
     }

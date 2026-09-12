@@ -32,8 +32,7 @@ namespace Agents.Players.GrabSystem
             if (grabbable == null || _playerGrabHandler.IsGrabbing) return;
             
             _playerGrabHandler.Grab(grabbable, handTrm);
-            _grabMover.MoveGrabbable(grabbable, grabbable.Pivot.position);
-            Debug.Log(grabbable.Pivot.position);
+            _grabMover.MoveGrabbable(grabbable, handTrm.position);
         }
 
         private void HandlePutGrabbable()

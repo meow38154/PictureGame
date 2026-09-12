@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace CoreSystem.GrabSystem
 {
@@ -6,7 +7,7 @@ namespace CoreSystem.GrabSystem
     public abstract class AbstractGrabbableObject : MonoBehaviour, IGrabbable
     {
         [SerializeField] private LayerMask ignoredWhileGrabbing;
-        [field: SerializeField] public Transform Pivot { get; private set; }
+        [field: SerializeField] public Vector2 Pivot { get; private set; }
         
         public Transform Transform => transform;
         public Rigidbody2D Rigidbody { get; private set; }
@@ -18,7 +19,6 @@ namespace CoreSystem.GrabSystem
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             _collider2D = GetComponent<Collider2D>();
-            if (Pivot == null) Pivot = transform;
         }
 
         public virtual void OnGrabbed()
@@ -30,6 +30,12 @@ namespace CoreSystem.GrabSystem
         public virtual void OnReleased()
         {
             _collider2D.excludeLayers = _previouslyGrabbedLayerMask;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.TransformPoint(Pivot), 0.1f);
         }
     }
 }

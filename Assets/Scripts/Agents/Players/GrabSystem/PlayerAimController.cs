@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Agents.Players.GrabSystem
 {
@@ -13,7 +12,13 @@ namespace Agents.Players.GrabSystem
         private void Update()
         {
             Vector2 dir = Utility.GetMouseWorldPosition() - (Vector2)transform.position;
-            transform.right  = dir.normalized;
+
+            if (dir.sqrMagnitude <= Mathf.Epsilon)
+                return;
+
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
 }
