@@ -11,14 +11,16 @@ namespace CoreSystem.GrabSystem
         
         public Transform Transform => transform;
         public Rigidbody2D Rigidbody { get; private set; }
+
+        private Vector3 _beforeSize;
         private Collider2D _collider2D;
-        
         private LayerMask _previouslyGrabbedLayerMask;
         
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             _collider2D = GetComponent<Collider2D>();
+            _beforeSize =  transform.localScale;
         }
 
         public virtual void OnGrabbed()
@@ -43,6 +45,8 @@ namespace CoreSystem.GrabSystem
         private void TrmCorrection()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, transform.eulerAngles.z);
+            transform.localScale = _beforeSize;
         }
     }
 }
+

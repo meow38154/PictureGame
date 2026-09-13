@@ -1,6 +1,7 @@
 ﻿using System;
 using CoreSystem.Triggers;
 using UnityEngine;
+using UnityEngine.Events;
 
 //다음주 발표라서 코드 좀 이상하게 써둘게요ㅠㅠ
 
@@ -12,10 +13,13 @@ namespace FakeUISystem
         [SerializeField] private UiTrigger trigger;
         [SerializeField] private GameObject[] enableTargetGameObjects;
         [SerializeField] private GameObject[] disableTargetGameObjects;
+        [SerializeField] public UnityEvent endUnityEvent;
         private Rigidbody2D _rigidbody2D;
         private Collider2D _collider2D;
 
         [SerializeField] private int health = 3;
+
+        private bool _endPlay;
         
         private void Awake()
         {
@@ -33,8 +37,11 @@ namespace FakeUISystem
                 return;
             }
             
-            if (!trigger.IsStay) return;
+            if (_endPlay) return;
             
+            if (!trigger.IsStay) return;
+
+            _endPlay = true;
             _collider2D.enabled = true;
             foreach (var go in enableTargetGameObjects)
             {
@@ -47,6 +54,7 @@ namespace FakeUISystem
             }
             _rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
             transform.SetParent(null);
+            endUnityEvent?.Invoke();
         }
     }
 }

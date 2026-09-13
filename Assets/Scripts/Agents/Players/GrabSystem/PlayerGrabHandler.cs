@@ -19,7 +19,8 @@ namespace Agents.Players.GrabSystem
         private Transform _originalParent;
         private RigidbodyType2D _originalBodyType;
         private readonly List<IgnoredCollision> _ignoredCollisions = new();
-
+        private Vector3 _originalLocalScale;
+        
         private readonly struct IgnoredCollision
         {
             public readonly Collider2D GrabbedCollider;
@@ -46,6 +47,7 @@ namespace Agents.Players.GrabSystem
             _current = target;
 
             _originalParent = target.Transform.parent;
+            _originalLocalScale = target.Transform.localScale;
             _originalBodyType = target.Rigidbody.bodyType;
 
             IgnorePlayerCollisions(target);
@@ -69,7 +71,18 @@ namespace Agents.Players.GrabSystem
             _current = null;
 
             released.Transform.DOKill();
-            released.Transform.SetParent(_originalParent, true);
+            Vector3 releasePosition = released.Transform.position;
+            float releaseAngle = released.Transform.eulerAngles.z;
+
+            // SetParent(worldPositionStays: true) decomposes the world matrix using the
+            // hand's scale. If the player flips on this frame, that decomposition can
+            // bake a transient negative or non-uniform scale into the released object.
+            released.Transform.SetParent(_originalParent, false);
+            released.Transform.localScale = _originalLocalScale;
+            released.Transform.SetPositionAndRotation(
+                releasePosition,
+                Quaternion.Euler(0f, 0f, releaseAngle)
+            );
             
 
             MoveOutsidePlayerColliders(released);
