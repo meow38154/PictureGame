@@ -8,13 +8,14 @@ namespace Agents.Players
         [SerializeField] private float jumpForce;
         [SerializeField, Range(0f, 1f)] private float jumpCutMultiplier = 0.5f;
 
-        [field: SerializeField]
-        public float CoyoteTime { get; private set; } = 0.1f;
+        [field: SerializeField] public bool CanJump { get; set; } = true;
+        [field: SerializeField] public float CoyoteTime { get; private set; } = 0.1f;
 
         public bool IsJumpFall { get; set; }
 
         private Rigidbody2D _playerRb;
 
+        
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
@@ -25,7 +26,7 @@ namespace Agents.Players
 
         public void Jump()
         {
-            if (_playerRb == null)
+            if (_playerRb == null || !CanJump)
                 return;
 
             _playerRb.linearVelocityY = 0f;
@@ -40,6 +41,9 @@ namespace Agents.Players
             if (_playerRb.linearVelocityY <= 0f)
                 return;
 
+            if (!CanJump)
+                return;
+            
             _playerRb.linearVelocityY *= jumpCutMultiplier;
         }
     }

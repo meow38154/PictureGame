@@ -14,6 +14,11 @@ namespace Agents.Players.FSM
 
         public override void Enter(float transitionDuration = 0.1f)
         {
+            if (!ControlJumper.CanJump)
+            {
+                Player.ChangeState(PlayerStateEnum.IDLE, 0.1f);
+                return;
+            }
             base.Enter(transitionDuration);
             ControlJumper.Jump();
             Player.PlayerInput.OnJumpKeyReleased += HandleJumpReleased;

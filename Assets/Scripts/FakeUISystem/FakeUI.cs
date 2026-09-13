@@ -14,6 +14,8 @@ namespace FakeUISystem
         [SerializeField] private GameObject[] disableTargetGameObjects;
         private Rigidbody2D _rigidbody2D;
         private Collider2D _collider2D;
+
+        [SerializeField] private int health = 3;
         
         private void Awake()
         {
@@ -21,8 +23,16 @@ namespace FakeUISystem
             _collider2D = GetComponent<Collider2D>();
         }
 
+        
+        
         public void EnableFakeUI()
         {
+            if (health > 1)
+            {
+                health--;
+                return;
+            }
+            
             if (!trigger.IsStay) return;
             
             _collider2D.enabled = true;

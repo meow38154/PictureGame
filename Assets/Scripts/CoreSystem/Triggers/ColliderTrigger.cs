@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace CoreSystem.Triggers
@@ -14,16 +15,36 @@ namespace CoreSystem.Triggers
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!IsTargetLayer(other.gameObject.layer))
+            Enter(other.gameObject.layer);
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            Exit(other.gameObject.layer);
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            Enter(other.gameObject.layer);
+        }
+
+        private void OnCollisionExit2D(Collision2D other)
+        {
+            Exit(other.gameObject.layer);
+        }
+        
+        private void Enter(int layer)
+        {
+            if (!IsTargetLayer(layer))
                 return;
             
             IsSearch = true;
             onEnter?.Invoke();
         }
-
-        private void OnTriggerExit2D(Collider2D other)
+        
+        private void Exit(int layer)
         {
-            if (!IsTargetLayer(other.gameObject.layer))
+            if (!IsTargetLayer(layer))
                 return;
             
             IsSearch = false;

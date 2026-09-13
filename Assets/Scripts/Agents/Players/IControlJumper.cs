@@ -6,6 +6,7 @@ namespace Agents.Players
     {
         float CoyoteTime { get; }
         bool IsJumpFall { get; set; }
+        bool CanJump { get; set;  }
         void Jump();
         void CancelJump();
     }

@@ -25,17 +25,24 @@ namespace CoreSystem.GrabSystem
         {
             _previouslyGrabbedLayerMask = _collider2D.excludeLayers;
             _collider2D.excludeLayers = ignoredWhileGrabbing;
+            TrmCorrection();
         }
 
         public virtual void OnReleased()
         {
             _collider2D.excludeLayers = _previouslyGrabbedLayerMask;
+            TrmCorrection();
         }
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.TransformPoint(Pivot), 0.1f);
+        }
+
+        private void TrmCorrection()
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, transform.eulerAngles.z);
         }
     }
 }
