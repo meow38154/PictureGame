@@ -17,6 +17,7 @@ namespace Agents.Players.FSM
             if (!ControlJumper.CanJump)
             {
                 Player.ChangeState(PlayerStateEnum.IDLE, 0.1f);
+                ControlJumper.NotJumpVfx();
                 return;
             }
             base.Enter(transitionDuration);

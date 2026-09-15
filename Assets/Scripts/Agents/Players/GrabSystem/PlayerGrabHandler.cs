@@ -16,6 +16,8 @@ namespace Agents.Players.GrabSystem
 
         private IGrabbable _current;
 
+        private Transform _grabAnchor;
+        private Transform _grabProxy;
         private Transform _originalParent;
         private RigidbodyType2D _originalBodyType;
         private readonly List<IgnoredCollision> _ignoredCollisions = new();
@@ -43,7 +45,9 @@ namespace Agents.Players.GrabSystem
                 return;
             target.OnGrabbed();
 
-            Transform grabParent = handTrm != null ? handTrm : transform;
+            _grabAnchor = handTrm != null ? handTrm : transform;
+            _grabProxy = new GameObject("Grab Proxy").transform;
+            UpdateGrabProxy();
             _current = target;
 
             _originalParent = target.Transform.parent;
@@ -56,7 +60,7 @@ namespace Agents.Players.GrabSystem
             target.Rigidbody.angularVelocity = 0f;
             target.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
             
-            target.Transform.SetParent(grabParent, true);
+            target.Transform.SetParent(_grabProxy, true);
 
             jumper.CanJump = false;
             
@@ -83,7 +87,9 @@ namespace Agents.Players.GrabSystem
                 releasePosition,
                 Quaternion.Euler(0f, 0f, releaseAngle)
             );
-            
+            Destroy(_grabProxy.gameObject);
+            _grabProxy = null;
+            _grabAnchor = null;
 
             MoveOutsidePlayerColliders(released);
             RestorePlayerCollisions();
@@ -91,6 +97,23 @@ namespace Agents.Players.GrabSystem
             jumper.CanJump = true;
             
             released.OnReleased();
+        }
+        
+        private void LateUpdate()
+        {
+            if (_current != null)
+                UpdateGrabProxy();
+        }
+
+        private void UpdateGrabProxy()
+        {
+            // Follow the hand without inheriting its animated X/Y rotation or scale.
+            // Parenting directly to the hand makes a 2D sprite appear squashed while
+            // the player's 3D direction-flip tween is between 0 and 180 degrees.
+            _grabProxy.SetPositionAndRotation(
+                _grabAnchor.position,
+                Quaternion.Euler(0f, 0f, _grabAnchor.eulerAngles.z)
+            );
         }
 
         private void IgnorePlayerCollisions(IGrabbable target)

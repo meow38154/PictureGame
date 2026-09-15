@@ -9,5 +9,6 @@ namespace Agents.Players
         bool CanJump { get; set;  }
         void Jump();
         void CancelJump();
+        void NotJumpVfx();
     }
 }

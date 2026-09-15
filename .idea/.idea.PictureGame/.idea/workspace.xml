@@ -3,130 +3,32 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakeProjectFlavorService">
-    <option name="flavorId" value="CMakePlainProjectFlavor" />
-  </component>
   <component name="CMakeSettings">
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d265c407-4ac7-4a2c-aeb1-b369635dffb1" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs.meta" afterDir="false" />
+    <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Player/Aniamation/Player_Eye_close_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Player/Aniamation/Player_Eye_close_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door_close Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door_close Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door_open Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Door/Door_open Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Display.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Display.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Hide.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction Hide.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction idle Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/E_Interaction idle Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Fake_Setting_button Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Fake_Setting_button Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Fake_Setting_button_idle Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Fake_Setting_button_idle Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_changer Controlller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_changer Controlller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_end Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_end Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_start Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Scene_Changer/Scene_start Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_button Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_button Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_button_idle Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_button_idle Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel_down Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel_down Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel_up Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/UI/Setting_panel_up Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Sprite/Square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Sprite/Square.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IControlJumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IControlJumper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="8" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSoEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateSoView.uxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/GroundChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/AbstractPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/AbstractPlayerAirState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerIdleState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IPlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerAimController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/TargetGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatorEventReceiver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/DontDestroyOnLoadObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/FadeSceneTransition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/IGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/CreateManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/AnimationTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/UiTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/WorldTrmLock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/TestMessageBoxFeedback.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject/TestGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureSelectionModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ICaptureSelection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9abe0f7cac7e/Editor/PSDGameObjectPreviewData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -135,67 +37,67 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000003707513874" />
-      <entry key="S2" value="1.0443378256047047" />
-      <entry key="S5" value="1.540628838704717" />
-      <entry key="S10" value="2.328615094443262" />
-      <entry key="S30" value="5.253856768031914" />
-      <entry key="S60" value="8.477853163250758" />
-      <entry key="M2" value="11.446334142323307" />
-      <entry key="M5" value="14.211699546739366" />
-      <entry key="M10" value="16.484434532404528" />
-      <entry key="M15" value="19.400362723328456" />
-      <entry key="M30" value="29.753784799652003" />
-      <entry key="H1" value="44.765470138308096" />
-      <entry key="H2" value="58.57956144685234" />
-      <entry key="H4" value="72.35277266889102" />
-      <entry key="D1" value="792.7428092718367" />
-      <entry key="W1" value="2048.873531729137" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000019393664" />
+      <entry key="S10" value="1.0000612028770868" />
+      <entry key="S30" value="1.1756095725197673" />
+      <entry key="S60" value="2.6561432983774376" />
+      <entry key="M2" value="6.25685121939885" />
+      <entry key="M5" value="11.608653392546739" />
+      <entry key="M10" value="14.424886048950405" />
+      <entry key="M15" value="15.52307172182536" />
+      <entry key="M30" value="16.71223722043915" />
+      <entry key="H1" value="17.34329334439885" />
+      <entry key="H2" value="17.668375537295326" />
+      <entry key="H4" value="17.83336173811562" />
+      <entry key="D1" value="17.972111523105138" />
+      <entry key="W1" value="17.996013095672748" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.7598162016712564E-8" />
-      <entry key="MS500" value="0.028125070371588554" />
-      <entry key="S2" value="0.41953469413974115" />
-      <entry key="S5" value="0.8583363850081389" />
-      <entry key="S10" value="1.2486106376577137" />
-      <entry key="S30" value="2.360040531919348" />
-      <entry key="S60" value="3.6676799215275806" />
-      <entry key="M2" value="4.96181796265218" />
-      <entry key="M5" value="6.484761821997663" />
-      <entry key="M10" value="8.285900404485366" />
-      <entry key="M15" value="10.558356599698023" />
-      <entry key="M30" value="17.677450592315708" />
-      <entry key="H1" value="26.81645976939073" />
-      <entry key="H2" value="34.60504126575547" />
-      <entry key="H4" value="41.57359620606334" />
-      <entry key="D1" value="318.0792015005594" />
-      <entry key="W1" value="796.0277231653378" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="5.077440371115445E-74" />
+      <entry key="S2" value="6.754411789017402E-19" />
+      <entry key="S5" value="1.1447009534716408E-7" />
+      <entry key="S10" value="8.601941938628086E-4" />
+      <entry key="S30" value="0.47511748354834754" />
+      <entry key="S60" value="2.518380970243308" />
+      <entry key="M2" value="5.900639344811441" />
+      <entry key="M5" value="9.893881473714167" />
+      <entry key="M10" value="11.76615492102076" />
+      <entry key="M15" value="12.467342830865483" />
+      <entry key="M30" value="13.211081531282279" />
+      <entry key="H1" value="13.599722646884725" />
+      <entry key="H2" value="13.798384889238456" />
+      <entry key="H4" value="13.898820561318505" />
+      <entry key="D1" value="13.983084872524236" />
+      <entry key="W1" value="13.997582279393422" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.186889040046052E-7" />
-      <entry key="MS500" value="0.07467176233230953" />
-      <entry key="S2" value="0.8868412702800356" />
-      <entry key="S5" value="2.0404241593560504" />
-      <entry key="S10" value="3.3330363012179123" />
-      <entry key="S30" value="7.4706110063100555" />
-      <entry key="S60" value="12.037581786972078" />
-      <entry key="M2" value="16.33630579015785" />
-      <entry key="M5" value="20.660715532855097" />
-      <entry key="M10" value="24.749394756086524" />
-      <entry key="M15" value="29.94217945073687" />
-      <entry key="M30" value="47.418730552106" />
-      <entry key="H1" value="71.57282792063664" />
-      <entry key="H2" value="93.17879517506576" />
-      <entry key="H4" value="113.92271345969088" />
-      <entry key="D1" value="1110.813024569282" />
-      <entry key="W1" value="2844.898078447261" />
+      <entry key="MS100" value="9.303105449647826E-4" />
+      <entry key="MS500" value="0.24758571798325615" />
+      <entry key="S2" value="0.7053934086097214" />
+      <entry key="S5" value="0.8697062845528898" />
+      <entry key="S10" value="0.9334343397713212" />
+      <entry key="S30" value="1.611323211820624" />
+      <entry key="S60" value="5.113087328825445" />
+      <entry key="M2" value="12.088529427738157" />
+      <entry key="M5" value="21.45570641141613" />
+      <entry key="M10" value="26.162966040486584" />
+      <entry key="M15" value="27.970520867030686" />
+      <entry key="M30" value="29.912743983509145" />
+      <entry key="H1" value="30.937563823529516" />
+      <entry key="H2" value="31.46399213332642" />
+      <entry key="H4" value="31.73078747136163" />
+      <entry key="D1" value="31.954962429669795" />
+      <entry key="W1" value="31.993561914609625" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0,
-  &quot;fromUser&quot;: false
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="3IMTHjpV0sNYgbgfhFbIP9lEXU3" />
+  <component name="ProjectId" id="3JIaxugTiOGPC4gH2P1rarrUDmX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -205,7 +107,6 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -215,16 +116,14 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;base&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
@@ -241,7 +140,7 @@
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Downloads/Test_build12\PictureGame.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\ASUS\Downloads\Test_build" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\ASUS\Downloads\Test_build12" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -277,26 +176,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="d265c407-4ac7-4a2c-aeb1-b369635dffb1" name="변경" comment="" />
-      <created>1787573356752</created>
+      <changelist id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="" />
+      <created>1789351305344</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1787573356752</updated>
-      <workItem from="1787573361953" duration="336000" />
-      <workItem from="1787574539103" duration="5605000" />
-      <workItem from="1787615570684" duration="1117000" />
-      <workItem from="1787619943313" duration="591000" />
-      <workItem from="1787620641571" duration="15739000" />
-      <workItem from="1787638926530" duration="3195000" />
-      <workItem from="1787650956420" duration="8000" />
-      <workItem from="1787801720279" duration="14621000" />
-      <workItem from="1787840790086" duration="1177000" />
-      <workItem from="1788182207085" duration="3221000" />
-      <workItem from="1788445853161" duration="491000" />
-      <workItem from="1788694477855" duration="98000" />
-      <workItem from="1788694698069" duration="3872000" />
-      <workItem from="1788703112516" duration="1042000" />
-      <workItem from="1788770113557" duration="693000" />
+      <updated>1789351305344</updated>
     </task>
     <servers />
   </component>
@@ -310,29 +194,4 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
 </project>

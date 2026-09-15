@@ -9,6 +9,7 @@ namespace CoreSystem
 
         public void Play(HashDataSO hashDataSo)
         {
+            if (animator == null || !animator.gameObject.activeSelf) return;
             animator.Play(hashDataSo.HashValue, 0, 0);
         }
     }

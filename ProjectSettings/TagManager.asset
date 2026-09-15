@@ -50,6 +50,9 @@ TagManager:
   - name: Object
     uniqueID: 1741641529
     locked: 0
+  - name: Beak
+    uniqueID: 2895648249
+    locked: 0
   m_RenderingLayers:
   - Default
   - Beak_Up
