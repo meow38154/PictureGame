@@ -1,6 +1,7 @@
 ﻿using System;
 using CoreSystem.GrabSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Agents.Players.GrabSystem
 {
@@ -9,14 +10,14 @@ namespace Agents.Players.GrabSystem
         [SerializeField] private PlayerInputSo playerInput;
         [SerializeField] private Transform handTrm;
         
-        private IGrabFinder _targetGrabFinder;
+        //private IGrabFinder _targetGrabFinder;
         private IPlayerGrabHandler _playerGrabHandler;
         private IGrabMover _grabMover;
         
         private void Awake()
         {
-            _targetGrabFinder = GetComponentInChildren<IGrabFinder>();
-            Debug.Assert(_targetGrabFinder != null, "IGrabFinder object not found");            
+            //_targetGrabFinder = GetComponentInChildren<IGrabFinder>();
+            //Debug.Assert(_targetGrabFinder != null, "IGrabFinder object not found");            
             _playerGrabHandler = GetComponentInChildren<IPlayerGrabHandler>();
             Debug.Assert(_playerGrabHandler != null, "IGrabHandler object not found");            
             _grabMover = GetComponentInChildren<IGrabMover>();
@@ -28,17 +29,33 @@ namespace Agents.Players.GrabSystem
         
         private void HandleCatchGrabbable()
         {
-            if (!_targetGrabFinder.TryFindObject(out IGrabbable grabbable)) return;
-            if (grabbable == null || _playerGrabHandler.IsGrabbing) return;
+            //if (!_targetGrabFinder.TryFindObject(out IGrabbable grabbable)) return;
+            //if (grabbable == null || _playerGrabHandler.IsGrabbing) return;
+            
+            //_playerGrabHandler.Grab(grabbable, handTrm);
+            //_grabMover.MoveGrabbable(grabbable, handTrm.position);
+        }
+        
+        //임시
+        public void GrabTarget(Transform target)
+        {
+            if (!target.TryGetComponent(out IGrabbable grabbable)) return;
             
             _playerGrabHandler.Grab(grabbable, handTrm);
             _grabMover.MoveGrabbable(grabbable, handTrm.position);
         }
 
-        private void HandlePutGrabbable()
+        private void Update()
         {
+            if (!Keyboard.current.escapeKey.wasReleasedThisFrame) return;
             if (_playerGrabHandler == null) return;
             _playerGrabHandler.Release();
+        }
+
+        private void HandlePutGrabbable()
+        {
+            //if (_playerGrabHandler == null) return;
+            //_playerGrabHandler.Release();
         }
         
         private void OnDestroy()

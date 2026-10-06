@@ -8,15 +8,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IPartDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IPartDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/PlayerManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/PlayerManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPart.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPart.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MouseDragMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IControlJumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IControlJumper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorEventReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MouseDragMover.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +48,59 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/MouseDragMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSoEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateSoView.uxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/GroundChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/IVfxModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/AbstractPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/AbstractPlayerAirState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerIdleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IPlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerAimController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/TargetGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/VfxModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/DontDestroyOnLoadObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/FadeSceneTransition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/IGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/CreateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/AnimationTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/UiTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/WorldTrmLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/TestMessageBoxFeedback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject/TestGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureSelectionModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ICaptureSelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9abe0f7cac7e/Editor/PSDGameObjectPreviewData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -38,60 +110,63 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000019393664" />
-      <entry key="S10" value="1.0000612028770868" />
-      <entry key="S30" value="1.1756095725197673" />
-      <entry key="S60" value="2.6561432983774376" />
-      <entry key="M2" value="6.25685121939885" />
-      <entry key="M5" value="11.608653392546739" />
-      <entry key="M10" value="14.424886048950405" />
-      <entry key="M15" value="15.52307172182536" />
-      <entry key="M30" value="16.71223722043915" />
-      <entry key="H1" value="17.34329334439885" />
-      <entry key="H2" value="17.668375537295326" />
-      <entry key="H4" value="17.83336173811562" />
-      <entry key="D1" value="17.972111523105138" />
-      <entry key="W1" value="17.996013095672748" />
+      <entry key="S2" value="1.0000000035157997" />
+      <entry key="S5" value="1.0004155705005664" />
+      <entry key="S10" value="1.0209648373325741" />
+      <entry key="S30" value="1.428581511975443" />
+      <entry key="S60" value="2.195764589363951" />
+      <entry key="M2" value="3.139062925487197" />
+      <entry key="M5" value="4.101694242546255" />
+      <entry key="M10" value="4.980891480099681" />
+      <entry key="M15" value="7.591764907643947" />
+      <entry key="M30" value="29.49366879892791" />
+      <entry key="H1" value="92.91471080602379" />
+      <entry key="H2" value="183.83667034502625" />
+      <entry key="H4" value="265.2556256475908" />
+      <entry key="D1" value="364.5501192503497" />
+      <entry key="W1" value="385.3989909541969" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="5.077440371115445E-74" />
-      <entry key="S2" value="6.754411789017402E-19" />
-      <entry key="S5" value="1.1447009534716408E-7" />
-      <entry key="S10" value="8.601941938628086E-4" />
-      <entry key="S30" value="0.47511748354834754" />
-      <entry key="S60" value="2.518380970243308" />
-      <entry key="M2" value="5.900639344811441" />
-      <entry key="M5" value="9.893881473714167" />
-      <entry key="M10" value="11.76615492102076" />
-      <entry key="M15" value="12.467342830865483" />
-      <entry key="M30" value="13.211081531282279" />
-      <entry key="H1" value="13.599722646884725" />
-      <entry key="H2" value="13.798384889238456" />
-      <entry key="H4" value="13.898820561318505" />
-      <entry key="D1" value="13.983084872524236" />
-      <entry key="W1" value="13.997582279393422" />
+      <entry key="MS100" value="1.7070047813802551E-6" />
+      <entry key="MS500" value="0.09979426332600899" />
+      <entry key="S2" value="0.9297923048833175" />
+      <entry key="S5" value="1.4708974941434634" />
+      <entry key="S10" value="1.7521529353320195" />
+      <entry key="S30" value="2.585714128151181" />
+      <entry key="S60" value="3.651334075988169" />
+      <entry key="M2" value="4.823965837935328" />
+      <entry key="M5" value="5.962091612116348" />
+      <entry key="M10" value="6.693147344838414" />
+      <entry key="M15" value="8.031919136468419" />
+      <entry key="M30" value="17.736803453076188" />
+      <entry key="H1" value="44.53468048421413" />
+      <entry key="H2" value="82.17602183198332" />
+      <entry key="H4" value="115.56224426996425" />
+      <entry key="D1" value="156.05545888672498" />
+      <entry key="W1" value="164.5359001125424" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.303105449647826E-4" />
-      <entry key="MS500" value="0.24758571798325615" />
-      <entry key="S2" value="0.7053934086097214" />
-      <entry key="S5" value="0.8697062845528898" />
-      <entry key="S10" value="0.9334343397713212" />
-      <entry key="S30" value="1.611323211820624" />
-      <entry key="S60" value="5.113087328825445" />
-      <entry key="M2" value="12.088529427738157" />
-      <entry key="M5" value="21.45570641141613" />
-      <entry key="M10" value="26.162966040486584" />
-      <entry key="M15" value="27.970520867030686" />
-      <entry key="M30" value="29.912743983509145" />
-      <entry key="H1" value="30.937563823529516" />
-      <entry key="H2" value="31.46399213332642" />
-      <entry key="H4" value="31.73078747136163" />
-      <entry key="D1" value="31.954962429669795" />
-      <entry key="W1" value="31.993561914609625" />
+      <entry key="MS100" value="0.004044086578753815" />
+      <entry key="MS500" value="0.3837521717515208" />
+      <entry key="S2" value="1.54098246496213" />
+      <entry key="S5" value="2.2673792572890585" />
+      <entry key="S10" value="2.657949447880222" />
+      <entry key="S30" value="3.9596846861521615" />
+      <entry key="S60" value="5.808876839704023" />
+      <entry key="M2" value="7.937928354570526" />
+      <entry key="M5" value="10.051431517642998" />
+      <entry key="M10" value="11.666869473920643" />
+      <entry key="M15" value="15.617070377866858" />
+      <entry key="M30" value="47.219498736599675" />
+      <entry key="H1" value="137.43283876052536" />
+      <entry key="H2" value="265.9965615862268" />
+      <entry key="H4" value="380.80631473973284" />
+      <entry key="D1" value="520.6029468361094" />
+      <entry key="W1" value="549.9344940680636" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,

@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6352cc4e235649389d345507371b8515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoreSystem.Manager.SceneChangeManager
-  defaultSceneName: Stage_01
+  defaultSceneName: Stage Selector
   sceneEnter: {fileID: 11400000, guid: 00e48fb9e6b961a47bbd54258367dbd0, type: 2}
   sceneExit: {fileID: 11400000, guid: b462557e91069d74c8a0bc89ac66a940, type: 2}
 --- !u!1 &1553776219

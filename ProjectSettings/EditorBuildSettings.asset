@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Bootstrap.unity
     guid: ea628e4aae7388b4593ce53f67229c68
   - enabled: 1
+    path: Assets/Scenes/Stage Selector.unity
+    guid: 462d6857bf944024c82b67a8ac081dbc
+  - enabled: 1
     path: Assets/Scenes/Sample/Stage_01.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1

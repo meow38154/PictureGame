@@ -16,8 +16,8 @@ TagManager:
   - Confiner
   - Beak
   - Trigger
-  - 
-  - 
+  - Part_trigger
+  - Part_outline_Collider
   - 
   - 
   - 
