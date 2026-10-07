@@ -11,7 +11,7 @@ namespace Agents.Players
         [SerializeField] private Transform footTrm;
         [SerializeField] private LayerMask partLayer;
 
-        private readonly Dictionary<IMapPart, HashSet<Collider2D>> _partColliders = new();
+        private readonly Dictionary<MapPart, HashSet<Collider2D>> _partColliders = new();
 
         private bool _isDirty;
 
@@ -32,7 +32,7 @@ namespace Agents.Players
         {
             Debug.Log("음");
             
-            IMapPart part = GetMapPart(other);
+            MapPart part = GetMapPart(other);
             
             Debug.Log(other.gameObject.name);
             
@@ -45,7 +45,7 @@ namespace Agents.Players
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            IMapPart part = GetMapPart(other);
+            MapPart part = GetMapPart(other);
 
             if (part == null)
                 return;
@@ -54,7 +54,7 @@ namespace Agents.Players
             _isDirty = true;
         }
 
-        private void AddPartCollider(IMapPart part, Collider2D collider)
+        private void AddPartCollider(MapPart part, Collider2D collider)
         {
             if (!_partColliders.TryGetValue(part, out HashSet<Collider2D> colliders))
             {
@@ -65,7 +65,7 @@ namespace Agents.Players
             colliders.Add(collider);
         }
 
-        private void RemovePartCollider(IMapPart part, Collider2D collider)
+        private void RemovePartCollider(MapPart part, Collider2D collider)
         {
             if (!_partColliders.TryGetValue(part, out HashSet<Collider2D> colliders))
                 return;
@@ -76,7 +76,7 @@ namespace Agents.Players
                 _partColliders.Remove(part);
         }
 
-        private IMapPart GetMapPart(Collider2D col)
+        private MapPart GetMapPart(Collider2D col)
         {
             MapPart part = col.GetComponentInParent<MapPart>();
 

@@ -2,9 +2,8 @@ using UnityEngine;
 
 namespace MapSystem
 {
-    public class MapPart : MonoBehaviour, IMapPart
+    public class MapPart : MonoBehaviour
     {
-        [field: SerializeField] public Collider2D Collider { get; private set; }
-        public Transform Transform => transform;
+        [field: SerializeField] public MapPieceSo MapPiece { get; private set; }
     }
 }
