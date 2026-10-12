@@ -1,3 +1,5 @@
+
+using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
 using MapSystem;
 using UnityEngine;
@@ -6,49 +8,88 @@ namespace Agents.Players
 {
     public class PlayerPartFollower : Module
     {
-        [SerializeField] private PlayerPartDetector partDetector;
-        [SerializeField] private Rigidbody2D playerRb;
+        //이거 받아서 true면 작동 안되게 하기
+        [SerializeField] private EventChannelSO eventChannelSo;
+        [Header("Detection")]
+        [SerializeField] private LayerMask mapPieceLayer;
+        
+        private IGroundChecker  _groundChecker;
 
-        private MouseDragMover _currentMover;
+        private Rigidbody2D _playerRb;
+        private Collider2D _playerCollider;
+        private MapPiece _currentPart;
 
-        private void OnEnable()
+        public override void Initialize(ModuleOwner owner)
         {
-            partDetector.OnPartChangeEvent += HandlePartChanged;
+            base.Initialize(owner);
+
+            _playerRb = owner.GetComponent<Rigidbody2D>();
+            _playerCollider = owner.GetComponent<Collider2D>();
+            _groundChecker = owner.GetModule<IGroundChecker>();
+
+            Debug.Assert(_playerRb != null, "PlayerPartFollower: Rigidbody2D가 없습니다.");
+            Debug.Assert(_playerCollider != null, "PlayerPartFollower: Collider2D가 없습니다.");
+            Debug.Assert(_groundChecker != null, "PlayerPartFollower: GroundChecker 없습니다.");
         }
 
-        private void OnDisable()
+        private void FixedUpdate()
         {
-            partDetector.OnPartChangeEvent -= HandlePartChanged;
-            UnsubscribeCurrentMover();
+            if (_playerRb == null || _playerCollider == null)
+                return;
+            
+            if (_currentPart != null && _currentPart.IsDragging) return;
+            
+            if (_playerRb.linearVelocityY > 0.05f)
+            {
+                SetCurrentPart(null); return;
+            }
+
+            SetCurrentPart(FindGroundPart());
         }
 
-        private void HandlePartChanged(IMapPart part)
+        private MapPiece FindGroundPart()
         {
-            UnsubscribeCurrentMover();
+            Collider2D col = _groundChecker.CurrentGround;
 
-            if (part == null)
-                return;
+            if (col == null) return null;
+            
+            return col.TryGetComponent(out _currentPart) ? _currentPart : null;
+        }
 
-            _currentMover = part.Collider.GetComponentInParent<MouseDragMover>();
+        private void SetCurrentPart(MapPiece nextPart)
+        {
+            if (_currentPart == nextPart) return;
 
-            if (_currentMover == null)
-                return;
+            if (_currentPart != null)
+            {
+                _currentPart.OnMoved -= HandlePartMoved;
+            }
 
-            _currentMover.OnMoved += HandlePartMoved;
+            _currentPart = nextPart;
+
+            if (_currentPart != null)
+            {
+                _currentPart.OnMoved += HandlePartMoved;
+            }
         }
 
         private void HandlePartMoved(Vector2 delta)
         {
-            playerRb.position += delta;
+            Debug.Log(delta);
+            
+            if (_playerRb == null) return;
+            
+            transform.position += (Vector3)delta;
         }
 
-        private void UnsubscribeCurrentMover()
+        private void OnDisable()
         {
-            if (_currentMover == null)
-                return;
+            SetCurrentPart(null);
+        }
 
-            _currentMover.OnMoved -= HandlePartMoved;
-            _currentMover = null;
+        private void OnDestroy()
+        {
+            SetCurrentPart(null);
         }
     }
 }

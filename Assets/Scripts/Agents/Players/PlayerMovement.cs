@@ -40,8 +40,7 @@ namespace Agents.Players
 
             int direction = movementXKey > 0 ? 1 : -1;
 
-            if (_currentDirection == direction)
-                return;
+            if (_currentDirection == direction) return;
 
             _currentDirection = direction;
 
@@ -51,12 +50,7 @@ namespace Agents.Players
 
             _flipTween?.Kill();
 
-            _flipTween = rendererTrm
-                .DORotate(
-                    new Vector3(0f, targetY, 0f),
-                    0.15f,
-                    RotateMode.Fast)
-                .SetEase(Ease.OutQuad);
+            _flipTween = rendererTrm.DORotate(new Vector3(0f, targetY, 0f), 0.15f, RotateMode.Fast).SetEase(Ease.OutQuad);
         }
         
         private void MovePlayer() 

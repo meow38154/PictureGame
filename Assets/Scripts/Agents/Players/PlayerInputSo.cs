@@ -7,8 +7,6 @@ namespace Agents.Players
     [CreateAssetMenu(fileName = "PlayerInput", menuName = "SO/Player input", order = 0)]
     public class PlayerInputSo : ScriptableObject, Controls.IPlayerActions
     {
-        [SerializeField] private LayerMask whatIsGround;
-        
         public event Action OnMouseLeftButtonPressed;
         public event Action OnMouseLeftButtonReleased;
         public event Action OnJumpKeyPressed;
@@ -17,7 +15,8 @@ namespace Agents.Players
         private Controls _controls;
         
         public Vector2 MovementKey { get; private set; }
-        
+
+        public bool CanMovement { get; set; } = true;
 
         private void OnEnable()
         {
@@ -38,6 +37,11 @@ namespace Agents.Players
         
         public void OnMove(InputAction.CallbackContext context)
         {
+            if (!CanMovement)
+            {
+                MovementKey = Vector2.zero;
+                return;
+            }
             MovementKey = context.ReadValue<Vector2>(); 
         }
 
