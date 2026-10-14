@@ -1,5 +1,3 @@
-
-using System;
 using Agents.Players;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
@@ -11,7 +9,7 @@ namespace MapSystem
     public class MapPieceDragController : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private MapGrid mapGrid;
+        [SerializeField] private GameObject mapGridObject;
         [SerializeField] private Camera targetCamera;
 
         [Header("Detection")]
@@ -24,11 +22,11 @@ namespace MapSystem
         [SerializeField, Min(0)] private int searchRadius = 5;
 
         [Header("So")] 
-        [SerializeField] private EventChannelSO canChangePieceEventChannelSo;
-        [SerializeField] private EventChannelSO isStopEventChannelSo;
+        [SerializeField] private EventChannelSO dragStateChangedEvent;
+        [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
         [SerializeField] private PlayerInputSo inputSo;
         
-        private MapPiece _selectedPiece;
+        private IMapPiece _selectedPiece;
 
         private Vector3 _originalWorldPosition;
         private Vector2Int _originalGridPosition;
@@ -40,9 +38,12 @@ namespace MapSystem
         
         private IControlMovement _controlMovement;
 
+        private IMapGrid mapGrid;
+        
         private void Awake()
         {
             if (targetCamera == null) targetCamera = Camera.main;
+            mapGrid = mapGridObject.GetComponent<IMapGrid>();
         }
 
         private void Update()
@@ -75,7 +76,7 @@ namespace MapSystem
 
             if (hit == null) return;
             
-            MapPiece piece = hit.GetComponentInParent<MapPiece>();
+            IMapPiece piece = hit.GetComponentInParent<IMapPiece>();
 
             if (piece == null || piece.Data == null || piece.Fixed) return;
 
@@ -83,13 +84,13 @@ namespace MapSystem
             
             _selectedPiece = piece;
 
-            _originalWorldPosition = piece.transform.position;
+            _originalWorldPosition = piece.Transform.position;
             _originalGridPosition = piece.GridPosition;
             _wasDeployed = piece.IsDeployed;
 
             Vector2Int mouseCell = mapGrid.WorldToCell(mouseWorld);
 
-            Vector2Int pieceCell = mapGrid.WorldToCell(piece.transform.position);
+            Vector2Int pieceCell = mapGrid.WorldToCell(piece.Transform.position);
 
             _grabCellOffset = mouseCell - pieceCell;
 
@@ -102,8 +103,9 @@ namespace MapSystem
 
             // 드래그 시작
             _selectedPiece.SetDragging(true);
+            _selectedPiece.SetPieceActive(false);
             
-            canChangePieceEventChannelSo.RaiseEvent(new BoolEvent().InitData(false));
+            dragStateChangedEvent.RaiseEvent(new BoolEvent().InitData(false));
 
             UpdateDrag();
         }
@@ -124,7 +126,7 @@ namespace MapSystem
 
             worldPos.z = _originalWorldPosition.z;
 
-            _selectedPiece.MoveTo(worldPos);
+            _selectedPiece.Transform.position = worldPos;
             _selectedPiece.SetPreview(_canPlace);
         }
 
@@ -136,7 +138,7 @@ namespace MapSystem
             }
             else
             {
-                _selectedPiece.MoveTo(_originalWorldPosition);
+                _selectedPiece.Transform.position = _originalWorldPosition;
 
                 if (_wasDeployed && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
                 {
@@ -148,7 +150,8 @@ namespace MapSystem
 
             // 드래그 종료
             _selectedPiece.SetDragging(false);
-            canChangePieceEventChannelSo.RaiseEvent(new BoolEvent().InitData(true));
+            _selectedPiece.SetPieceActive(true);
+            dragStateChangedEvent.RaiseEvent(new BoolEvent().InitData(true));
             
             inputSo.CanMovement = true;
             
@@ -159,7 +162,9 @@ namespace MapSystem
         {
             int size = Mathf.Max(1, sellSize);
 
-            return new Vector2Int(Mathf.RoundToInt((float)position.x / size) * size, Mathf.RoundToInt((float)position.y / size) * size);
+            return new Vector2Int(
+                Mathf.RoundToInt((float)position.x / size) * size, 
+                Mathf.RoundToInt((float)position.y / size) * size);
         }
 
         private bool TryFindNearestPosition(Vector2Int targetPos, out Vector2Int result)
@@ -200,16 +205,16 @@ namespace MapSystem
 
         private void OnEnable()
         {
-            isStopEventChannelSo.AddListener<ControlMovementEvent>(HandleSetControlMovement);
+            movementControllerRegisteredEvent.AddListener<ControlMovementEvent>(HandleSetControlMovement);
         }
 
         private void OnDisable()
         {
-            isStopEventChannelSo.RemoveListener<ControlMovementEvent>(HandleSetControlMovement);
+            movementControllerRegisteredEvent.RemoveListener<ControlMovementEvent>(HandleSetControlMovement);
             
             if (_selectedPiece == null) return;
 
-            _selectedPiece.MoveTo(_originalWorldPosition);
+            _selectedPiece.Transform.position = _originalWorldPosition;
             _selectedPiece.ResetPreview();
 
             if (_wasDeployed)
@@ -227,6 +232,14 @@ namespace MapSystem
         private void HandleSetControlMovement(ControlMovementEvent obj)
         {
             _controlMovement = obj.Value;
+        }
+
+        private void OnValidate()
+        {
+            if (mapGridObject.TryGetComponent(out IMapGrid _)) return;
+            
+            Debug.LogError("할당한 오브젝트에 IMapGrid가 없습니다.");
+            mapGridObject = null;
         }
     }
 }

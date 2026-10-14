@@ -1,5 +1,4 @@
-﻿using System;
-using CoreSystem.Events;
+﻿using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
 using DG.Tweening;
@@ -9,8 +8,9 @@ namespace Agents.Players
 {
     public class PlayerMovement : Module, IControlMovement
     {
-        [field: SerializeField] public bool CanControl { get; private set; } = true;
-        [SerializeField] private EventChannelSO eventChannelSo;
+        [field: SerializeField] public bool Freeze { get; private set; } = true;
+        [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
+        [SerializeField] private EventChannelSO dragStateChangedEvent;
         
         [SerializeField] private float playerMoveSpeed;
         private Rigidbody2D _playerRb;
@@ -19,17 +19,20 @@ namespace Agents.Players
         private float _movementDirectionX;
         private Tween _flipTween;
         private int _currentDirection = 1;
+        private RigidbodyConstraints2D _originalConstraints;
 
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
             _renderer = _owner.GetModule<IRenderer>();
             _playerRb = _owner.GetComponent<Rigidbody2D>();
+            
+            _originalConstraints = _playerRb.constraints;
         }
 
         private void Start()
         {
-            eventChannelSo.RaiseEvent(new ControlMovementEvent().InitData(this));
+            movementControllerRegisteredEvent.RaiseEvent(new ControlMovementEvent().InitData(this));
         }
 
         public void SetMovementDirectionX(float movementXInput)
@@ -70,23 +73,34 @@ namespace Agents.Players
 
         private void OnEnable()
         {
-            eventChannelSo.AddListener<BoolEvent>(HandleChangeCanMove);
+            dragStateChangedEvent.AddListener<BoolEvent>(HandleChangeCanMove);
         }
 
         private void OnDisable()
         {
-            eventChannelSo.RemoveListener<BoolEvent>(HandleChangeCanMove);
+            dragStateChangedEvent.RemoveListener<BoolEvent>(HandleChangeCanMove);
         }
 
         private void HandleChangeCanMove(BoolEvent obj)
         {
-            CanControl = obj.Value;
+            Freeze = obj.Value;
+            Debug.Log(Freeze);
+            
+            if (Freeze)
+            {
+                _playerRb.constraints = _originalConstraints;
+            }
+            else
+            {
+                _playerRb.linearVelocity = Vector2.zero;
+                _playerRb.angularVelocity = 0f;
+                _playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
         }
 
         public bool PlayerIsStop()
         {
             return _playerRb.linearVelocity.sqrMagnitude > 0.1f;
         }
-
     }
 }
