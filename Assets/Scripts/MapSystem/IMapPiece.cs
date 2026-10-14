@@ -9,7 +9,7 @@ namespace MapSystem
         Transform Transform { get; }
         bool IsDeployed { get; }
         bool IsDragging { get; }
-        bool Active { get; }
+        bool IsActive { get; }
         Vector2Int GridPosition { get; }
         void SetDragging(bool dragging);
         void SetDeployed(Vector2Int pos);

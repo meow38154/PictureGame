@@ -22,7 +22,7 @@ namespace MapSystem
 
         public bool IsDeployed { get; private set; }
         public bool IsDragging { get; private set; }
-        public bool Active { get; private set; }
+        public bool IsActive { get; private set; }
         public Vector2Int GridPosition { get; private set; }
 
         private Tilemap _tilemaps;
@@ -87,7 +87,7 @@ namespace MapSystem
             Color originalColor = _tilemaps.color;
             _tilemaps.color = new Color(originalColor.r, originalColor.g, originalColor.b, active ? 1f : DISABLE_COLOR_ALPHA);
             _collider.enabled = active;
-            Active = active;
+            IsActive = active;
         }
     }
 }
