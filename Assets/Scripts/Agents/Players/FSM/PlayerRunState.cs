@@ -13,7 +13,7 @@ namespace Agents.Players.FSM
         {
             base.Update();
             
-            if (!ControlMovement.CanControl)
+            if (!ControlMovement.Freeze)
             {
                 Player.ChangeState(PlayerStateEnum.IDLE, 0.1f);
                 return;

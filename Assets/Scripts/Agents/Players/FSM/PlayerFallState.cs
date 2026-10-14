@@ -48,7 +48,7 @@ namespace Agents.Players.FSM
         
         private void HandleJump()
         {
-            if (!ControlMovement.CanControl) return;
+            if (!ControlMovement.Freeze) return;
             if (_fallTime < ControlJumper.CoyoteTime && !ControlJumper.IsJumpFall || _controlMultiJumper.CanDoubleJump())
             {
                 Player.ChangeState(PlayerStateEnum.JUMP, 0.1f);

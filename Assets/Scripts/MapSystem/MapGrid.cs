@@ -6,7 +6,7 @@ namespace MapSystem
     /// <summary>
     /// 맵의 셀 점유 상태를 관리합니다.
     /// </summary>
-    public class MapGrid : MonoBehaviour
+    public class MapGrid : MonoBehaviour, IMapGrid
     {
         [SerializeField] private Grid grid;
         
@@ -28,13 +28,13 @@ namespace MapSystem
         {
             _occupiedCells.Clear();
 
-            MapPiece[] pieces = GetComponentsInChildren<MapPiece>(true);
+            IMapPiece[] pieces = GetComponentsInChildren<IMapPiece>(true);
 
-            foreach (MapPiece piece in pieces)
+            foreach (IMapPiece piece in pieces)
             {
                 if (piece.Data == null) continue;
 
-                Vector2Int gridPos = WorldToCell(piece.transform.position);
+                Vector2Int gridPos = WorldToCell(piece.Transform.position);
                 
                 if (TryDeployment(gridPos, piece.Data))
                 {
@@ -42,7 +42,7 @@ namespace MapSystem
                 }
                 else
                 {
-                    Debug.LogWarning($"초기 배치 실패: {piece.name}, 위치: {gridPos}", piece);
+                    Debug.LogWarning($"초기 배치 실패: {piece.Transform.gameObject.name}, 위치: {gridPos}", piece.Transform);
                 }
             }
         }

@@ -2,7 +2,7 @@
 {
     public interface IControlMovement
     {
-        bool CanControl { get; }
+        bool Freeze { get; }
         void SetMovementDirectionX(float movementXInput);
         void UpdateFacingDirection(float movementXKey);
          bool PlayerIsStop();
