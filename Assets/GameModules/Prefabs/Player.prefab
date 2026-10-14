@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 2821001366580530838}
   - component: {fileID: 1379872389330698523}
   - component: {fileID: 573072676191617222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5007,7 +5007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759c5d3f7e424443a51f08068579bec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.PlayerMovement
-  <CanControl>k__BackingField: 1
+  <Freeze>k__BackingField: 1
+  movementControllerRegisteredEvent: {fileID: 11400000, guid: 5c40bccc316404b42ac3dde05e312d64, type: 2}
+  dragStateChangedEvent: {fileID: 11400000, guid: 2b04b5447a171a142ab9fbffe1f74147, type: 2}
   playerMoveSpeed: 9
 --- !u!1 &876702032248601050
 GameObject:
@@ -5068,7 +5070,7 @@ GameObject:
   - component: {fileID: 8630196064818940458}
   - component: {fileID: 7438868168281689432}
   - component: {fileID: 9124131430817867858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right-Leg-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,11 +5215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb95f7df41749199c4ee4dad752f291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.PlayerPartFollower
-  mapPieceLayer:
-    serializedVersion: 2
-    m_Bits: 2048
-  checkDistance: 0.2
-  checkWidthMultiplier: 0.8
+  eventChannelSo: {fileID: 11400000, guid: 5c40bccc316404b42ac3dde05e312d64, type: 2}
 --- !u!1 &1473509878010751005
 GameObject:
   m_ObjectHideFlags: 0
@@ -10509,7 +10507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Agents.GroundChecker
   checkerShape: 0
   gizmosEnabled: 1
-  chackerOffset: {x: -0.1, y: -1.91}
+  checkerOffset: {x: 0, y: -1.88}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 2240
@@ -10607,7 +10605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5653120238670800799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10644,7 +10642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6354575660329530809}
   - component: {fileID: 2778079432869939982}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Beak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10723,7 +10721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966045536169660122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10850,7 +10848,7 @@ GameObject:
   - component: {fileID: 8193112888593253754}
   - component: {fileID: 8043040867321722206}
   - component: {fileID: 9021574373513569681}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left-Leg-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11106,7 +11104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641179640352870222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head_Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11178,7 +11176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoreSystem.Triggers.ColliderTrigger
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   onEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -11230,7 +11228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7777673142017066712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11262,7 +11260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7354854084502381841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16220,7 +16218,7 @@ GameObject:
   - component: {fileID: 6878058634924901607}
   - component: {fileID: 4642633429385110686}
   - component: {fileID: 6757640502861903768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left-Leg-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16330,7 +16328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5987654293080189053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16362,7 +16360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8494648186219608141}
   - component: {fileID: 3082833974679255118}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Beak_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16452,7 +16450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7693082167402666428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21378,7 +21376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4877249109795028814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21412,7 +21410,7 @@ GameObject:
   - component: {fileID: 6814813295670895659}
   - component: {fileID: 4692116263710010002}
   - component: {fileID: 87012361320332985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right-Leg-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21523,7 +21521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4665465420571895998}
   - component: {fileID: 6657843125591421129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21592,7 +21590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739548874452157566}
   - component: {fileID: 6931420553725768760}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Beak_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21682,7 +21680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3238979465110563251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21714,7 +21712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8415034587201304122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31582,7 +31580,7 @@ GameObject:
   - component: {fileID: 2285525976035748402}
   - component: {fileID: 8049881861664191566}
   - component: {fileID: 1243691069783398928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
