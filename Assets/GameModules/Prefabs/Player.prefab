@@ -5011,54 +5011,6 @@ MonoBehaviour:
   movementControllerRegisteredEvent: {fileID: 11400000, guid: 5c40bccc316404b42ac3dde05e312d64, type: 2}
   dragStateChangedEvent: {fileID: 11400000, guid: 2b04b5447a171a142ab9fbffe1f74147, type: 2}
   playerMoveSpeed: 9
---- !u!1 &876702032248601050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1714538753044818357}
-  - component: {fileID: 3012248478298193986}
-  m_Layer: 3
-  m_Name: Grab_Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1714538753044818357
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876702032248601050}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2563013976859535628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3012248478298193986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876702032248601050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55aa8d1bb44e4643a760c04f4e19cb8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.PlayerGrabHandler
-  ignoredPlayerLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  jumper: {fileID: 77212498162074599}
 --- !u!1 &1173986205891029176
 GameObject:
   m_ObjectHideFlags: 0
@@ -10320,8 +10272,6 @@ Transform:
   - {fileID: 8226807846981675862}
   - {fileID: 3811699649613593358}
   - {fileID: 2220588678605546477}
-  - {fileID: 7923396875923418106}
-  - {fileID: 2563013976859535628}
   - {fileID: 3164765438832472822}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10412,55 +10362,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3003235, y: 0.5503087}
   m_EdgeRadius: 0
---- !u!1 &2064109573142273697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2563013976859535628}
-  - component: {fileID: 6343079173156289681}
-  m_Layer: 3
-  m_Name: Grab Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2563013976859535628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064109573142273697}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1714538753044818357}
-  - {fileID: 8080823095606131036}
-  - {fileID: 8805003368670095076}
-  m_Father: {fileID: 4202138797429866258}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6343079173156289681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064109573142273697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58bac0ddf1ac417597fb97adb6234623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.PlayerGrabController
-  playerInput: {fileID: 11400000, guid: e1b94466858999e4c8089203ed69deef, type: 2}
-  handTrm: {fileID: 785014873062457358}
 --- !u!1 &2834611497965347677
 GameObject:
   m_ObjectHideFlags: 0
@@ -10522,8 +10423,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3217179474653889573}
-  - component: {fileID: 4252039649119483540}
-  - component: {fileID: 6466442154276765854}
   m_Layer: 3
   m_Name: bone_10
   m_TagString: Untagged
@@ -10548,54 +10447,6 @@ Transform:
   - {fileID: 785014873062457358}
   m_Father: {fileID: 7777673142017066712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -73.15}
---- !u!114 &4252039649119483540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920814264620637151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a299ff749bb4c6ab4f2627238ade469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.PlayerAimController
---- !u!58 &6466442154276765854
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920814264620637151}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.02, y: 0}
-  m_Radius: 0.2
 --- !u!1 &3436379491464430020
 GameObject:
   m_ObjectHideFlags: 0
@@ -11045,56 +10896,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.PlayerDoubleJumper
   activeDoubleJump: 0
   extraJumpCount: 1
---- !u!1 &4698694933529078455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8080823095606131036}
-  - component: {fileID: 8344563192699841759}
-  m_Layer: 3
-  m_Name: Grab_Finder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8080823095606131036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4698694933529078455}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2563013976859535628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8344563192699841759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4698694933529078455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 822e721fc25240d092d12df6b05ab544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.TargetGrabFinder
-  clickPointRadius: 0.5
-  grabbableLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  grabIntersectionPointTrm: {fileID: 785014873062457358}
-  grabIntersection: 1
 --- !u!1 &5174746856004872865
 GameObject:
   m_ObjectHideFlags: 0
@@ -11129,96 +10930,6 @@ Transform:
   - {fileID: 2631798056032000834}
   m_Father: {fileID: 3217179474653889573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5472897962466741155
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7923396875923418106}
-  - component: {fileID: 6765021307263623173}
-  - component: {fileID: 912674418536466392}
-  m_Layer: 3
-  m_Name: PlayerHold
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7923396875923418106
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5472897962466741155}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.932, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4202138797429866258}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6765021307263623173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5472897962466741155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317701c336de4b18a05c1cccf4646a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoreSystem.Triggers.ColliderTrigger
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 1024
-  onEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!58 &912674418536466392
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5472897962466741155}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.3075508}
-  m_Radius: 0.8075508
 --- !u!1 &5504983417188015450
 GameObject:
   m_ObjectHideFlags: 0
@@ -26629,52 +26340,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!1 &8975685917492733662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8805003368670095076}
-  - component: {fileID: 5694929382283635888}
-  m_Layer: 3
-  m_Name: Grab_Mover
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8805003368670095076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8975685917492733662}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2563013976859535628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5694929382283635888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8975685917492733662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5724af6b00d84f0695545e40adb97baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.PlayerGrabMover
-  moveDuration: 0.3
-  ease: 10
 --- !u!1 &8988899106801575314
 GameObject:
   m_ObjectHideFlags: 0

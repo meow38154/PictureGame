@@ -17,12 +17,11 @@ namespace MapSystem
         
         [field: SerializeField] public MapPieceSo Data { get; private set; }
         [field: SerializeField] public bool Fixed { get; private set; }
-        
         public Transform Transform => transform;
 
         public bool IsDeployed { get; private set; }
         public bool IsDragging { get; private set; }
-        public bool IsActive { get; private set; }
+        public bool IsActive { get; private set; } = true;
         public Vector2Int GridPosition { get; private set; }
 
         private Tilemap _tilemaps;

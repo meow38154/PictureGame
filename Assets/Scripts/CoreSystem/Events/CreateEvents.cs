@@ -1,4 +1,5 @@
 using Agents.Players;
+using CoreSystem.GrabSystem;
 using DevLib.EventChannelSystem;
 
 namespace CoreSystem.Events
@@ -6,8 +7,10 @@ namespace CoreSystem.Events
 	public static class CreateEvents
 	{
 		public static readonly BoolEvent BoolEvent = new();
+		public static readonly ControlMovementEvent ControlMovementEvent = new();
+		public static readonly GrabbableObjectEvent GrabbableObjectEvent = new();
 	}
-
+	
 	public class BoolEvent : GameEvent
 	{
 		public bool Value { get; private set; }
@@ -17,13 +20,24 @@ namespace CoreSystem.Events
 			Value = value;
 			return this;
 		}
-	}	
-	
+	}
+
 	public class ControlMovementEvent : GameEvent
 	{
 		public IControlMovement Value { get; private set; }
 
 		public ControlMovementEvent InitData(IControlMovement value)
+		{
+			Value = value;
+			return this;
+		}
+	}	
+	
+	public class GrabbableObjectEvent : GameEvent
+	{
+		public IGrabbable Value { get; private set; }
+
+		public GrabbableObjectEvent InitData(IGrabbable value)
 		{
 			Value = value;
 			return this;
