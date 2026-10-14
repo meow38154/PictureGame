@@ -1,4 +1,5 @@
 
+using System;
 using Agents.Players;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
@@ -23,7 +24,8 @@ namespace MapSystem
         [SerializeField, Min(0)] private int searchRadius = 5;
 
         [Header("So")] 
-        [SerializeField] private EventChannelSO eventChannelSo;
+        [SerializeField] private EventChannelSO canChangePieceEventChannelSo;
+        [SerializeField] private EventChannelSO isStopEventChannelSo;
         [SerializeField] private PlayerInputSo inputSo;
         
         private MapPiece _selectedPiece;
@@ -35,6 +37,8 @@ namespace MapSystem
 
         private bool _wasDeployed;
         private bool _canPlace;
+        
+        private IControlMovement _controlMovement;
 
         private void Awake()
         {
@@ -63,6 +67,8 @@ namespace MapSystem
 
         private void BeginDrag()
         {
+            if (_controlMovement.PlayerIsStop()) return;
+            
             Vector3 mouseWorld = GetMouseWorldPosition();
 
             Collider2D hit = Physics2D.OverlapPoint(mouseWorld, pieceLayer);
@@ -97,7 +103,7 @@ namespace MapSystem
             // 드래그 시작
             _selectedPiece.SetDragging(true);
             
-            eventChannelSo.RaiseEvent(new PlayerOnGroundCheck().InitData(false));
+            canChangePieceEventChannelSo.RaiseEvent(new BoolEvent().InitData(false));
 
             UpdateDrag();
         }
@@ -142,7 +148,7 @@ namespace MapSystem
 
             // 드래그 종료
             _selectedPiece.SetDragging(false);
-            eventChannelSo.RaiseEvent(new PlayerOnGroundCheck().InitData(true));
+            canChangePieceEventChannelSo.RaiseEvent(new BoolEvent().InitData(true));
             
             inputSo.CanMovement = true;
             
@@ -192,8 +198,15 @@ namespace MapSystem
             return found;
         }
 
+        private void OnEnable()
+        {
+            isStopEventChannelSo.AddListener<ControlMovementEvent>(HandleSetControlMovement);
+        }
+
         private void OnDisable()
         {
+            isStopEventChannelSo.RemoveListener<ControlMovementEvent>(HandleSetControlMovement);
+            
             if (_selectedPiece == null) return;
 
             _selectedPiece.MoveTo(_originalWorldPosition);
@@ -209,6 +222,11 @@ namespace MapSystem
 
             _selectedPiece.SetDragging(false);
             _selectedPiece = null;
+        }
+        
+        private void HandleSetControlMovement(ControlMovementEvent obj)
+        {
+            _controlMovement = obj.Value;
         }
     }
 }

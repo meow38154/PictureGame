@@ -1,22 +1,31 @@
+using Agents.Players;
 using DevLib.EventChannelSystem;
-using DevLib.ObjectPool.Runtime;
-using MapSystem;
-using UnityEngine;
 
 namespace CoreSystem.Events
 {
 	public static class CreateEvents
 	{
-		public static readonly PlayerOnGroundCheck PlayerOnGroundCheck = new();
+		public static readonly BoolEvent BoolEvent = new();
 	}
 
-	public class PlayerOnGroundCheck : GameEvent
+	public class BoolEvent : GameEvent
 	{
-		public bool IsFrozen { get; private set; }
+		public bool Value { get; private set; }
 
-		public PlayerOnGroundCheck InitData(bool isFrozen)
+		public BoolEvent InitData(bool value)
 		{
-			IsFrozen = isFrozen;
+			Value = value;
+			return this;
+		}
+	}	
+	
+	public class ControlMovementEvent : GameEvent
+	{
+		public IControlMovement Value { get; private set; }
+
+		public ControlMovementEvent InitData(IControlMovement value)
+		{
+			Value = value;
 			return this;
 		}
 	}

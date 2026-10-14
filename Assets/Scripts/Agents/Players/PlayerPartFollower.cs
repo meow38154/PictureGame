@@ -1,4 +1,5 @@
 
+using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
 using MapSystem;
@@ -8,40 +9,42 @@ namespace Agents.Players
 {
     public class PlayerPartFollower : Module
     {
-        //이거 받아서 true면 작동 안되게 하기
         [SerializeField] private EventChannelSO eventChannelSo;
-        [Header("Detection")]
-        [SerializeField] private LayerMask mapPieceLayer;
-        
-        private IGroundChecker  _groundChecker;
 
+        private bool _canCurrentPartChange = true;
+
+        private IGroundChecker _groundChecker;
         private Rigidbody2D _playerRb;
-        private Collider2D _playerCollider;
         private MapPiece _currentPart;
+        private Transform _originalParent;
 
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
 
             _playerRb = owner.GetComponent<Rigidbody2D>();
-            _playerCollider = owner.GetComponent<Collider2D>();
             _groundChecker = owner.GetModule<IGroundChecker>();
+            _originalParent = owner.transform.parent;
 
-            Debug.Assert(_playerRb != null, "PlayerPartFollower: Rigidbody2D가 없습니다.");
-            Debug.Assert(_playerCollider != null, "PlayerPartFollower: Collider2D가 없습니다.");
-            Debug.Assert(_groundChecker != null, "PlayerPartFollower: GroundChecker 없습니다.");
+            Debug.Assert(_playerRb != null);
+            Debug.Assert(_groundChecker != null);
         }
 
         private void FixedUpdate()
         {
-            if (_playerRb == null || _playerCollider == null)
+            if (_playerRb == null || _groundChecker == null)
                 return;
-            
-            if (_currentPart != null && _currentPart.IsDragging) return;
-            
+
+            if (!_canCurrentPartChange)
+                return;
+
+            if (_currentPart != null && _currentPart.IsDragging)
+                return;
+
             if (_playerRb.linearVelocityY > 0.05f)
             {
-                SetCurrentPart(null); return;
+                SetCurrentPart(null);
+                return;
             }
 
             SetCurrentPart(FindGroundPart());
@@ -51,45 +54,44 @@ namespace Agents.Players
         {
             Collider2D col = _groundChecker.CurrentGround;
 
-            if (col == null) return null;
-            
-            return col.TryGetComponent(out _currentPart) ? _currentPart : null;
+            return col != null
+                ? col.GetComponentInParent<MapPiece>()
+                : null;
         }
 
         private void SetCurrentPart(MapPiece nextPart)
         {
-            if (_currentPart == nextPart) return;
-
-            if (_currentPart != null)
-            {
-                _currentPart.OnMoved -= HandlePartMoved;
-            }
+            if (_currentPart == nextPart)
+                return;
 
             _currentPart = nextPart;
 
-            if (_currentPart != null)
-            {
-                _currentPart.OnMoved += HandlePartMoved;
-            }
+            Transform parent = _currentPart != null
+                ? _currentPart.transform
+                : _originalParent;
+
+            _owner.transform.SetParent(parent, true);
         }
 
-        private void HandlePartMoved(Vector2 delta)
+        private void OnEnable()
         {
-            Debug.Log(delta);
-            
-            if (_playerRb == null) return;
-            
-            transform.position += (Vector3)delta;
+            if (eventChannelSo != null)
+                eventChannelSo.AddListener<BoolEvent>(
+                    HandleChangeCanCurrentPart);
         }
 
         private void OnDisable()
         {
-            SetCurrentPart(null);
+            if (eventChannelSo != null)
+                eventChannelSo.RemoveListener<BoolEvent>(
+                    HandleChangeCanCurrentPart);
+            
+            _currentPart = null;
         }
 
-        private void OnDestroy()
+        private void HandleChangeCanCurrentPart(BoolEvent evt)
         {
-            SetCurrentPart(null);
+            _canCurrentPartChange = evt.Value;
         }
     }
 }

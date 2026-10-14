@@ -12,7 +12,7 @@ namespace CoreSystem.Manager
         
         private void Start()
         {
-            playerTrmRegistered.RaiseEvent(CreateEvents.PlayerOnGroundCheck.InitData(playerTransform));
+            playerTrmRegistered.RaiseEvent(CreateEvents.BoolEvent.InitData(playerTransform));
         }
     }
 }
