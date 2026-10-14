@@ -8,7 +8,7 @@ namespace CoreSystem.Manager
 {
 	public class CreateManager : MonoBehaviour
 	{
-		[SerializeField] private EventChannelSO createChannel;
+		/*[SerializeField] private EventChannelSO createChannel;
 		[SerializeField] private PoolManagerSO poolManagerAsset;
 
 		private void Awake()
@@ -32,6 +32,6 @@ namespace CoreSystem.Manager
 		{
 			targetVfx.OnVfxEnd -= HandleVfxEnd;
 			poolManagerAsset.Push(targetVfx);
-		}
+		}*/
 	}
 }

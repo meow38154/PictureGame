@@ -1,4 +1,7 @@
-﻿using DevLib.ModuleSystem;
+﻿using System;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
+using DevLib.ModuleSystem;
 using DG.Tweening;
 using UnityEngine;
 
@@ -7,6 +10,7 @@ namespace Agents.Players
     public class PlayerMovement : Module, IControlMovement
     {
         [field: SerializeField] public bool CanControl { get; private set; } = true;
+        [SerializeField] private EventChannelSO eventChannelSo;
         
         [SerializeField] private float playerMoveSpeed;
         private Rigidbody2D _playerRb;
@@ -21,6 +25,11 @@ namespace Agents.Players
             base.Initialize(owner);
             _renderer = _owner.GetModule<IRenderer>();
             _playerRb = _owner.GetComponent<Rigidbody2D>();
+        }
+
+        private void Start()
+        {
+            eventChannelSo.RaiseEvent(new ControlMovementEvent().InitData(this));
         }
 
         public void SetMovementDirectionX(float movementXInput)
@@ -40,8 +49,7 @@ namespace Agents.Players
 
             int direction = movementXKey > 0 ? 1 : -1;
 
-            if (_currentDirection == direction)
-                return;
+            if (_currentDirection == direction) return;
 
             _currentDirection = direction;
 
@@ -51,12 +59,7 @@ namespace Agents.Players
 
             _flipTween?.Kill();
 
-            _flipTween = rendererTrm
-                .DORotate(
-                    new Vector3(0f, targetY, 0f),
-                    0.15f,
-                    RotateMode.Fast)
-                .SetEase(Ease.OutQuad);
+            _flipTween = rendererTrm.DORotate(new Vector3(0f, targetY, 0f), 0.15f, RotateMode.Fast).SetEase(Ease.OutQuad);
         }
         
         private void MovePlayer() 
@@ -65,9 +68,25 @@ namespace Agents.Players
             _playerRb.linearVelocityX = _movementDirectionX * playerMoveSpeed;
         }
 
-        public void ChangeCanMove(bool canMove)
+        private void OnEnable()
         {
-            CanControl = canMove;
+            eventChannelSo.AddListener<BoolEvent>(HandleChangeCanMove);
         }
+
+        private void OnDisable()
+        {
+            eventChannelSo.RemoveListener<BoolEvent>(HandleChangeCanMove);
+        }
+
+        private void HandleChangeCanMove(BoolEvent obj)
+        {
+            CanControl = obj.Value;
+        }
+
+        public bool PlayerIsStop()
+        {
+            return _playerRb.linearVelocity.sqrMagnitude > 0.1f;
+        }
+
     }
 }

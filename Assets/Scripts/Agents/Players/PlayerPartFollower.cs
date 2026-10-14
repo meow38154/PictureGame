@@ -1,3 +1,6 @@
+
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
 using MapSystem;
 using UnityEngine;
@@ -6,49 +9,89 @@ namespace Agents.Players
 {
     public class PlayerPartFollower : Module
     {
-        [SerializeField] private PlayerPartDetector partDetector;
-        [SerializeField] private Rigidbody2D playerRb;
+        [SerializeField] private EventChannelSO eventChannelSo;
 
-        private MouseDragMover _currentMover;
+        private bool _canCurrentPartChange = true;
+
+        private IGroundChecker _groundChecker;
+        private Rigidbody2D _playerRb;
+        private MapPiece _currentPart;
+        private Transform _originalParent;
+
+        public override void Initialize(ModuleOwner owner)
+        {
+            base.Initialize(owner);
+
+            _playerRb = owner.GetComponent<Rigidbody2D>();
+            _groundChecker = owner.GetModule<IGroundChecker>();
+            _originalParent = owner.transform.parent;
+
+            Debug.Assert(_playerRb != null);
+            Debug.Assert(_groundChecker != null);
+        }
+
+        private void FixedUpdate()
+        {
+            if (_playerRb == null || _groundChecker == null)
+                return;
+
+            if (!_canCurrentPartChange)
+                return;
+
+            if (_currentPart != null && _currentPart.IsDragging)
+                return;
+
+            if (_playerRb.linearVelocityY > 0.05f)
+            {
+                SetCurrentPart(null);
+                return;
+            }
+
+            SetCurrentPart(FindGroundPart());
+        }
+
+        private MapPiece FindGroundPart()
+        {
+            Collider2D col = _groundChecker.CurrentGround;
+
+            return col != null
+                ? col.GetComponentInParent<MapPiece>()
+                : null;
+        }
+
+        private void SetCurrentPart(MapPiece nextPart)
+        {
+            if (_currentPart == nextPart)
+                return;
+
+            _currentPart = nextPart;
+
+            Transform parent = _currentPart != null
+                ? _currentPart.transform
+                : _originalParent;
+
+            _owner.transform.SetParent(parent, true);
+        }
 
         private void OnEnable()
         {
-            partDetector.OnPartChangeEvent += HandlePartChanged;
+            if (eventChannelSo != null)
+                eventChannelSo.AddListener<BoolEvent>(
+                    HandleChangeCanCurrentPart);
         }
 
         private void OnDisable()
         {
-            partDetector.OnPartChangeEvent -= HandlePartChanged;
-            UnsubscribeCurrentMover();
+            if (eventChannelSo != null)
+                eventChannelSo.RemoveListener<BoolEvent>(
+                    HandleChangeCanCurrentPart);
+            
+            _currentPart = null;
         }
 
-        private void HandlePartChanged(IMapPart part)
+        private void HandleChangeCanCurrentPart(BoolEvent evt)
         {
-            UnsubscribeCurrentMover();
-
-            if (part == null)
-                return;
-
-            _currentMover = part.Collider.GetComponentInParent<MouseDragMover>();
-
-            if (_currentMover == null)
-                return;
-
-            _currentMover.OnMoved += HandlePartMoved;
-        }
-
-        private void HandlePartMoved(Vector2 delta)
-        {
-            playerRb.position += delta;
-        }
-
-        private void UnsubscribeCurrentMover()
-        {
-            if (_currentMover == null)
-                return;
-
-            _currentMover.OnMoved -= HandlePartMoved;
-            _currentMover = null;
+            _canCurrentPartChange = evt.Value;
         }
     }
 }
