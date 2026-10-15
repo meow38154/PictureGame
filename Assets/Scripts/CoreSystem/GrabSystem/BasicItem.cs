@@ -1,6 +1,6 @@
 namespace CoreSystem.GrabSystem
 {
-    public class TestItem : AbstractGrabbableObject
+    public class BasicItem : AbstractGrabbableObject
     {
         
     }
