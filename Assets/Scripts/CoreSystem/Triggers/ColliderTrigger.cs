@@ -10,16 +10,38 @@ namespace CoreSystem.Triggers
 
         [SerializeField] private UnityEvent onEnter;
         [SerializeField] private UnityEvent onExit;
+
+        [SerializeField] private bool isActive;
         
+        public bool IsActive 
+        { 
+            get => isActive; 
+            set 
+            { 
+                isActive = value; 
+                OnActiveChanged();
+            } 
+        }
+
+        private void OnActiveChanged()
+        {
+            IsSearch = false;
+            onExit?.Invoke();
+        }
+
         public bool IsSearch { get; private set; }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (!isActive) return;
+            
             Enter(other.gameObject.layer);
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (!isActive) return;
+            
             Exit(other.gameObject.layer);
         }
 

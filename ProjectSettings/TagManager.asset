@@ -14,10 +14,10 @@ TagManager:
   - Ground
   - Collider Object
   - Confiner
-  - Beak
+  - Item
   - Trigger
   - Part_trigger
-  - Part_outline_Collider
+  - 
   - 
   - 
   - 
@@ -44,14 +44,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 439793959
-    locked: 0
   - name: Object
     uniqueID: 1741641529
     locked: 0
-  - name: Beak
+  - name: Item
     uniqueID: 2895648249
+    locked: 0
+  - name: UI
+    uniqueID: 439793959
     locked: 0
   m_RenderingLayers:
   - Default

@@ -42,7 +42,7 @@ namespace MapSystem
         
         private void Awake()
         {
-            if (targetCamera == null) targetCamera = Camera.main;
+            targetCamera = Camera.main;
             mapGrid = mapGridObject.GetComponent<IMapGrid>();
         }
 
@@ -105,7 +105,7 @@ namespace MapSystem
             _selectedPiece.SetDragging(true);
             _selectedPiece.SetPieceActive(false);
             
-            dragStateChangedEvent.RaiseEvent(new BoolEvent().InitData(false));
+            dragStateChangedEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(false));
 
             UpdateDrag();
         }
@@ -151,7 +151,7 @@ namespace MapSystem
             // 드래그 종료
             _selectedPiece.SetDragging(false);
             _selectedPiece.SetPieceActive(true);
-            dragStateChangedEvent.RaiseEvent(new BoolEvent().InitData(true));
+            dragStateChangedEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
             
             inputSo.CanMovement = true;
             
