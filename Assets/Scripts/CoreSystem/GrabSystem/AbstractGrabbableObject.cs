@@ -1,51 +1,37 @@
 ﻿using System;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 using UnityEngine;
+using UnityEngine.LowLevelPhysics2D;
 
 namespace CoreSystem.GrabSystem
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class AbstractGrabbableObject : MonoBehaviour, IGrabbable
     {
-        [SerializeField] private LayerMask ignoredWhileGrabbing;
-        [field: SerializeField] public Vector2 Pivot { get; private set; }
-        
+        [SerializeField] private EventChannelSO grabEventChannelSo;
         public Transform Transform => transform;
-        public Rigidbody2D Rigidbody { get; private set; }
 
-        private Vector3 _beforeSize;
-        private Collider2D _collider2D;
-        private LayerMask _previouslyGrabbedLayerMask;
-        
+        private Collider2D _collider;
+        private Rigidbody2D _rb;
+
         private void Awake()
         {
-            Rigidbody = GetComponent<Rigidbody2D>();
-            _collider2D = GetComponent<Collider2D>();
-            _beforeSize =  transform.localScale;
+            _rb = GetComponent<Rigidbody2D>();
+            _collider = GetComponent<Collider2D>();
         }
 
         public virtual void OnGrabbed()
         {
-            _previouslyGrabbedLayerMask = _collider2D.excludeLayers;
-            _collider2D.excludeLayers = ignoredWhileGrabbing;
-            TrmCorrection();
+            grabEventChannelSo.RaiseEvent(CreateEvents.GrabbableObjectEvent.InitData(this));
+            _collider.enabled = false;
+            _rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
         public virtual void OnReleased()
         {
-            _collider2D.excludeLayers = _previouslyGrabbedLayerMask;
-            TrmCorrection();
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.TransformPoint(Pivot), 0.1f);
-        }
-
-        private void TrmCorrection()
-        {
-            transform.rotation = Quaternion.Euler(0f, 0f, transform.eulerAngles.z);
-            transform.localScale = _beforeSize;
+            _collider.enabled = true;
+            _rb.bodyType = RigidbodyType2D.Dynamic;
         }
     }
 }

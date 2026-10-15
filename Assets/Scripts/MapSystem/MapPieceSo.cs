@@ -19,6 +19,11 @@ namespace MapSystem
         
         private void OnValidate()
         {
+            TileDataRegister();
+        }
+
+        public void TileDataRegister()
+        {
             //리스트 초기화
             occupiedCells.Clear();
 

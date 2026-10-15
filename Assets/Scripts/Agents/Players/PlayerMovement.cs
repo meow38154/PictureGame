@@ -32,7 +32,7 @@ namespace Agents.Players
 
         private void Start()
         {
-            movementControllerRegisteredEvent.RaiseEvent(new ControlMovementEvent().InitData(this));
+            movementControllerRegisteredEvent.RaiseEvent(CreateEvents.ControlMovementEvent.InitData(this));
         }
 
         public void SetMovementDirectionX(float movementXInput)
@@ -84,7 +84,6 @@ namespace Agents.Players
         private void HandleChangeCanMove(BoolEvent obj)
         {
             Freeze = obj.Value;
-            Debug.Log(Freeze);
             
             if (Freeze)
             {

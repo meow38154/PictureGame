@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public static class Utility
 {
     private static Camera _cam;
-
+    
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     public static void Init()
     {
         _cam = Camera.main;

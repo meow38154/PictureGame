@@ -7,11 +7,17 @@ namespace UI.Interactions
 {
     public class Interaction : MonoBehaviour
     {
-        [SerializeField] private ColliderTrigger colliderTrigger;
         [SerializeField] public UnityEvent onKeyDown;
+        private ColliderTrigger colliderTrigger;
 
         private bool _end;
-        
+
+        private void Awake()
+        {
+            colliderTrigger = GetComponentInChildren<ColliderTrigger>();
+            Debug.Assert(colliderTrigger != null, "ColliderTrigger is missing");
+        }
+
         private void Update()
         {
             if (!colliderTrigger.IsSearch || !Keyboard.current.eKey.wasPressedThisFrame || _end) return;
