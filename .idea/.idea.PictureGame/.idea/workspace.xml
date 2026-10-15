@@ -8,17 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestDebug.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/Editor/ReadOnlyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/Editor/ReadOnlyDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/TestItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/BasicItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/TestItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/BasicItem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +34,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/AbstractPlayerAirState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/GrabController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/IPlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerAimController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/PlayerGrabMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/GrabSystem/TargetGrabFinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerJumper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,7 +48,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/FadeSceneTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/IGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/Testitem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/CreateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,6 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureSelectionModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ICaptureSelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,61 +78,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="8.30221713348507E-7" />
-      <entry key="MS500" value="0.06079093421326783" />
-      <entry key="S2" value="0.4965462477185179" />
-      <entry key="S5" value="0.7557599641581133" />
-      <entry key="S10" value="0.8693445600900396" />
-      <entry key="S30" value="0.9544417147883857" />
-      <entry key="S60" value="0.9866023092761798" />
-      <entry key="M2" value="1.230241743645184" />
-      <entry key="M5" value="4.527014273620289" />
-      <entry key="M10" value="12.657215996428503" />
-      <entry key="M15" value="20.602688135316665" />
-      <entry key="M30" value="48.92829153673532" />
-      <entry key="H1" value="117.49987670744461" />
-      <entry key="H2" value="233.62780376104774" />
-      <entry key="H4" value="402.05606670588594" />
-      <entry key="D1" value="898.2574557710489" />
-      <entry key="W1" value="1089.3699964385355" />
+      <entry key="MS100" value="1.6190256861364493E-70" />
+      <entry key="MS500" value="1.6717979875211754E-14" />
+      <entry key="S2" value="0.0012360654406778139" />
+      <entry key="S5" value="0.202200080646103" />
+      <entry key="S10" value="1.1621491874017964" />
+      <entry key="S30" value="4.049178727409666" />
+      <entry key="S60" value="5.66091637990046" />
+      <entry key="M2" value="6.897272021504639" />
+      <entry key="M5" value="10.61145612324378" />
+      <entry key="M10" value="18.744284275175996" />
+      <entry key="M15" value="26.696511964618495" />
+      <entry key="M30" value="54.945140859219926" />
+      <entry key="H1" value="123.36630088307244" />
+      <entry key="H2" value="239.5167060208615" />
+      <entry key="H4" value="408.1056358752586" />
+      <entry key="D1" value="904.9051333771982" />
+      <entry key="W1" value="1096.308993316127" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000003338743" />
-      <entry key="MS500" value="1.0141348143365074" />
-      <entry key="S2" value="1.529589839170117" />
-      <entry key="S5" value="2.1649936630982856" />
-      <entry key="S10" value="2.5241277396767345" />
-      <entry key="S30" value="2.826218166310119" />
-      <entry key="S60" value="2.9158346371810646" />
-      <entry key="M2" value="3.060364937205161" />
-      <entry key="M5" value="4.263449100497782" />
-      <entry key="M10" value="7.262092132154808" />
-      <entry key="M15" value="10.850246360482661" />
-      <entry key="M30" value="24.9912896700782" />
-      <entry key="H1" value="56.92432669458108" />
-      <entry key="H2" value="109.73683729221969" />
-      <entry key="H4" value="186.7427090482139" />
-      <entry key="D1" value="410.34435088599923" />
-      <entry key="W1" value="495.31984767682417" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000001425903222" />
+      <entry key="S5" value="1.0039167390735562" />
+      <entry key="S10" value="1.123552111699956" />
+      <entry key="S30" value="2.2513267898519578" />
+      <entry key="S60" value="3.2391423296339013" />
+      <entry key="M2" value="4.070188209246003" />
+      <entry key="M5" value="5.705909059995397" />
+      <entry key="M10" value="8.81152549130467" />
+      <entry key="M15" value="12.415024340163075" />
+      <entry key="M30" value="26.509005860458984" />
+      <entry key="H1" value="58.38412472155762" />
+      <entry key="H2" value="111.21915948140656" />
+      <entry key="H4" value="188.30332147928635" />
+      <entry key="D1" value="412.1837332521638" />
+      <entry key="W1" value="497.29215733350645" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0015865480299141947" />
-      <entry key="MS500" value="0.31974912330432015" />
-      <entry key="S2" value="1.5395937939888145" />
-      <entry key="S5" value="2.6097408584765924" />
-      <entry key="S10" value="3.205000388620705" />
-      <entry key="S30" value="3.7085160009186544" />
-      <entry key="S60" value="3.864935345226391" />
-      <entry key="M2" value="4.2703481566943955" />
-      <entry key="M5" value="8.776371783495854" />
-      <entry key="M10" value="19.90396129681648" />
-      <entry key="M15" value="31.4363392923703" />
-      <entry key="M30" value="73.89940480557158" />
-      <entry key="H1" value="174.40096155455308" />
-      <entry key="H2" value="343.34217132296226" />
-      <entry key="H4" value="588.7795418582257" />
-      <entry key="D1" value="1308.5946997124458" />
-      <entry key="W1" value="1584.688616871242" />
+      <entry key="MS100" value="1.0363911271343782E-6" />
+      <entry key="MS500" value="0.06354841708076316" />
+      <entry key="S2" value="0.503292005229972" />
+      <entry key="S5" value="0.9625554328087136" />
+      <entry key="S10" value="2.140924469453387" />
+      <entry key="S30" value="6.2144831491282915" />
+      <entry key="S60" value="8.841839037355296" />
+      <entry key="M2" value="10.931760121012791" />
+      <entry key="M5" value="16.296030577575234" />
+      <entry key="M10" value="27.536824551522233" />
+      <entry key="M15" value="39.092542188412175" />
+      <entry key="M30" value="81.43282778297835" />
+      <entry key="H1" value="181.72663881493716" />
+      <entry key="H2" value="350.71311915142826" />
+      <entry key="H4" value="596.3895774370093" />
+      <entry key="D1" value="1317.0817305919745" />
+      <entry key="W1" value="1593.5999189207387" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
