@@ -10,8 +10,6 @@ namespace UI.Interactions
         [SerializeField] public UnityEvent onKeyDown;
         private ColliderTrigger colliderTrigger;
 
-        private bool _end;
-
         private void Awake()
         {
             colliderTrigger = GetComponentInChildren<ColliderTrigger>();
@@ -20,9 +18,8 @@ namespace UI.Interactions
 
         private void Update()
         {
-            if (!colliderTrigger.IsSearch || !Keyboard.current.eKey.wasPressedThisFrame || _end) return;
+            if (!colliderTrigger.IsSearch || !Keyboard.current.eKey.wasPressedThisFrame) return;
             onKeyDown?.Invoke();
-            _end = true;
         }
     }
 }
