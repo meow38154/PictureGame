@@ -1,8 +1,6 @@
-﻿using System;
-using CoreSystem.Events;
+﻿using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
-using UnityEngine.LowLevelPhysics2D;
 
 namespace CoreSystem.GrabSystem
 {
@@ -10,8 +8,9 @@ namespace CoreSystem.GrabSystem
     public abstract class AbstractGrabbableObject : MonoBehaviour, IGrabbable
     {
         [SerializeField] private EventChannelSO grabEventChannelSo;
+        public bool IsGrabbing { get; private set; }
         public Transform Transform => transform;
-
+        
         private Collider2D _collider;
         private Rigidbody2D _rb;
 
@@ -26,12 +25,14 @@ namespace CoreSystem.GrabSystem
             grabEventChannelSo.RaiseEvent(CreateEvents.GrabbableObjectEvent.InitData(this));
             _collider.enabled = false;
             _rb.bodyType = RigidbodyType2D.Kinematic;
+            IsGrabbing = true;
         }
 
         public virtual void OnReleased()
         {
             _collider.enabled = true;
             _rb.bodyType = RigidbodyType2D.Dynamic;
+            IsGrabbing = false;
         }
     }
 }
