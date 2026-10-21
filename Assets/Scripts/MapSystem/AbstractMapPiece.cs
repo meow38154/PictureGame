@@ -7,7 +7,7 @@ namespace MapSystem
     /// 
     /// </summary>
    
-    public class MapPiece : MonoBehaviour, IMapPiece
+    public abstract class AbstractMapPiece : MonoBehaviour, IMapPiece
     {
         private static readonly Color NotCanDeploymentColor = new Color(1f, 0.3f, 0.3f, 0.65f);
         private static readonly Color CanDeploymentColor = new Color(0.4f, 1f, 0.6f, 0.65f);
