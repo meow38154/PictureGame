@@ -1,4 +1,6 @@
-﻿using CoreSystem.Triggers;
+﻿using System.Linq;
+using Condition;
+using CoreSystem.Triggers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -7,7 +9,10 @@ namespace UI.Interactions
 {
     public class Interaction : MonoBehaviour
     {
-        [SerializeField] public UnityEvent onKeyDown;
+        [SerializeField] private ConditionEntry[] conditions;
+        [SerializeField] public UnityEvent onKeyDownSuccess;
+        [SerializeField] public UnityEvent onKeyDownFail;
+        
         private ColliderTrigger colliderTrigger;
 
         private void Awake()
@@ -19,7 +24,13 @@ namespace UI.Interactions
         private void Update()
         {
             if (!colliderTrigger.IsSearch || !Keyboard.current.eKey.wasPressedThisFrame) return;
-            onKeyDown?.Invoke();
+            if (CheckCondition()) onKeyDownSuccess?.Invoke();
+            else onKeyDownFail?.Invoke();
+        }
+
+        private bool CheckCondition()
+        {
+            return conditions.Length == 0 || conditions.All(i => i.condition.Evaluate(i.target));
         }
     }
 }

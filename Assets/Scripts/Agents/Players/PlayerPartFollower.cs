@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Agents.Players
 {
-    public class PlayerPartFollower : Module
+    public class PlayerPartFollower : Module, IPartFollower
     {
         [SerializeField] private EventChannelSO eventChannelSo;
 
@@ -15,8 +15,10 @@ namespace Agents.Players
 
         private IGroundChecker _groundChecker;
         private Rigidbody2D _playerRb;
-        private MapPiece _currentPart;
+        private IMapPiece _currentPart;
         private Transform _originalParent;
+        
+        public IMapPiece CurrentPart => _currentPart;
 
         public override void Initialize(ModuleOwner owner)
         {
@@ -50,16 +52,16 @@ namespace Agents.Players
             SetCurrentPart(FindGroundPart());
         }
 
-        private MapPiece FindGroundPart()
+        private IMapPiece FindGroundPart()
         {
             Collider2D col = _groundChecker.CurrentGround;
 
             return col != null
-                ? col.GetComponentInParent<MapPiece>()
+                ? col.GetComponentInParent<IMapPiece>()
                 : null;
         }
 
-        private void SetCurrentPart(MapPiece nextPart)
+        private void SetCurrentPart(IMapPiece nextPart)
         {
             if (_currentPart == nextPart)
                 return;
@@ -67,7 +69,7 @@ namespace Agents.Players
             _currentPart = nextPart;
 
             Transform parent = _currentPart != null
-                ? _currentPart.transform
+                ? _currentPart.Transform
                 : _originalParent;
 
             _owner.transform.SetParent(parent, true);
