@@ -1,0 +1,16 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/GameModules/Toolkit/PartMaker.uss?fileID=7433441132597879392&amp;guid=66255122ee87a334c9a5959318168717&amp;type=3#PartMaker"/>
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 0; position: absolute; left: 50px; right: 50px; top: 20px; bottom: 195px; align-items: flex-start; align-content: flex-start; align-self: auto; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+            <ui:Button text="Button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

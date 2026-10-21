@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestDebug.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/TestMessageBoxFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject/TestGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGimmicks/PressurePlateGimmick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,7 +159,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JJM&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SJH&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
