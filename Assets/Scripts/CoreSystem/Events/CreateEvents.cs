@@ -1,6 +1,8 @@
 using Agents.Players;
 using CoreSystem.GrabSystem;
 using DevLib.EventChannelSystem;
+using UI.Wall_Paper.Files;
+using UI.Wall_Paper.Files.SO;
 
 namespace CoreSystem.Events
 {
@@ -8,6 +10,7 @@ namespace CoreSystem.Events
 	{
 		public static readonly BoolEvent BoolEvent = new();
 		public static readonly ControlMovementEvent ControlMovementEvent = new();
+		public static readonly DirectoryFileDataEvent DirectoryFileDataEvent = new();
 		public static readonly GrabbableObjectEvent GrabbableObjectEvent = new();
 	}
 	
@@ -32,6 +35,17 @@ namespace CoreSystem.Events
 			return this;
 		}
 	}	
+	
+	public class DirectoryFileDataEvent : GameEvent
+	{
+		public AbstractFileSO[] Value { get; private set; }
+
+		public DirectoryFileDataEvent InitData(AbstractFileSO[] value)
+		{
+			Value = value;
+			return this;
+		}
+	}
 	
 	public class GrabbableObjectEvent : GameEvent
 	{
