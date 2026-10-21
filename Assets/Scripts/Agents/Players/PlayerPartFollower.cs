@@ -1,4 +1,5 @@
 
+using System;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
@@ -17,6 +18,8 @@ namespace Agents.Players
         private Rigidbody2D _playerRb;
         private IMapPiece _currentPart;
         private Transform _originalParent;
+        
+        public event Action<IMapPiece> OnChangeGroundPiece;
         
         public IMapPiece CurrentPart => _currentPart;
 

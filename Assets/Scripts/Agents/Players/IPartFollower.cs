@@ -1,3 +1,4 @@
+using System;
 using MapSystem;
 
 namespace Agents.Players
@@ -5,5 +6,6 @@ namespace Agents.Players
     public interface IPartFollower
     {
         IMapPiece CurrentPart { get; }
+        event Action<IMapPiece> OnChangeGroundPiece;
     }
 }
