@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 2142262123605787258}
   - component: {fileID: 8998317665673534108}
   - component: {fileID: 3253302019980821759}
+  - component: {fileID: 2993942664850425542}
   m_Layer: 5
   m_Name: Hover Highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2142262123605787258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79559743, g: 0.9724081, b: 1, a: 0.39215687}
+  m_Color: {r: 0.79559743, g: 0.9724081, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75,6 +76,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2993942664850425542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747183695598383735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073fc902e9f14237bc435523c09f37f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.WallPaperFileHoverHighlight
 --- !u!1 &3321490186160139240
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +97,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5689847351296808197}
-  - component: {fileID: 8405870015537596777}
   - component: {fileID: 5549075915775849981}
   m_Layer: 5
   m_Name: File_icon
@@ -113,19 +125,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8405870015537596777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3321490186160139240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073fc902e9f14237bc435523c09f37f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.WallPaperIcon.WallPaperIconHoverHighlight
-  hoverHighlight: {fileID: 1747183695598383735}
 --- !u!114 &5549075915775849981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.WallPaperFile
   fileSo: {fileID: 0}
+  playerInputSO: {fileID: 11400000, guid: e1b94466858999e4c8089203ed69deef, type: 2}
   fileNameText: {fileID: 1818745048677736859}
   image: {fileID: 409444138426652655}
 --- !u!1 &3389633100178856223

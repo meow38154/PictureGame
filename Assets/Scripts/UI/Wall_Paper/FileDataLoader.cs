@@ -1,5 +1,6 @@
 using UI.Wall_Paper.Files;
 using UI.Wall_Paper.Files.SO;
+using UI.Wall_Paper.Files.Wall_Paper_File;
 using UnityEngine;
 
 namespace UI.Wall_Paper

@@ -8,7 +8,7 @@ namespace PhotoSystem.Capture
 {
     public class CaptureController : ModuleOwner
     {
-        [SerializeField] private PlayerInputSo playerInputSo;
+        [SerializeField] private PlayerInputSO playerInputSo;
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
         
         private ICaptureSelection _selection;

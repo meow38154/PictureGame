@@ -5,14 +5,21 @@ using UnityEngine.InputSystem;
 namespace Agents.Players
 {
     [CreateAssetMenu(fileName = "PlayerInput", menuName = "SO/Player input", order = 0)]
-    public class PlayerInputSo : ScriptableObject, Controls.IPlayerActions
+    public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
     {
+        [SerializeField] private float doubleClickInterval = 0.5f;
+        [SerializeField] private float doubleClickMaxDistance = 2f;
         public event Action OnMouseLeftButtonPressed;
+        public event Action OnMouseLeftDoubleButtonPressed;
         public event Action OnMouseLeftButtonReleased;
         public event Action OnJumpKeyPressed;
         public event Action OnJumpKeyReleased;
 
         private Controls _controls;
+        
+        private bool _canDoubleClick;
+        private float _lastClickTime;
+        private Vector2 _prevMouseScreenPos;
         
         public Vector2 MovementKey { get; private set; }
 
@@ -56,7 +63,26 @@ namespace Agents.Players
         public void OnCapture(InputAction.CallbackContext context)
         {
             if (context.performed)
+            {
                 OnMouseLeftButtonPressed?.Invoke();
+
+                Vector2 currentMousePos = Utility.GetMouseScreenPosition();
+                float currentTime = Time.unscaledTime;
+
+                if (_canDoubleClick && currentTime - _lastClickTime < doubleClickInterval && 
+                    Vector2.Distance(_prevMouseScreenPos, currentMousePos) < doubleClickMaxDistance)
+                {
+                    OnMouseLeftDoubleButtonPressed?.Invoke();
+                    _canDoubleClick = false;
+                }
+                else
+                {
+                    _canDoubleClick = true;
+                    _lastClickTime = currentTime;
+                    _prevMouseScreenPos = currentMousePos;
+                }
+            }
+
             if (context.canceled)
                 OnMouseLeftButtonReleased?.Invoke();
         }

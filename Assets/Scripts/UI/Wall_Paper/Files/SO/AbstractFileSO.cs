@@ -9,6 +9,6 @@ namespace UI.Wall_Paper.Files.SO
         [SerializeField] private string fileName;
         public string FileName => fileName;
 
-        protected abstract void FileLoaded();
+        public abstract void FileLoaded();
     }
 }

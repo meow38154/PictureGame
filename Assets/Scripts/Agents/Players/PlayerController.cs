@@ -8,7 +8,7 @@ namespace Agents.Players
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerController : Agent
     {
-        [field: SerializeField] public PlayerInputSo PlayerInput { get; private set; }
+        [field: SerializeField] public PlayerInputSO PlayerInput { get; private set; }
         [SerializeField] private StateListSo playerStates;
         private StateMachine _stateMachine;
         

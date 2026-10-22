@@ -8,7 +8,7 @@ namespace UI.Wall_Paper.Files.SO
     {
         [SerializeField] private string sceneName;
 
-        protected override void FileLoaded()
+        public override void FileLoaded()
         {
             SceneManager.LoadScene(sceneName);
         }

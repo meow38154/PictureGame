@@ -24,7 +24,7 @@ namespace MapSystem
         [Header("So")] 
         [SerializeField] private EventChannelSO dragStateChangedEvent;
         [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
-        [SerializeField] private PlayerInputSo inputSo;
+        [SerializeField] private PlayerInputSO inputSo;
         
         private IMapPiece _selectedPiece;
 

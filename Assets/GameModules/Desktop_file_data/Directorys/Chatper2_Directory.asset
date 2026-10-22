@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.DirectoryFileSO
   icon: {fileID: 21300000, guid: b50626af3e4e7d245aa7bfa8c617bfcf, type: 3}
   fileName: Chatper 2
+  directoryFileExecuteEvent: {fileID: 11400000, guid: 22f56136c6548da4e95172a67324a30a, type: 2}
   files: []

@@ -1,20 +1,15 @@
 using DevLib.ObjectPool.Runtime;
 using UI.Wall_Paper.Files.SO;
+using UI.Wall_Paper.Files.Wall_Paper_File;
 using UnityEngine;
 
-namespace UI.Wall_Paper.Files
+namespace UI.Wall_Paper.Files.Windows
 {
-    public class DirectoryWindow : MonoBehaviour, IPoolable
+    [RequireComponent(typeof(CanvasGroup))]
+    public class DirectoryWindow : AbstractWindows
     {
         [SerializeField] private Transform iconGroupTrm;
         [SerializeField] private WallPaperFile filePrefab;
-        
-        public PoolItemSO PoolItem { get; set; }
-        public GameObject GameObject => gameObject;
-        public void ResetItem()
-        {
-            
-        }
 
         public void SpawnIcons(AbstractFileSO[] files)
         {
