@@ -19,22 +19,20 @@ namespace MapSystem
         
         private void OnValidate()
         {
-            TileDataRegister();
+            TileDataRegister(mapPrefabTilemap);
         }
 
-        public void TileDataRegister()
+        public void TileDataRegister(Tilemap tilemap)
         {
             //리스트 초기화
             occupiedCells.Clear();
 
-            if (mapPrefabTilemap == null) return;
-            
-            if (mapPrefabTilemap == null) return;
+            if (tilemap == null) return;
 
             foreach (var pos in mapPrefabTilemap.cellBounds.allPositionsWithin)
             {
                 //그 부분에 타일 없으면 넘기기
-                if (!mapPrefabTilemap.HasTile(pos)) continue;
+                if (!tilemap.HasTile(pos)) continue;
                 
                 occupiedCells.Add(new Vector2Int(pos.x, pos.y));
             }

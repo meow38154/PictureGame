@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d263a9150b2d45e58fd257785e8d64b2, type: 3}
   m_Name: PlayerInputSo
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.PlayerInputSo
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 2048
+  doubleClickInterval: 0.2
+  doubleClickMaxDistance: 10
