@@ -9,9 +9,9 @@ namespace MapSystem
    
     public abstract class AbstractMapPiece : MonoBehaviour, IMapPiece
     {
-        private static readonly Color NotCanDeploymentColor = new Color(1f, 0.3f, 0.3f, 0.65f);
-        private static readonly Color CanDeploymentColor = new Color(0.4f, 1f, 0.6f, 0.65f);
-        private static readonly Color FixedPieceColor = new Color(0.5f, 0.5f, 0.5f, 1f);
+        private readonly Color NotCanDeploymentColor = new Color(1f, 0.3f, 0.3f, 0.65f);
+        private readonly Color CanDeploymentColor = new Color(0.4f, 1f, 0.6f, 0.65f);
+        private readonly Color FixedPieceColor = new Color(0.5f, 0.5f, 0.5f, 1f);
 
         private const float DISABLE_COLOR_ALPHA = 0.5f;
         
@@ -87,6 +87,14 @@ namespace MapSystem
             _tilemaps.color = new Color(originalColor.r, originalColor.g, originalColor.b, active ? 1f : DISABLE_COLOR_ALPHA);
             _collider.enabled = active;
             IsActive = active;
+        }
+
+        [ContextMenu("File")]
+        public void PrefabDataRefresh()
+        {
+            if (Data == null || _tilemaps == null) return;
+            
+            Data.TileDataRegister(_tilemaps);
         }
     }
 }

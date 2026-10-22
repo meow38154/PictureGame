@@ -1887,19 +1887,42 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7691838971850148544, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6669267412236252816, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1843620457}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8990490174854566423, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 352072072}
   m_SourcePrefab: {fileID: 100100000, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
 --- !u!4 &352072070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6669267412236252816, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
   m_PrefabInstance: {fileID: 352072069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &352072071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8990490174854566423, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
+  m_PrefabInstance: {fileID: 352072069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &352072072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352072071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6b4cf1e4614ff0bf80639d2be17c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapSystem.DefaultMapPiece
+  <Data>k__BackingField: {fileID: 0}
+  <Fixed>k__BackingField: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,7 +2005,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.38344997, g: 0.7834496, b: 0.9308176, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

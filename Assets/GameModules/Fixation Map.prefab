@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5052500360125344188}
   - component: {fileID: 8302203329198439675}
   - component: {fileID: 6299105333808560565}
-  - component: {fileID: 2722076971202379762}
+  - component: {fileID: 1995392381773115173}
   m_Layer: 11
   m_Name: Fixation Map
   m_TagString: Untagged
@@ -17523,7 +17523,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -39, y: -26, z: 0}
   m_Size: {x: 82, y: 46, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -17797,7 +17797,7 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 6035273716954996671}
---- !u!114 &2722076971202379762
+--- !u!114 &1995392381773115173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17806,8 +17806,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6035273716954996671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0471038873384e3e9353feab5c503539, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b6b4cf1e4614ff0bf80639d2be17c55, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapSystem.MapPiece
-  <Data>k__BackingField: {fileID: 11400000, guid: 7b526fcd81eb1ae44bfe3b055977d20a, type: 2}
-  <Fixed>k__BackingField: 1
+  m_EditorClassIdentifier: Assembly-CSharp::MapSystem.DefaultMapPiece
+  <Data>k__BackingField: {fileID: 0}
+  <Fixed>k__BackingField: 0
