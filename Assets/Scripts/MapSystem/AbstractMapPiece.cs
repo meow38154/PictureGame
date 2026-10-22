@@ -30,7 +30,7 @@ namespace MapSystem
 
         private bool _active;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             SetDeployed(Vector2Int.RoundToInt(transform.position));
             _tilemaps = GetComponentInChildren<Tilemap>();
