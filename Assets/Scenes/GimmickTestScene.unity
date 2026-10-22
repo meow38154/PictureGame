@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7817880424962910333, guid: 46c178e7921ec2d4986294ccfde53aff, type: 3}
       propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
+      value: OnOffToggle
       objectReference: {fileID: 0}
     - target: {fileID: 7817880424962910333, guid: 46c178e7921ec2d4986294ccfde53aff, type: 3}
       propertyPath: onKeyDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

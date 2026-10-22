@@ -8,8 +8,11 @@ namespace MapSystem.MapGimmicks
     public class OnOffGimmick : MonoBehaviour, IToggleable
     {
         [SerializeField] private List<GameObject> items;
+        
+        private const string ON_TEXT = "ON";
+        private const string OFF_TEXT = "OFF";
 
-        public bool Current { get; private set; } = false;
+        public bool IsOn { get; private set; } = false;
         
         private TextMeshPro _onOffText;
 
@@ -18,10 +21,10 @@ namespace MapSystem.MapGimmicks
             _onOffText = gameObject.GetComponentInChildren<TextMeshPro>();
         }
 
-        public void Toggle()
+        public void OnOffToggle()
         {
-            Current = !Current;
-            _onOffText.text = Current ? "On" : "Off";
+            IsOn = !IsOn;
+            _onOffText.text = IsOn ? ON_TEXT : OFF_TEXT;
             foreach (GameObject item in items)
             {
                 if (item.TryGetComponent(out IMapPiece mapPiece))
@@ -30,7 +33,6 @@ namespace MapSystem.MapGimmicks
                     Debug.Log(mapPiece.IsActive);
                 }
             }
-            Debug.Log("dd");
         }
     }
 }

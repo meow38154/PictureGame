@@ -2,8 +2,8 @@ namespace MapSystem.MapGimmicks
 {
     public interface IToggleable
     {
-        bool Current { get; }
+        bool IsOn { get; }
         
-        void Toggle();
+        void OnOffToggle();
     }
 }

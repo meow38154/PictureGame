@@ -1,6 +1,7 @@
 using Agents.Players;
 using CoreSystem.GrabSystem;
 using DevLib.EventChannelSystem;
+using MapSystem;
 using UI.Wall_Paper.Files;
 using UI.Wall_Paper.Files.SO;
 
@@ -34,7 +35,17 @@ namespace CoreSystem.Events
 			Value = value;
 			return this;
 		}
-	}	
+	}
+
+	// public class MapGridEvent : GameEvent
+	// {
+	// 	public IMapGrid Value { get; private set; }
+	//
+	// 	public MapGridEvent InitData(IMapGrid value)
+	// 	{
+	// 		
+	// 	}
+	// }
 	
 	public class DirectoryFileDataEvent : GameEvent
 	{
