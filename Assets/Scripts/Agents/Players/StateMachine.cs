@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Agents.FSM;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 namespace Agents.Players
 {

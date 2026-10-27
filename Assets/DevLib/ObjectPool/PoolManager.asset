@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a2ddd8ba28464dbff889cf8506b8e1, type: 3}
   m_Name: PoolManager
   m_EditorClassIdentifier: PoolRuntime::DevLib.ObjectPool.Runtime.PoolManagerSO
-  itemList:
-  - {fileID: 11400000, guid: 46b43846072871b4690015ec16776dbc, type: 2}
+  itemList: []

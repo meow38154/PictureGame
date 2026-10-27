@@ -1,3 +1,5 @@
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 using UnityEngine;
 
 namespace UI.Wall_Paper.Files.SO
@@ -8,7 +10,12 @@ namespace UI.Wall_Paper.Files.SO
         public Sprite Icon => icon;
         [SerializeField] private string fileName;
         public string FileName => fileName;
+        [SerializeField] private EventChannelSO windowOpenEvent;
 
-        public abstract void FileLoaded();
+        public virtual void FileLoaded()
+        {
+            if (windowOpenEvent != null) 
+                windowOpenEvent.RaiseEvent(CreateEvents.AbstractFileSOEvent.InitData(this));
+        }
     }
 }

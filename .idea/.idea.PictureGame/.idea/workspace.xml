@@ -8,39 +8,460 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/IHoverHighlightActive.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/IHoverHighlightActive.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/AbstractWindows.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debugs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debugs/UIRaycastDebugger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debugs/UIRaycastDebugger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/IWindowAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/IWindowAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DevLib/ObjectPool/Items/Directory Window.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DevLib/ObjectPool/Items/Directory Window.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DevLib/ObjectPool/PoolManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DevLib/ObjectPool/PoolManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper1_Directory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper1_Directory.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper2_Directory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper2_Directory.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/PlayerInputSo.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/PlayerInputSo.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/DirectoryWindow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/DirectoryWindow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/File_icon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/File_icon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/DirectoryFileDataEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/DirectoryFileDataEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/DragStateChangedEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/DragStateChangedEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/GrabbableObjectRegistedEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/GrabbableObjectRegistedEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/MovementControllerRegisteredEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventBus/MovementControllerRegisteredEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Directory Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Directory Window.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/FMODUnity.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/FMODUnity.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/LICENSE.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/README.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FMODUnityResonanceEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FMODUnityResonanceEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FMODUnityResonance.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FMODUnityResonance.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/AddIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/AddIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ArrowIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ArrowIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BankIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BankIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BrowserIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/BrowserIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ContinuousParameterIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/ContinuousParameterIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CopyIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CopyIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CrossYellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/CrossYellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Delete.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/DiscreteParameterIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/DiscreteParameterIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/EventIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/EventIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoBlack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoBlack.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoWhite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FMODLogoWhite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconClosed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconClosed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconOpen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/FolderIconOpen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LabeledParameterIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LabeledParameterIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeterOff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/LevelMeterOff.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/NotFound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/NotFound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/PreviewEmitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/PreviewEmitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SearchIconBlack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SearchIconBlack.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SelectedAlt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SelectedAlt.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SnapshotIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/SnapshotIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/StudioIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/StudioIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TickGreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TickGreen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportOpen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportOpen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOff.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportPlayButtonOn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOff.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/TransportStopButtonOn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Wrench.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/images/Wrench.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platform_ios.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platform_ios.mm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmod.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmod.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudioL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libfmodstudioL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libresonanceaudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/arm64-v8a/libresonanceaudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmod.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmod.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudioL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libfmodstudioL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libresonanceaudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/armeabi-v7a/libresonanceaudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/fmod.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/fmod.jar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmod.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmod.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudioL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libfmodstudioL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libresonanceaudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86/libresonanceaudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmod.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmod.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudioL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libfmodstudioL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libresonanceaudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/lib/x86_64/libresonanceaudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudio.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudioL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/2.0.19/libfmodstudioL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.39.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.39/libfmodstudio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.39/libfmodstudio.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.39/libfmodstudioL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.39/libfmodstudioL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.8.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.8/libfmodstudio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.8/libfmodstudio.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.8/libfmodstudioL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/3.1.8/libfmodstudioL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounityplugin.bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounityplugin.bc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounitypluginL.bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/lib/libfmodstudiounitypluginL.bc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudioL.so.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libfmodstudioL.so.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libresonanceaudio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/lib/x86_64/libresonanceaudio.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmod.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmod.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudioL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmod.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmod.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudioL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmod.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmod.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudioL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudioL_xros.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudioL_xros.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudioL_xrsimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudioL_xrsimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudio_xros.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudio_xros.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudio_xrsimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libfmodstudio_xrsimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libresonanceaudio_xros.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libresonanceaudio_xros.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libresonanceaudio_xrsimulator.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/lib/libresonanceaudio_xrsimulator.a.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/src/PlatformVisionOS.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/visionos/src/PlatformVisionOS.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/arm64/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/arm64/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/arm64/fmodstudioL.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/arm64/fmodstudioL.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/resonanceaudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/resonanceaudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/resonanceaudio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/resonanceaudio.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/AutomatableSlots.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/AutomatableSlots.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/BankRefAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/BankRefAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefreshWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefreshWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefresher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BankRefresher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BoltIntegration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/BoltIntegration.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CodeGeneration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CodeGeneration.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventReferenceUpdater.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/EventReferenceUpdater.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventPlayableEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventPlayableEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventTrackEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODEventTrackEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODUnityEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FMODUnityEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FileReorganizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FileReorganizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ListView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ListView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SetupWizard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/SetupWizard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventRefAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventRefAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/EventReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventPlayable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventPlayable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventTrack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODEventTrack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODRuntimeManagerOnGUIHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/FMODRuntimeManagerOnGUIHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRef.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRef.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRefAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/ParamRefAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Platform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Platform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformDefault.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformDefault.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileHigh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileHigh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileLow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformMobileLow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformPlayInEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/PlatformPlayInEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/RuntimeUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Settings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Settings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioBankLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioBankLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioEventEmitter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioEventEmitter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioGlobalParameterTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioGlobalParameterTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioListener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioParameterTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/StudioParameterTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_dsp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_dsp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_errors.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_errors.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_studio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/fmod_studio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/linux.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/linux/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/linux/lib/x86_64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/linux/lib/x86_64/libfmodstudioL.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/linux/lib/x86_64/libfmodstudioL.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/arm64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/arm64/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/arm64/fmodstudioL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86/fmodstudioL.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86_64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86_64/fmodstudioL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/staging/win/lib/x86_64/fmodstudioL.dll.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/DirectoryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/DirectoryWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/DirectoryWindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindowManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/DirectoryWindowManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindowManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/DisposablePieceDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/DisposablePieceDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IPartFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/IPartFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/AbstractFileSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/AbstractFileSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/DirectoryFileSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/DirectoryFileSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/SceneFileSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/SceneFileSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/WallPaperFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/WallPaperFile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFile.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/WallPaperFileHoverHighlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFileHoverHighlight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/WallPaperFileHoverHighlight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFileHoverHighlight.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/AbstractWindows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/AbstractWindows.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/DirectoryWindowManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindowManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/DirectoryWindowManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +473,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/e7/018916bc/CursorLockMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2df39eb45b3b41f2a1da4c46d177a418b000/ec/283cdaf3/RectTransformUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/68/94d78292/Enum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,11 +525,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/DirectoryWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/WallPaperFile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WIndows.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9abe0f7cac7e/Editor/PSDGameObjectPreviewData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -115,63 +539,64 @@
     <commands />
     <urls />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000035685" />
-      <entry key="S10" value="1.0000018890600966" />
-      <entry key="S30" value="1.0123956184816834" />
-      <entry key="S60" value="1.117266509841257" />
-      <entry key="M2" value="1.4679730211369495" />
-      <entry key="M5" value="3.834991677218408" />
-      <entry key="M10" value="8.632333370124625" />
-      <entry key="M15" value="13.05259501086365" />
-      <entry key="M30" value="30.589078130777168" />
-      <entry key="H1" value="67.60911379314304" />
-      <entry key="H2" value="121.8361627670612" />
-      <entry key="H4" value="242.05610534581297" />
-      <entry key="D1" value="1159.6994031323843" />
-      <entry key="W1" value="1786.5303427958727" />
+      <entry key="S2" value="1.000126191965417" />
+      <entry key="S5" value="1.0951155842673144" />
+      <entry key="S10" value="1.8710965366285834" />
+      <entry key="S30" value="4.819034204401378" />
+      <entry key="S60" value="6.527725408842477" />
+      <entry key="M2" value="7.739376007792473" />
+      <entry key="M5" value="11.215474273596998" />
+      <entry key="M10" value="20.53426867787516" />
+      <entry key="M15" value="31.32984577782455" />
+      <entry key="M30" value="73.7069023200746" />
+      <entry key="H1" value="166.466093127605" />
+      <entry key="H2" value="300.9255144593747" />
+      <entry key="H4" value="477.84827962482916" />
+      <entry key="D1" value="1494.8668166826242" />
+      <entry key="W1" value="2271.794097603529" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.6533276082690564E-114" />
-      <entry key="S2" value="4.035968044613148E-29" />
-      <entry key="S5" value="4.38913650195451E-12" />
-      <entry key="S10" value="2.0950266112759785E-6" />
-      <entry key="S30" value="0.012795683062006947" />
-      <entry key="S60" value="0.1133409539961439" />
-      <entry key="M2" value="0.38362543511951264" />
-      <entry key="M5" value="2.0962441548303232" />
-      <entry key="M10" value="5.682009142851964" />
-      <entry key="M15" value="8.56889270647364" />
-      <entry key="M30" value="16.283876375762343" />
-      <entry key="H1" value="29.099791212728945" />
-      <entry key="H2" value="47.30369558897577" />
-      <entry key="H4" value="92.34837698801384" />
-      <entry key="D1" value="475.0819590758112" />
-      <entry key="W1" value="744.1422238681463" />
+      <entry key="MS100" value="1.35196E-319" />
+      <entry key="MS500" value="1.683423395783136E-64" />
+      <entry key="S2" value="1.139064559715506E-16" />
+      <entry key="S5" value="4.1939122158015926E-7" />
+      <entry key="S10" value="6.476042167714468E-4" />
+      <entry key="S30" value="0.08651735709020256" />
+      <entry key="S60" value="0.2942605531859321" />
+      <entry key="M2" value="0.5646199346477258" />
+      <entry key="M5" value="1.47373997150974" />
+      <entry key="M10" value="4.061170563213148" />
+      <entry key="M15" value="8.002783004128377" />
+      <entry key="M30" value="27.871600446846315" />
+      <entry key="H1" value="73.32403429434213" />
+      <entry key="H2" value="136.80222734924013" />
+      <entry key="H4" value="214.37238525061386" />
+      <entry key="D1" value="642.8018908010284" />
+      <entry key="W1" value="975.032292975562" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.7492917354115494E-4" />
-      <entry key="MS500" value="0.21643414137991457" />
-      <entry key="S2" value="0.6820739174396773" />
-      <entry key="S5" value="0.8580894786506378" />
-      <entry key="S10" value="0.9263347734155112" />
-      <entry key="S30" value="0.999120204701725" />
-      <entry key="S60" value="1.2138883460709207" />
-      <entry key="M2" value="1.8383876414561027" />
-      <entry key="M5" value="5.916348204806159" />
-      <entry key="M10" value="14.297440774925105" />
-      <entry key="M15" value="21.605250863008" />
-      <entry key="M30" value="46.858647793585256" />
-      <entry key="H1" value="96.69695019252767" />
-      <entry key="H2" value="169.12992770238387" />
-      <entry key="H4" value="334.39344241609757" />
-      <entry key="D1" value="1634.7716043640078" />
-      <entry key="W1" value="2530.670426114528" />
+      <entry key="MS100" value="0.21464135910943843" />
+      <entry key="MS500" value="0.7350936681945205" />
+      <entry key="S2" value="0.9260634127628261" />
+      <entry key="S5" value="1.0625808656556315" />
+      <entry key="S10" value="1.8467880880709364" />
+      <entry key="S30" value="4.88410547884458" />
+      <entry key="S60" value="6.804929333930433" />
+      <entry key="M2" value="8.29208934999925" />
+      <entry key="M5" value="12.678677211837021" />
+      <entry key="M10" value="24.58141698435549" />
+      <entry key="M15" value="39.31507882197218" />
+      <entry key="M30" value="101.54910676734649" />
+      <entry key="H1" value="239.75052090429494" />
+      <entry key="H2" value="437.6904702286986" />
+      <entry key="H4" value="692.1915760954521" />
+      <entry key="D1" value="2137.6548710670972" />
+      <entry key="W1" value="3246.8234764635426" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -271,6 +696,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

@@ -19,8 +19,6 @@ namespace Agents.Players
         private IMapPiece _currentPart;
         private Transform _originalParent;
         
-        public event Action<IMapPiece> OnChangeGroundPiece;
-        
         public IMapPiece CurrentPart => _currentPart;
 
         public override void Initialize(ModuleOwner owner)

@@ -18,13 +18,13 @@ namespace Agents.Players
             _partFollower = owner.GetModule<IPartFollower>();
             _groundChecker = owner.GetModule<IGroundChecker>();
 
-            _partFollower.OnChangeGroundPiece += CheckPiece;
+            //_partFollower.OnChangeGroundPiece += CheckPiece;
             _groundChecker.OnGroundExit += HandleExitPiece;
         }
 
         private void OnDestroy()
         {
-            _partFollower.OnChangeGroundPiece -= CheckPiece;
+            //_partFollower.OnChangeGroundPiece -= CheckPiece;
         }
         
         private void HandleExitPiece(Collider2D pieceCollider)
