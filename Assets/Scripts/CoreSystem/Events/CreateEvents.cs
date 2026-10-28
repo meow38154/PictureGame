@@ -1,4 +1,5 @@
 using Agents.Players;
+using Command;
 using CoreSystem.GrabSystem;
 using DevLib.EventChannelSystem;
 using UI.Wall_Paper.Files.SO;
@@ -24,6 +25,7 @@ namespace CoreSystem.Events
         public static readonly GrabbableObjectEvent GrabbableObjectEvent = new();
         public static readonly AbstractFileSOEvent AbstractFileSOEvent = new();
         public static readonly AbstractWindowEvent AbstractWindowEvent = new();
+        public static readonly CommandInvokeEvent CommandInvokeEvent = new();
     }
 
     public class BoolEvent : JEvent<BoolEvent, bool> { }
@@ -35,4 +37,6 @@ namespace CoreSystem.Events
     public class AbstractWindowEvent : JEvent<AbstractWindowEvent, AbstractWindows> { }
 
     public class GrabbableObjectEvent : JEvent<GrabbableObjectEvent, IGrabbable> { }
+    
+    public class CommandInvokeEvent : JEvent<CommandInvokeEvent, CommandInvokeEventStruct> { }
 }

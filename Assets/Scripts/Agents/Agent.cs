@@ -1,9 +1,8 @@
-﻿using DevLib.ModuleSystem;
-using UnityEngine;
+﻿using Command.UndoableObjects;
 
 namespace Agents
 {
-    public class Agent : ModuleOwner
+    public class Agent : UndoableObject
     {
         
     }

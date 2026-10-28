@@ -1,4 +1,5 @@
 using Agents.Players;
+using Command;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
@@ -24,6 +25,7 @@ namespace MapSystem
         [Header("So")] 
         [SerializeField] private EventChannelSO dragStateChangedEvent;
         [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
+        [SerializeField] private EventChannelSO commandInvokeEvent;
         [SerializeField] private PlayerInputSO inputSo;
         
         private IMapPiece _selectedPiece;
@@ -132,32 +134,50 @@ namespace MapSystem
 
         private void EndDrag()
         {
-            if (_canPlace && mapGrid.TryDeployment(_targetPosition, _selectedPiece.Data))
-            {
-                _selectedPiece.SetDeployed(_targetPosition);
-            }
-            else
-            {
-                _selectedPiece.Transform.position = _originalWorldPosition;
+            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.Data);
 
-                if (_wasDeployed && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
+            Vector2Int finalGridPosition = willBeDeployed ? _targetPosition : _originalGridPosition;
+
+            Vector3 finalWorldPosition = willBeDeployed ? mapGrid.CellToWorld(finalGridPosition) : _originalWorldPosition;
+
+            finalWorldPosition.z = _originalWorldPosition.z;
+            
+            _selectedPiece.Transform.position = _originalWorldPosition;
+
+            bool hasChanged = finalWorldPosition != _originalWorldPosition || willBeDeployed != _wasDeployed;
+
+            if (hasChanged)
+            {
+                ICommand command = new MoveMapPieceCommand(
+                    _selectedPiece, mapGrid, _originalGridPosition, finalGridPosition, 
+                    _originalWorldPosition, finalWorldPosition, _wasDeployed, willBeDeployed);
+
+                CommandInvokeEventStruct eventData = new()
+                {
+                    Action = CommandActionType.Execute,
+                    Command = command
+                };
+
+                commandInvokeEvent.RaiseEvent(CreateEvents.CommandInvokeEvent.InitData(eventData));
+            }
+            else if (_wasDeployed)
+            {
+                if (mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
                 {
                     _selectedPiece.SetDeployed(_originalGridPosition);
                 }
             }
 
             _selectedPiece.ResetPreview();
-
-            // 드래그 종료
             _selectedPiece.SetDragging(false);
             _selectedPiece.SetPieceActive(true);
+
             dragStateChangedEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
-            
+
             inputSo.CanMovement = true;
-            
+
             _selectedPiece = null;
         }
-
         private Vector2Int SnapToGrid(Vector2Int position)
         {
             int size = Mathf.Max(1, sellSize);

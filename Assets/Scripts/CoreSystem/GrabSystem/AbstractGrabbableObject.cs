@@ -1,11 +1,12 @@
-﻿using CoreSystem.Events;
+﻿using Command.UndoableObjects;
+using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
 
 namespace CoreSystem.GrabSystem
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public abstract class AbstractGrabbableObject : MonoBehaviour, IGrabbable
+    public abstract class AbstractGrabbableObject : UndoableObject, IGrabbable
     {
         [SerializeField] private EventChannelSO grabEventChannelSo;
         public bool IsGrabbing { get; private set; }
@@ -14,8 +15,9 @@ namespace CoreSystem.GrabSystem
         private Collider2D _collider;
         private Rigidbody2D _rb;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             _rb = GetComponent<Rigidbody2D>();
             _collider = GetComponent<Collider2D>();
         }

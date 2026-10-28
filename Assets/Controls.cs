@@ -118,6 +118,33 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left Ctrl"",
+                    ""type"": ""Button"",
+                    ""id"": ""c128e085-5c66-4a82-ab0e-d1ed9676b7fa"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Z"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5ea9b69-9be4-4ac7-b9d1-66f9279822c1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Y"",
+                    ""type"": ""Button"",
+                    ""id"": ""03fbd72f-3c3b-4dd2-82a9-8fb4386d0c8d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -250,6 +277,39 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7307182f-d6b0-4866-8728-b18dac81079e"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left Ctrl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10b128f9-4538-4985-814a-a44b8f403696"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Z"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31b92781-fd48-4a95-a418-f6e3fd40c735"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Y"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -906,6 +966,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Capture = m_Player.FindAction("Capture", throwIfNotFound: true);
+        m_Player_LeftCtrl = m_Player.FindAction("Left Ctrl", throwIfNotFound: true);
+        m_Player_Z = m_Player.FindAction("Z", throwIfNotFound: true);
+        m_Player_Y = m_Player.FindAction("Y", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1002,6 +1065,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Capture;
+    private readonly InputAction m_Player_LeftCtrl;
+    private readonly InputAction m_Player_Z;
+    private readonly InputAction m_Player_Y;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1025,6 +1091,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Capture".
         /// </summary>
         public InputAction @Capture => m_Wrapper.m_Player_Capture;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/LeftCtrl".
+        /// </summary>
+        public InputAction @LeftCtrl => m_Wrapper.m_Player_LeftCtrl;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Z".
+        /// </summary>
+        public InputAction @Z => m_Wrapper.m_Player_Z;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Y".
+        /// </summary>
+        public InputAction @Y => m_Wrapper.m_Player_Y;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1060,6 +1138,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Capture.started += instance.OnCapture;
             @Capture.performed += instance.OnCapture;
             @Capture.canceled += instance.OnCapture;
+            @LeftCtrl.started += instance.OnLeftCtrl;
+            @LeftCtrl.performed += instance.OnLeftCtrl;
+            @LeftCtrl.canceled += instance.OnLeftCtrl;
+            @Z.started += instance.OnZ;
+            @Z.performed += instance.OnZ;
+            @Z.canceled += instance.OnZ;
+            @Y.started += instance.OnY;
+            @Y.performed += instance.OnY;
+            @Y.canceled += instance.OnY;
         }
 
         /// <summary>
@@ -1080,6 +1167,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Capture.started -= instance.OnCapture;
             @Capture.performed -= instance.OnCapture;
             @Capture.canceled -= instance.OnCapture;
+            @LeftCtrl.started -= instance.OnLeftCtrl;
+            @LeftCtrl.performed -= instance.OnLeftCtrl;
+            @LeftCtrl.canceled -= instance.OnLeftCtrl;
+            @Z.started -= instance.OnZ;
+            @Z.performed -= instance.OnZ;
+            @Z.canceled -= instance.OnZ;
+            @Y.started -= instance.OnY;
+            @Y.performed -= instance.OnY;
+            @Y.canceled -= instance.OnY;
         }
 
         /// <summary>
@@ -1401,6 +1497,27 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCapture(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left Ctrl" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeftCtrl(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Z" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZ(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Y" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnY(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

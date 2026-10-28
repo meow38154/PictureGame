@@ -13,7 +13,13 @@ namespace Agents.Players
         public event Action OnMouseLeftDoubleButtonPressed;
         public event Action OnMouseLeftButtonReleased;
         public event Action OnJumpKeyPressed;
-        public event Action OnJumpKeyReleased;
+        public event Action OnJumpKeyReleased;        
+        public event Action OnLCtrlKeyPressed;
+        public event Action OnLCtrlKeyReleased;        
+        public event Action OnZKeyPressed;
+        public event Action OnZKeyReleased;       
+        public event Action OnYKeyPressed;
+        public event Action OnYKeyReleased;
 
         private Controls _controls;
         
@@ -85,6 +91,24 @@ namespace Agents.Players
 
             if (context.canceled)
                 OnMouseLeftButtonReleased?.Invoke();
+        }
+
+        public void OnLeftCtrl(InputAction.CallbackContext context)
+        {
+            if (context.performed) OnLCtrlKeyPressed?.Invoke();
+            if (context.canceled) OnLCtrlKeyReleased?.Invoke();
+        }
+
+        public void OnZ(InputAction.CallbackContext context)
+        {
+            if (context.performed) OnZKeyPressed?.Invoke();
+            if (context.canceled) OnZKeyReleased?.Invoke();
+        }
+
+        public void OnY(InputAction.CallbackContext context)
+        {
+            if (context.performed) OnYKeyPressed?.Invoke();
+            if (context.canceled) OnYKeyReleased?.Invoke();
         }
     }
 }

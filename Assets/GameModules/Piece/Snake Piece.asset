@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39cd9bd2f6b04dcd83d05edb358a65cf, type: 3}
-  m_Name: e 2
+  m_Name: Snake Piece
   m_EditorClassIdentifier: Assembly-CSharp::MapSystem.MapPieceSo
-  mapPrefabTilemap: {fileID: 6493836977155422317, guid: bca87a7792ee54042bdf1c65384bdc72, type: 3}
+  mapPrefabTilemap: {fileID: 3860451926815663703, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
   occupiedCells:
   - {x: -3, y: -3}
   - {x: -2, y: -3}
@@ -26,14 +26,14 @@ MonoBehaviour:
   - {x: 0, y: -2}
   - {x: 1, y: -2}
   - {x: 2, y: -2}
-  - {x: 1, y: -1}
-  - {x: 2, y: -1}
-  - {x: 1, y: 0}
-  - {x: 2, y: 0}
-  - {x: 1, y: 1}
-  - {x: 2, y: 1}
-  - {x: 1, y: 2}
-  - {x: 2, y: 2}
+  - {x: -3, y: -1}
+  - {x: -2, y: -1}
+  - {x: -3, y: 0}
+  - {x: -2, y: 0}
+  - {x: -3, y: 1}
+  - {x: -2, y: 1}
+  - {x: -3, y: 2}
+  - {x: -2, y: 2}
   - {x: -3, y: 3}
   - {x: -2, y: 3}
   - {x: -1, y: 3}
@@ -46,3 +46,23 @@ MonoBehaviour:
   - {x: 0, y: 4}
   - {x: 1, y: 4}
   - {x: 2, y: 4}
+  - {x: 1, y: 5}
+  - {x: 2, y: 5}
+  - {x: 1, y: 6}
+  - {x: 2, y: 6}
+  - {x: 1, y: 7}
+  - {x: 2, y: 7}
+  - {x: 1, y: 8}
+  - {x: 2, y: 8}
+  - {x: -3, y: 9}
+  - {x: -2, y: 9}
+  - {x: -1, y: 9}
+  - {x: 0, y: 9}
+  - {x: 1, y: 9}
+  - {x: 2, y: 9}
+  - {x: -3, y: 10}
+  - {x: -2, y: 10}
+  - {x: -1, y: 10}
+  - {x: 0, y: 10}
+  - {x: 1, y: 10}
+  - {x: 2, y: 10}

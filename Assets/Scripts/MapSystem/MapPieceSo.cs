@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Common.Attributes;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -14,7 +15,7 @@ namespace MapSystem
         [SerializeField] private Tilemap mapPrefabTilemap;
 
         //에셋에 저장, 수정은 불가
-        [SerializeField] private List<Vector2Int> occupiedCells = new();
+        [ReadOnly, SerializeField] private List<Vector2Int> occupiedCells = new();
         public IReadOnlyList<Vector2Int> OccupiedCells => occupiedCells;
         
         private void OnValidate()

@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace Agents.Players.GrabSystem
 {
-    public class GrabController : Module
+    public class GrabController : Module, IGrabController
     {
-        [ReadOnly, SerializeField] private GameObject currentGrabbingObject;
+        [field: SerializeField, ReadOnly] public GameObject CurrentGrabbingObject { get; set; }
         [SerializeField] private EventChannelSO grabEventChannelSo;
         [SerializeField] private Vector2 grabOffset;
         
@@ -31,7 +31,7 @@ namespace Agents.Players.GrabSystem
             grabbedObject.Transform.position = (Vector2)_owner.transform.position + grabOffset;
             grabbedObject.Transform.SetParent(_owner.transform, true);
             
-            currentGrabbingObject = obj.Value.Transform.gameObject;
+            CurrentGrabbingObject = obj.Value.Transform.gameObject;
         }
     }
 }
