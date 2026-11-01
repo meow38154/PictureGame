@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39cd9bd2f6b04dcd83d05edb358a65cf, type: 3}
-  m_Name: e
+  m_Name: U-shaped Piece
   m_EditorClassIdentifier: Assembly-CSharp::MapSystem.MapPieceSo
   mapPrefabTilemap: {fileID: 3860451926815663703, guid: 0b27014bccfeb074a886ba49f7d1bd10, type: 3}
   occupiedCells:
@@ -46,3 +46,23 @@ MonoBehaviour:
   - {x: 0, y: 4}
   - {x: 1, y: 4}
   - {x: 2, y: 4}
+  - {x: 1, y: 5}
+  - {x: 2, y: 5}
+  - {x: 1, y: 6}
+  - {x: 2, y: 6}
+  - {x: 1, y: 7}
+  - {x: 2, y: 7}
+  - {x: 1, y: 8}
+  - {x: 2, y: 8}
+  - {x: -3, y: 9}
+  - {x: -2, y: 9}
+  - {x: -1, y: 9}
+  - {x: 0, y: 9}
+  - {x: 1, y: 9}
+  - {x: 2, y: 9}
+  - {x: -3, y: 10}
+  - {x: -2, y: 10}
+  - {x: -1, y: 10}
+  - {x: 0, y: 10}
+  - {x: 1, y: 10}
+  - {x: 2, y: 10}

@@ -14,6 +14,7 @@ namespace UI.Wall_Paper.Files.Windows.Manager
         {
             AbstractWindows window = Instantiate(windowPrefab, windowsTrm);
             window.WindowOpen();
+            window.ReflectWindowData(fileSO.FileName, fileSO.Icon);
             return window;
         }
 

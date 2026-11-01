@@ -6,6 +6,8 @@ namespace UI.Wall_Paper.Files.SO
 {
     public abstract class AbstractFileSO : ScriptableObject
     {
+        [SerializeField] private AbstractFileSO parentFileSO;
+        public AbstractFileSO ParentFileSO => parentFileSO;
         [SerializeField] private Sprite icon;
         public Sprite Icon => icon;
         [SerializeField] private string fileName;
@@ -14,8 +16,7 @@ namespace UI.Wall_Paper.Files.SO
 
         public virtual void FileLoaded()
         {
-            if (windowOpenEvent != null) 
-                windowOpenEvent.RaiseEvent(CreateEvents.AbstractFileSOEvent.InitData(this));
+            if (windowOpenEvent != null) windowOpenEvent.RaiseEvent(CreateEvents.AbstractFileSOEvent.InitData(this));
         }
     }
 }

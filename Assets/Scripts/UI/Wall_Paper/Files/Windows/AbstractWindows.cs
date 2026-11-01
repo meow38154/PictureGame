@@ -1,14 +1,17 @@
 using DevLib.ModuleSystem;
 using UnityEngine;
 using System.Collections;
+using Common;
+using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace UI.Wall_Paper.Files.Windows
 {
     public abstract class AbstractWindows : ModuleOwner, IPointerDownHandler, IDragHandler, IEndDragHandler
     {
         [Header("Animation Settings")]
-        [SerializeField] private float animDuration = 0.5f;
+        [SerializeField] private float animDuration = 0.1f;
         [Header("Resize Settings")]
         [SerializeField] private float borderWidth = 10f;
         [SerializeField] private Vector2 minSize = new(200f, 150f);
@@ -33,12 +36,21 @@ namespace UI.Wall_Paper.Files.Windows
         private Vector2 _startSize;
         private Vector2 _startPosition;
 
+        private Visuals _visual;
+
         private IWindowAnimation _windowAnimation;
+
+        private TextMeshProUGUI _titleText;
+        private Image _icon;
 
         protected override void Awake()
         {
             base.Awake();
+            _visual = GetComponentInChildren<Visuals>();
+            _titleText = _visual.GetComponentInChildren<TextMeshProUGUI>();
+            _icon = _visual.GetComponentInChildren<Images>().GetComponent<Image>();
             _windowAnimation = GetModule<IWindowAnimation>();
+            WindowFocusing();
         }
 
         public void WindowOpen()
@@ -61,8 +73,6 @@ namespace UI.Wall_Paper.Files.Windows
         public void OnPointerDown(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left) return;
-            
-            transform.SetAsLastSibling();
 
             _rect ??= GetComponent<RectTransform>();
             _parentRect ??= _rect.parent as RectTransform;
@@ -73,6 +83,8 @@ namespace UI.Wall_Paper.Files.Windows
 
             if (CurrentBorder == BorderDirection.None) return;
 
+            WindowFocusing();
+            
             _startSize = _rect.rect.size;
             _startPosition = _rect.anchoredPosition;
 
@@ -151,6 +163,17 @@ namespace UI.Wall_Paper.Files.Windows
             else if (point.y <= rect.yMin + borderWidth) direction |= BorderDirection.Bottom;
 
             return direction;
+        }
+
+        private void WindowFocusing()
+        {
+            transform.SetAsLastSibling();
+        }
+
+        public void ReflectWindowData(string text, Sprite icon)
+        {
+            _titleText.text = text;
+            _icon.sprite = icon;
         }
     }
 }

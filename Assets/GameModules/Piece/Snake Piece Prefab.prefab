@@ -1043,5 +1043,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6b4cf1e4614ff0bf80639d2be17c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapSystem.DefaultMapPiece
-  <Data>k__BackingField: {fileID: 11400000, guid: 9d8ec1d8cb0f5704db9a5533141b473c, type: 2}
+  <Data>k__BackingField: {fileID: 11400000, guid: 7b526fcd81eb1ae44bfe3b055977d20a, type: 2}
   <Fixed>k__BackingField: 0

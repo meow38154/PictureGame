@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace UI.Wall_Paper.Files.Windows
 {
-    public class MouseGrabbingWindow : Module,
-        IPointerDownHandler, IPointerUpHandler, IDragHandler
+    public class MouseGrabbingWindow : Module, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
         private bool _isGrabbing;
 
@@ -23,8 +22,7 @@ namespace UI.Wall_Paper.Files.Windows
         
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (eventData.button != PointerEventData.InputButton.Left)
-                return;
+            if (eventData.button != PointerEventData.InputButton.Left) return;
 
             _isGrabbing = true;
         }
@@ -33,14 +31,12 @@ namespace UI.Wall_Paper.Files.Windows
         {
             if (!_isGrabbing) return;
 
-            _ownerRectTransform.anchoredPosition +=
-                eventData.delta / _canvas.scaleFactor;
+            _ownerRectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (eventData.button != PointerEventData.InputButton.Left)
-                return;
+            if (eventData.button != PointerEventData.InputButton.Left) return;
 
             _isGrabbing = false;
         }
