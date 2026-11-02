@@ -41,6 +41,7 @@ namespace UI.Wall_Paper.Files.Windows
             _ownerRectTransform.localScale = _targetScale;
 
             _openScaleChangeTween = _ownerRectTransform.DOScale(_originalScale, duration);
+            _canvasGroup.alpha = 0;
             _openFadeTween = DOTween.To(() => _canvasGroup.alpha, x => _canvasGroup.alpha = x, 1f, duration);
         }
 

@@ -13,6 +13,7 @@ namespace UI.Wall_Paper.Files.Windows.Manager
         [ReadOnly, SerializeField] private List<AbstractWindows> windowsList;
         [SerializeField] private RectTransform taskbarTrm;
 
+        [SerializeField] private GameObject pathButton;
         private readonly Dictionary<Type, AbstractWindowManager> abstractWindowDict = new();
         private readonly Dictionary<Type, GameObject> iconDict = new();
         

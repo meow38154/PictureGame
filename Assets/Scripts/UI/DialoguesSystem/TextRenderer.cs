@@ -16,6 +16,7 @@ namespace UI.DialoguesSystem
 
         private Coroutine _textCoroutine;
         private Coroutine _eventCoroutine;
+        private Coroutine _autoNextCoroutine;
 
         private void Awake()
         {
@@ -25,7 +26,14 @@ namespace UI.DialoguesSystem
 
         public void AutoNextTextRender(DialoguesTextBundleSO textBundle)
         {
-            StartCoroutine(AutoNextTextRenderCoroutine(textBundle));
+            if (textBundle == null) return;
+
+            StopRendering();
+
+            textBundleSO = textBundle;
+            _textCount = 0;
+
+            _autoNextCoroutine = StartCoroutine(AutoNextTextRenderCoroutine(textBundle));
         }
 
         private IEnumerator AutoNextTextRenderCoroutine(DialoguesTextBundleSO textBundle)
@@ -35,12 +43,14 @@ namespace UI.DialoguesSystem
                 NextTextRender();
                 yield return new WaitForSecondsRealtime(data.textDuration + freeTime);
             }
+
+            _autoNextCoroutine = null;
         }
 
-    [ContextMenu("Next text")]
+        [ContextMenu("Next text")]
         public void NextTextRender()
         {
-            if (_textCount >= textBundleSO.DialoguesDataBundle.Length) return;
+            if (textBundleSO == null || _textCount >= textBundleSO.DialoguesDataBundle.Length) return;
 
             if (_textCoroutine != null) StopCoroutine(_textCoroutine);
 
@@ -78,16 +88,24 @@ namespace UI.DialoguesSystem
             data.EventDuringTextRendering?.Invoke();
             _eventCoroutine = null;
         }
-        
-        //비활성화 시 코루틴 정지
-        private void OnDisable()
+
+        private void StopRendering()
         {
+            if (_autoNextCoroutine != null) StopCoroutine(_autoNextCoroutine);
+
             if (_textCoroutine != null) StopCoroutine(_textCoroutine);
 
             if (_eventCoroutine != null) StopCoroutine(_eventCoroutine);
 
+            _autoNextCoroutine = null;
             _textCoroutine = null;
             _eventCoroutine = null;
+        }
+
+        //비활성화 시 코루틴 정지
+        private void OnDisable()
+        {
+            StopRendering();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace UI.Wall_Paper.Files.Windows.Manager
             foreach (var e in events)
             {
                 OnOpenWindow += e.OpenEvent;
+                Debug.Log("ㅇ");
             }
         }
 
