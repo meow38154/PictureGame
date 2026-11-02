@@ -1,4 +1,5 @@
-﻿using DevLib.BattleSystem.Feedback;
+﻿using CoreSystem.Manager;
+using DevLib.BattleSystem.Feedback;
 using UnityEngine;
 
 namespace Feedbacks
@@ -9,7 +10,7 @@ namespace Feedbacks
         
         public override void PlayFeedback()
         {
-            //await SceneChangeManager.Instance.SceneChangeAsync(sceneName);
+            SceneChangeManager.Instance.ChangeScene(sceneName);
         }
     }
 }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.SceneFileSO
   parentFileSO: {fileID: 11400000, guid: 5618b70aaa7838c49bcc0fda650bb7e9, type: 2}
   icon: {fileID: 3559879713902379002, guid: 42ed7d200fa3d9743b5ad5529266aecb, type: 3}
-  fileName: Stage 2
+  fileName: Introduction2.ppx.vivirus
   windowOpenEvent: {fileID: 11400000, guid: 22f56136c6548da4e95172a67324a30a, type: 2}
   sceneName: Stage_02

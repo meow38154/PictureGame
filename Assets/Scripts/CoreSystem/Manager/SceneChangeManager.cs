@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace CoreSystem.Manager
 {
     public class SceneChangeManager : MonoBehaviour
     {
-        [SerializeField] private string defaultSceneName;
         public static SceneChangeManager Instance { get; private set; }
+
+        private bool _isLoading;
 
         private void Awake()
         {
             ManagerInit();
+            DontDestroyOnLoad(gameObject);
         }
 
         private void ManagerInit()
@@ -22,11 +24,12 @@ namespace CoreSystem.Manager
             }
 
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
-        public void ChangeScene(string sceneName)
+        public AsyncOperation ChangeScene(string sceneName)
         {
-
+            return SceneManager.LoadSceneAsync(sceneName);
         }
     }
 }
