@@ -17,7 +17,7 @@ namespace UI.Wall_Paper.Files.Windows
             base.Initialize(owner);
 
             _ownerRectTransform = _owner.GetComponent<RectTransform>();
-            _canvas = _owner.GetComponentInParent<Canvas>().rootCanvas;
+            _canvas = WallPaperManager.Instance.GetComponent<Canvas>();
         }
         
         public void OnPointerDown(PointerEventData eventData)

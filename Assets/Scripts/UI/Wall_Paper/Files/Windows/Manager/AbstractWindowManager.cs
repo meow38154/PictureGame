@@ -14,14 +14,13 @@ namespace UI.Wall_Paper.Files.Windows.Manager
         
         public event Action<AbstractWindowManager> OnOpenWindow;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             var events = GetComponentsInChildren<AbstractWindowOpenEvent>();
 
             foreach (var e in events)
             {
                 OnOpenWindow += e.OpenEvent;
-                Debug.Log("ㅇ");
             }
         }
 

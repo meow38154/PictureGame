@@ -12,7 +12,9 @@ namespace UI.Wall_Paper.Files.Windows
         private CanvasGroup _canvasGroup;
         private Vector3 _originalScale;
         private Vector3 _targetScale;
-        
+
+        [SerializeField] private bool dontStartAnim;
+        [SerializeField] private bool dontEndAnim;
         [SerializeField] private float startScaleMultiplier = 0.7f;
 
         public override void Initialize(ModuleOwner owner)
@@ -29,7 +31,7 @@ namespace UI.Wall_Paper.Files.Windows
             }
 
             _originalScale = _ownerRectTransform.localScale;
-
+            
             _openScaleChangeTween?.Kill();
             _openFadeTween?.Kill();
             
@@ -38,6 +40,8 @@ namespace UI.Wall_Paper.Files.Windows
 
         public void OpenAnimationPlay(float duration)
         {
+            if (dontStartAnim) duration = 0;
+            
             _ownerRectTransform.localScale = _targetScale;
 
             _openScaleChangeTween = _ownerRectTransform.DOScale(_originalScale, duration);
@@ -47,6 +51,8 @@ namespace UI.Wall_Paper.Files.Windows
 
         public void CloseAnimationPlay(float duration)
         {
+            if (dontEndAnim) duration = 0;
+            
             _ownerRectTransform.localScale = _originalScale;
             
             _openScaleChangeTween = _ownerRectTransform.DOScale(_targetScale, duration);

@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4860,7 +4860,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -5007,7 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d98843295c74c799124ffad801e27a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.GrabSystem.GrabController
-  currentGrabbingObject: {fileID: 0}
+  <CurrentGrabbingObject>k__BackingField: {fileID: 0}
   grabEventChannelSo: {fileID: 11400000, guid: 9ef193906c48b2c438789e248f226a6b, type: 2}
   grabOffset: {x: 0, y: 0}
 --- !u!1 &424506816192737671
@@ -5137,7 +5137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5122922813407463399, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}
@@ -5339,7 +5339,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1399319047
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 101
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5156993582514690110, guid: b54a3c77c8970d7448e4a12c620034e3, type: 3}
@@ -5402,7 +5402,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10212,7 +10212,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -10325,6 +10325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1cabe06ba94becaa1e5474e7f32a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Agents.Players.PlayerController
+  commandInvokeEvent: {fileID: 0}
   <PlayerInput>k__BackingField: {fileID: 11400000, guid: e1b94466858999e4c8089203ed69deef, type: 2}
   playerStates: {fileID: 11400000, guid: c1fe94e027fffb443a064a4d17fbcbf0, type: 2}
 --- !u!70 &5738247038244568881
@@ -10630,7 +10631,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1399319047
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
@@ -10722,7 +10723,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2729190761258598410, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}
@@ -11029,7 +11030,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -15839,7 +15840,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -15952,7 +15953,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8754419404319283786, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}
@@ -16094,7 +16095,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1399319047
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4401181725353862837, guid: 285083aa4e2d21e4da2da5b1e07f4c29, type: 3}
@@ -16189,7 +16190,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -20999,7 +21000,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -21144,7 +21145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2658080953883009866, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}
@@ -21287,7 +21288,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1399319047
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: -100
   m_MaskInteraction: 0
   m_Sprite: {fileID: -49375607616518755, guid: e420a34001e85644aa429b71b0881972, type: 3}
@@ -21414,7 +21415,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -26224,7 +26225,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -26308,7 +26309,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -31118,7 +31119,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 102
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -31231,7 +31232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1741641529
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9222567681736291143, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}
@@ -31321,7 +31322,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

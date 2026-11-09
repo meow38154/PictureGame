@@ -21,6 +21,8 @@ namespace CoreSystem.Events
     public static class CreateEvents
     {
         public static readonly BoolEvent BoolEvent = new();
+        public static readonly FloatEvent FloatEvent = new();
+        public static readonly StringEvent StringEvent = new();
         public static readonly ControlMovementEvent ControlMovementEvent = new();
         public static readonly GrabbableObjectEvent GrabbableObjectEvent = new();
         public static readonly AbstractFileSOEvent AbstractFileSOEvent = new();
@@ -29,6 +31,8 @@ namespace CoreSystem.Events
     }
 
     public class BoolEvent : JEvent<BoolEvent, bool> { }
+    public class FloatEvent : JEvent<FloatEvent, float> { }
+    public class StringEvent : JEvent<StringEvent, string> { }
 
     public class ControlMovementEvent : JEvent<ControlMovementEvent, IControlMovement> { }
 

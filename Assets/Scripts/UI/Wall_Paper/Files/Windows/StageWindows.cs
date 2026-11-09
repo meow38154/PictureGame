@@ -10,11 +10,11 @@ namespace UI.Wall_Paper.Files.Windows
         private Texture2D _capturedTexture;
         private Sprite _capturedSprite;
 
-        public void ScreenImageChanged(string sceneName)
+        public async void ScreenImageChanged(string sceneName)
         {
             Rect rect = new Rect(0, 0, Screen.width, Screen.height);
-
-            Utility.GetSceneFirstScreen(sceneName, rect, OnScreenCaptured);
+            
+            OnScreenCaptured(await Utility.GetSceneFirstScreenAsync(sceneName, rect));
         }
 
         private void OnScreenCaptured(Texture2D texture)
@@ -31,11 +31,7 @@ namespace UI.Wall_Paper.Files.Windows
 
             _capturedTexture = texture;
 
-            _capturedSprite = Sprite.Create(
-                texture,
-                new Rect(0, 0, texture.width, texture.height),
-                new Vector2(0.5f, 0.5f)
-            );
+            _capturedSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f) );
 
             screenImage.sprite = _capturedSprite;
         }

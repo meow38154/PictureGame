@@ -15,7 +15,6 @@ namespace UI.Wall_Paper.Files.Windows.Manager
 
         [SerializeField] private GameObject pathButton;
         private readonly Dictionary<Type, AbstractWindowManager> abstractWindowDict = new();
-        private readonly Dictionary<Type, GameObject> iconDict = new();
         
         [SerializeField] private EventChannelSO windowOpenRegisterEvent;
         [SerializeField] private EventChannelSO windowCloseRegisterEvent;
@@ -40,6 +39,7 @@ namespace UI.Wall_Paper.Files.Windows.Manager
         private void HandleWindowOpenRegister(AbstractFileSOEvent obj)
         {
             AbstractWindows win = abstractWindowDict[obj.Value.GetType()].OpenWindow(obj.Value);
+            Debug.Log(obj.Value.GetType().Name);
             windowsList.Add(win);
             
             GameObject taskbarIcon = new GameObject("TaskbarIcon");

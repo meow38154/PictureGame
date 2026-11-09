@@ -1,33 +1,43 @@
-﻿using UnityEngine;
+﻿using Common;
+using CoreSystem.Effect;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace CoreSystem.Manager
 {
-    public class SceneChangeManager : MonoBehaviour
+    public class SceneChangeManager : MonoSingleton<SceneChangeManager>
     {
-        public static SceneChangeManager Instance { get; private set; }
-
+        [SerializeField] private AssetNameSO sceneStartAnim;
+        [SerializeField] private AssetNameSO sceneEndAnim;
+        
         private bool _isLoading;
+        private Animator _animator;
 
         private void Awake()
         {
-            ManagerInit();
-            DontDestroyOnLoad(gameObject);
+            _animator = GetComponentInChildren<Animator>();
         }
 
-        private void ManagerInit()
+        public void ChangeScene(string sceneName)
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            StartCoroutine(SceneLoadAnim(sceneName));
         }
 
-        public AsyncOperation ChangeScene(string sceneName)
+        private IEnumerator SceneLoadAnim(string sceneName)
+        {
+            _animator.Play(sceneStartAnim.AssetHash);
+            yield return new WaitForSeconds(GetAnimatorClipTime());
+            ChangeSceneAsync(sceneName);
+            _animator.Play(sceneEndAnim.AssetHash);
+        }
+
+        private float GetAnimatorClipTime()
+        {
+            return _animator.GetCurrentAnimatorStateInfo(0).length;
+        }
+
+        public AsyncOperation ChangeSceneAsync(string sceneName)
         {
             return SceneManager.LoadSceneAsync(sceneName);
         }

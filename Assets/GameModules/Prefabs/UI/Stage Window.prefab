@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae1808e9be64a61a45781074bb6db0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.Windows.WindowOpenAnimation
+  dontStartAnim: 0
+  dontEndAnim: 0
   startScaleMultiplier: 0.7
 --- !u!1 &1002784762888303457
 GameObject:
@@ -351,6 +353,7 @@ GameObject:
   - component: {fileID: 6091281343750173125}
   - component: {fileID: 3263167612150618010}
   - component: {fileID: -2011034824923976961}
+  - component: {fileID: 2904317426096188245}
   m_Layer: 5
   m_Name: Stage Window
   m_TagString: Untagged
@@ -458,10 +461,24 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2358284482122072801}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2904317426096188245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358284482122072801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb6d5a401104cbfbb2baa3367a58511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Wall_Paper.Files.Windows.StageClearEventWindow
+  image: {fileID: 4781932179876569185}
+  reflectScreenCaptureEvent: {fileID: 11400000, guid: f8c138f1255ae0b4f9c31609346f6c9e, type: 2}
 --- !u!1 &2459437344070271278
 GameObject:
   m_ObjectHideFlags: 0

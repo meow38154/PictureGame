@@ -8,18 +8,128 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Common/FilePath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Common/FilePath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Common/MonoSingleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Common/MonoSingleton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Effects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/GoBackSelectorInvoker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnim.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnim.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnimInvoker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnimInvoker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuUIManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuUIManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButtonSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButtonSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/GoBackSelectorEventEventAnim.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/GoBackSelectorEventEventAnim.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/ScreenCaptureEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/ScreenCaptureEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageCloseWindows.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageCloseWindows.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TimeRenderer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/WallPaperManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/WallPaperManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper1_Directory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper1_Directory.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper2_Directory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Desktop_file_data/Directorys/Chatper2_Directory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Directory Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Directory Window.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Stage Window.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Stage Window.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainUIScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainUIScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector 1.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/TextRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/TextRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Renderer2D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Editor/SortifyChangeLogEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Editor/SortifyChangeLogEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Logo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Logo.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Logo/SortifyLogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/Logo/SortifyLogo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyChangeLog.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyDashboardWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Dashboard/SortifyDashboardWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Documentation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Documentation/Sortify Guide v.1.2.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Documentation/Sortify Guide v.1.2.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Helper.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Helper.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Helper/SortifyHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Helper/SortifyHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/BetterHeaderAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/BetterHeaderAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ButtonAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ButtonAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/BetterHeaderAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/BetterHeaderAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ButtonAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ButtonAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/LayerAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/LayerAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/MessageAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/MessageAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/MinMaxSliderAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/MinMaxSliderAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ReadOnlyAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ReadOnlyAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ShowIfAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ShowIfAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/TagAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/TagAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/UnitAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/UnitAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ValidateAttributeDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/Editor/ValidateAttributeDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/LayerAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/LayerAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/MessageAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/MessageAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/MinMaxSliderAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/MinMaxSliderAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ReadOnlyAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ReadOnlyAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ShowIfAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ShowIfAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/TagAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/TagAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/UnitAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/UnitAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ValidateAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyAttributes/ValidateAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyAddComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyAddComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyComponentManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyComponentManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyFileManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyFileManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyInitializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyInitializer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteDatabase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyNoteManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyObjectManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyObjectManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyRemainingComponentsPopup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyRemainingComponentsPopup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifySettingsPopup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifySettingsPopup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyUserDataManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyCore/SortifyUserDataManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyHighlight.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyHighlight.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyHighlight/SortifyHighlight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Modules/SortifyHighlight/SortifyHighlight.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Sample.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Sample.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Sample/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Sample/Demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Sample/Demo.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Sample/Demo.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sortify/Sample/SortifyCustomAttributeSample.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sortify/Sample/SortifyCustomAttributeSample.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +141,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/e4/ed946a5e/Screen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/e7/018916bc/CursorLockMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2df39eb45b3b41f2a1da4c46d177a418b000/ec/283cdaf3/RectTransformUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/68/94d78292/Enum.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +173,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Attributes/ReadOnlyAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Editor/ReadOnlyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/FilePath.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/SceneChangeEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/SceneStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Visuals.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Condition/ConditionSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,25 +197,32 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnimInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureSelectionModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ICaptureSelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Dialogues/DialoguesTextBundleSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueForcedPass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueForcedTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueManualTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/TextRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIButtonSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowOpenEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TImeRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,7 +230,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@21a28c3a6c83/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/BuildProcessors/URPPreprocessBuild.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/UIElements/UIToolkitInteroperabilityBridge.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -121,61 +241,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.608824047076298" />
-      <entry key="MS500" value="4.22569122192097" />
-      <entry key="S2" value="8.158292153577285" />
-      <entry key="S5" value="10.133199057978288" />
-      <entry key="S10" value="10.99809636650109" />
-      <entry key="S30" value="11.703308338522152" />
-      <entry key="S60" value="12.055087344183613" />
-      <entry key="M2" value="12.393048028728892" />
-      <entry key="M5" value="12.791497646136657" />
-      <entry key="M10" value="15.655913410144594" />
-      <entry key="M15" value="24.054012744620167" />
-      <entry key="M30" value="71.4672927074517" />
-      <entry key="H1" value="176.38608875814003" />
-      <entry key="H2" value="308.82642228333793" />
-      <entry key="H4" value="429.24330487213655" />
-      <entry key="D1" value="1446.5544882922588" />
-      <entry key="W1" value="3152.906186254678" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000008556074" />
+      <entry key="S30" value="1.0046744970781838" />
+      <entry key="S60" value="1.271546850307168" />
+      <entry key="M2" value="4.105653125466443" />
+      <entry key="M5" value="23.40359392502102" />
+      <entry key="M10" value="52.25126015208033" />
+      <entry key="M15" value="73.7469895767349" />
+      <entry key="M30" value="128.18510072868776" />
+      <entry key="H1" value="225.79961484022607" />
+      <entry key="H2" value="396.9114777529936" />
+      <entry key="H4" value="654.6000271135151" />
+      <entry key="D1" value="1942.614171564023" />
+      <entry key="W1" value="3876.7898356429127" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="9.4781606659488E-75" />
-      <entry key="S2" value="3.1201898270201506E-19" />
-      <entry key="S5" value="3.95979229836617E-8" />
-      <entry key="S10" value="1.989922686529849E-4" />
-      <entry key="S30" value="0.058381968522797895" />
-      <entry key="S60" value="0.24162360921584014" />
-      <entry key="M2" value="0.4915587101925422" />
-      <entry key="M5" value="0.7895792776470455" />
-      <entry key="M10" value="1.8907855748022928" />
-      <entry key="M15" value="4.511629902680643" />
-      <entry key="M30" value="17.255284401925774" />
-      <entry key="H1" value="43.131481713264286" />
-      <entry key="H2" value="75.13781878855741" />
-      <entry key="H4" value="105.35465594569047" />
-      <entry key="D1" value="489.3785892649289" />
-      <entry key="W1" value="1186.1739910866752" />
+      <entry key="MS100" value="1.432526569916277E-20" />
+      <entry key="MS500" value="1.0745349286659552E-4" />
+      <entry key="S2" value="0.1018134453837769" />
+      <entry key="S5" value="0.4009793926684818" />
+      <entry key="S10" value="0.6332293369645557" />
+      <entry key="S30" value="0.8616472531980038" />
+      <entry key="S60" value="1.0931889613176766" />
+      <entry key="M2" value="2.5069599203905315" />
+      <entry key="M5" value="9.053023312741145" />
+      <entry key="M10" value="17.25553906985031" />
+      <entry key="M15" value="23.58795150880084" />
+      <entry key="M30" value="42.038411457536725" />
+      <entry key="H1" value="79.41815256907151" />
+      <entry key="H2" value="145.8022708737489" />
+      <entry key="H4" value="238.42635249605235" />
+      <entry key="D1" value="711.5587083156463" />
+      <entry key="W1" value="1488.4848037660304" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4763699335612719" />
-      <entry key="MS500" value="4.126284136213355" />
-      <entry key="S2" value="8.08486078385126" />
-      <entry key="S5" value="10.090421909706567" />
-      <entry key="S10" value="10.9736798687138" />
-      <entry key="S30" value="11.750719341698453" />
-      <entry key="S60" value="12.288004485053005" />
-      <entry key="M2" value="12.878080060194655" />
-      <entry key="M5" value="13.577332507916587" />
-      <entry key="M10" value="17.541517343399747" />
-      <entry key="M15" value="28.556715064792787" />
-      <entry key="M30" value="88.70495652669989" />
-      <entry key="H1" value="219.49535618749636" />
-      <entry key="H2" value="383.94448328348636" />
-      <entry key="H4" value="534.5838138362593" />
-      <entry key="D1" value="1935.922402161563" />
-      <entry key="W1" value="4339.076590389561" />
+      <entry key="MS100" value="5.455503603868261E-4" />
+      <entry key="MS500" value="0.22257659609638808" />
+      <entry key="S2" value="0.7739593897638338" />
+      <entry key="S5" value="1.2372533998423514" />
+      <entry key="S10" value="1.5414415455459778" />
+      <entry key="S30" value="1.8325878636422714" />
+      <entry key="S60" value="2.343639033702537" />
+      <entry key="M2" value="6.585586202478955" />
+      <entry key="M5" value="32.41192637786277" />
+      <entry key="M10" value="69.46177440690994" />
+      <entry key="M15" value="97.29288372158013" />
+      <entry key="M30" value="170.1849237587684" />
+      <entry key="H1" value="305.1813764464173" />
+      <entry key="H2" value="542.6798778484936" />
+      <entry key="H4" value="892.9977156710137" />
+      <entry key="D1" value="2654.157806225675" />
+      <entry key="W1" value="5365.270169247367" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
