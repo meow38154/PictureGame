@@ -1,13 +1,17 @@
-﻿using Common;
+﻿using System;
+using Common;
 using CoreSystem.Effect;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 
 namespace CoreSystem.Manager
 {
-    public class SceneChangeManager : MonoSingleton<SceneChangeManager>
+    public class SceneChangeManager : MonoBehaviour
     {
+        [SerializeField] private EventChannelSO sceneChangeEvent;
         [SerializeField] private AssetNameSO sceneStartAnim;
         [SerializeField] private AssetNameSO sceneEndAnim;
         
@@ -19,9 +23,19 @@ namespace CoreSystem.Manager
             _animator = GetComponentInChildren<Animator>();
         }
 
-        public void ChangeScene(string sceneName)
+        private void OnEnable()
         {
-            StartCoroutine(SceneLoadAnim(sceneName));
+            sceneChangeEvent.AddListener<StringEvent>(HandleChangeScene);
+        }
+
+        private void HandleChangeScene(StringEvent stringEvent)
+        {
+            StartCoroutine(SceneLoadAnim(stringEvent.Value));
+        }
+
+        private void OnDisable()
+        {
+            sceneChangeEvent.RemoveListener<StringEvent>(HandleChangeScene);
         }
 
         private IEnumerator SceneLoadAnim(string sceneName)

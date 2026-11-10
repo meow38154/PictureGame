@@ -11,7 +11,7 @@ namespace CoreSystem.Triggers
         [SerializeField] private UnityEvent onEnter;
         [SerializeField] private UnityEvent onExit;
 
-        [SerializeField] private bool isActive;
+        [SerializeField] private bool isActive = true;
         
         public bool IsActive 
         { 

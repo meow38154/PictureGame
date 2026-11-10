@@ -25,7 +25,7 @@ namespace UI
         {
             if (!obj.Value) return;
             canvas.SetActive(true);
-            SceneChangeManager.Instance.ChangeScene("Stage Selector");
+            //SceneChangeManager.Instance.ChangeScene("Stage Selector");
         }
     }
 }
