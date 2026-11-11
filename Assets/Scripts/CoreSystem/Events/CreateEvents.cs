@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using Agents.Players;
 using Command;
 using CoreSystem.GrabSystem;
 using DevLib.EventChannelSystem;
+using UI.DialogueSystem;
 
 namespace CoreSystem.Events
 {
@@ -24,6 +26,7 @@ namespace CoreSystem.Events
         public static readonly ControlMovementEvent ControlMovementEvent = new();
         public static readonly GrabbableObjectEvent GrabbableObjectEvent = new();
         public static readonly CommandInvokeEvent CommandInvokeEvent = new();
+        public static readonly DialogueLineDataEvent DialogueLineDataEvent = new();
     }
 
     public class BoolEvent : JEvent<BoolEvent, bool> { }
@@ -35,4 +38,6 @@ namespace CoreSystem.Events
     public class GrabbableObjectEvent : JEvent<GrabbableObjectEvent, IGrabbable> { }
     
     public class CommandInvokeEvent : JEvent<CommandInvokeEvent, CommandInvokeEventStruct> { }
+    
+    public class DialogueLineDataEvent : JEvent<DialogueLineDataEvent, List<DialogueLineData>> { }
 }
