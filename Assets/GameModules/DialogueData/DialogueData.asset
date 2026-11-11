@@ -12,3 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3c718d0f634fea806faf4004eaa94e, type: 3}
   m_Name: DialogueData
   m_EditorClassIdentifier: Assembly-CSharp::UI.DialogueSystem.DialogueDataSo
+  LineDatas:
+  - DialogueTextData:
+    - TextSpeed: 0
+      TextSize: 0
+      Text: "\uC57C\uB974"
+    - TextSpeed: 0.98
+      TextSize: 2
+      Text: "\uC57C!\uB974"
+    - TextSpeed: 3.04
+      TextSize: 1.234
+      Text: "\uC57C!!!!!\uB974"
+    SpeakerImage: {fileID: -9222567681736291143, guid: 05e27c9c2889b814a806705e86fe7a12, type: 3}

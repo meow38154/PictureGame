@@ -24,7 +24,7 @@ namespace UI.DialogueSystem
         {
             if (!_isShown || writer == null) return;
 
-            if (Keyboard.current.anyKey.wasPressedThisFrame)
+            if (Keyboard.current.enterKey.wasPressedThisFrame)
             {
                 if(!writer.IsWriting)
                     NextLine();
@@ -47,8 +47,10 @@ namespace UI.DialogueSystem
         
         private void NextLine()
         {
-            currentLine++;
+            if (currentLine == currentDialogueData.LineDatas.Count+1)
+                return;
             writer.WriteLine(currentDialogueData.LineDatas[currentLine]);
+            currentLine++;
         }
     }
 }

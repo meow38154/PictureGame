@@ -18,18 +18,21 @@ namespace UI.DialogueSystem
             _dialogueText.richText = true;
         }
 
-        private IEnumerator WriteText(DialogueTextData textData)
+        private IEnumerator WriteText(DialogueLineData lineData)
         {
-            _dialogueText.text += $"<size={textData.TextSize * 10}%>";
-            
-            foreach (char c in textData.Text)
+
+            foreach (DialogueTextData textData in lineData.DialogueTextData)
             {
-                _dialogueText.text += $"{c}";
-                if(!_isSkipped)
-                    yield return new WaitForSeconds(0.1f*textData.TextSpeed);
+                _dialogueText.text += $"<size={textData.TextSize * 100}%>";
+                foreach (char c in textData.Text)
+                {
+                    _dialogueText.text += $"{c}";
+                    if(!_isSkipped)
+                        yield return new WaitForSeconds(0.1f*textData.TextSpeed);
+                }
+                _dialogueText.text += $"</size>";
             }
             
-            _dialogueText.text += $"</size>";
         }
         
         public void WriteLine(DialogueLineData lineData)
@@ -39,8 +42,7 @@ namespace UI.DialogueSystem
             IsWriting = true;
             _dialogueText.text = "";
             
-            foreach (DialogueTextData textData in lineData.DialogueTextData)
-                StartCoroutine(WriteText(textData));
+            StartCoroutine(WriteText(lineData));
             
             IsWriting = false;
             _isSkipped = false;

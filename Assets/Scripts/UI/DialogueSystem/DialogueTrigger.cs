@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace UI.DialogueSystem
 {
@@ -6,9 +8,15 @@ namespace UI.DialogueSystem
     {
         [SerializeField] private DialogueDataSo dialogueData;
 
+        private void Update()
+        {
+            if(Keyboard.current.lKey.wasPressedThisFrame)
+                TriggerDialogue();
+        }
+
         public void TriggerDialogue()
         {
-            if (dialogueData != null) 
+            if (dialogueData == null) 
                 return;
             
             DialogueManager.Instance.Dialogue(dialogueData);
