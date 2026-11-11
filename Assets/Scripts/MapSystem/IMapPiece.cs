@@ -17,5 +17,7 @@ namespace MapSystem
         void ResetPreview();
         void ClearDeployed();
         void SetPieceActive(bool active);
+        void AllFreeze();
+        void AllUnFreeze();
     }
 }

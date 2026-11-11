@@ -1,3 +1,4 @@
+using Agents;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -87,6 +88,26 @@ namespace MapSystem
             _tilemaps.color = new Color(originalColor.r, originalColor.g, originalColor.b, active ? 1f : DISABLE_COLOR_ALPHA);
             _collider.enabled = active;
             IsActive = active;
+        }
+
+        public void AllFreeze()
+        {
+            var freezies = GetComponentsInChildren<IAgentFreezer>();
+
+            foreach (IAgentFreezer freeze in freezies)
+            {
+                freeze.Freeze();
+            }
+        }
+
+        public void AllUnFreeze()
+        {
+            var freezies = GetComponentsInChildren<IAgentFreezer>();
+
+            foreach (IAgentFreezer freeze in freezies)
+            {
+                freeze.UnFreeze();
+            }
         }
 
         [ContextMenu("File")]

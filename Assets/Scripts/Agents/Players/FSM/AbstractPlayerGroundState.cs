@@ -36,7 +36,7 @@ namespace Agents.Players.FSM
 
         private void HandleJumpStateChange()
         {
-            if (!ControlMovement.Freeze) return;
+            //if (!Freezer.IsFreeze) return;
             Player.ChangeState(PlayerStateEnum.JUMP, 0.1f);
         }
     }

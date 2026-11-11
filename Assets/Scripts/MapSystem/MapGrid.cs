@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using Command;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 using UnityEngine;
 
 namespace MapSystem
@@ -9,6 +12,7 @@ namespace MapSystem
     public class MapGrid : MonoBehaviour, IMapGrid
     {
         [SerializeField] private Grid grid;
+        [SerializeField] private EventChannelSO commandInvokeEvent;
         
         private readonly HashSet<Vector2Int> _occupiedCells = new();
 
@@ -22,6 +26,7 @@ namespace MapSystem
         private void Start()
         {
             InitializeMapPieces();
+            SaveInitialState();
         }
 
         private void InitializeMapPieces()
@@ -45,6 +50,22 @@ namespace MapSystem
                     Debug.LogWarning($"초기 배치 실패: {piece.Transform.gameObject.name}, 위치: {gridPos}", piece.Transform);
                 }
             }
+        }
+
+        private void SaveInitialState()
+        {
+            if (commandInvokeEvent == null) return;
+
+            IMapPiece[] pieces = GetComponentsInChildren<IMapPiece>(true);
+            ICommand command = new InitialMapStateCommand(this, pieces);
+
+            CommandInvokeEventStruct eventData = new()
+            {
+                Action = CommandActionType.Execute,
+                Command = command
+            };
+
+            commandInvokeEvent.RaiseEvent(CreateEvents.CommandInvokeEvent.InitData(eventData));
         }
 
         public Vector2Int WorldToCell(Vector3 worldPos)

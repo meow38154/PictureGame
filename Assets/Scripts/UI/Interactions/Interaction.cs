@@ -24,6 +24,9 @@ namespace UI.Interactions
         private void Update()
         {
             if (!colliderTrigger.IsSearch || !Keyboard.current.eKey.wasPressedThisFrame) return;
+            
+            Debug.Log(CheckCondition());
+            
             if (CheckCondition()) onKeyDownSuccess?.Invoke();
             else onKeyDownFail?.Invoke();
         }

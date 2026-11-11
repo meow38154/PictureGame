@@ -13,11 +13,11 @@ namespace Agents.Players.FSM
         {
             base.Update();
             
-            if (!ControlMovement.Freeze)
+            /*if (!Freezer.IsFreeze)
             {
                 Player.ChangeState(PlayerStateEnum.IDLE, 0.1f);
                 return;
-            }
+            }*/
             
             if (TryChangeToFall())
             {

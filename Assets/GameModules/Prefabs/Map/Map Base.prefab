@@ -272,7 +272,7 @@ MonoBehaviour:
     m_Bits: 64
   sellSize: 2
   searchRadius: 5
-  dragStateChangedEvent: {fileID: 11400000, guid: 2b04b5447a171a142ab9fbffe1f74147, type: 2}
+  playerFreezeControllerEvent: {fileID: 11400000, guid: 2b04b5447a171a142ab9fbffe1f74147, type: 2}
   movementControllerRegisteredEvent: {fileID: 11400000, guid: 5c40bccc316404b42ac3dde05e312d64, type: 2}
   commandInvokeEvent: {fileID: 11400000, guid: 0399adcc63775f042929cb7d5a149a99, type: 2}
   inputSo: {fileID: 11400000, guid: e1b94466858999e4c8089203ed69deef, type: 2}
@@ -516,10 +516,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1963941909277164708, guid: 6cd357d5f81d3a04383870d261b240ab, type: 3}
-      propertyPath: commandInvokeEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 0399adcc63775f042929cb7d5a149a99, type: 2}
     - target: {fileID: 4202138797429866258, guid: 6cd357d5f81d3a04383870d261b240ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -559,14 +555,6 @@ PrefabInstance:
     - target: {fileID: 4202138797429866258, guid: 6cd357d5f81d3a04383870d261b240ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738247038244568881, guid: 6cd357d5f81d3a04383870d261b240ab, type: 3}
-      propertyPath: m_Size.x
-      value: 1.2833099
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738247038244568881, guid: 6cd357d5f81d3a04383870d261b240ab, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.053798676
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

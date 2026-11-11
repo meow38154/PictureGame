@@ -16,6 +16,8 @@ namespace Agents.Players
             Debug.Assert(Player != null, "플레이어 상태는 플레이어한테 붙이세요.");
             ControlMovement = agent.GetModule<IControlMovement>();
             Debug.Assert(ControlMovement != null, "플레이어한테 ControlMovement 붙이세요.");
+            //Freezer = agent.GetModule<IAgentFreezer>();
+            //Debug.Assert(ControlMovement != null, "플레이어한테 Freezer 붙이세요.");
         }
     }
 }
