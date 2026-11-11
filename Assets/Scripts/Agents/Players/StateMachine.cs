@@ -24,6 +24,8 @@ namespace Agents.Players
                 
                 // 런타임에 객체의 형식정보를 들여다보는 기능  
                 AgentState agentState = (AgentState)Activator.CreateInstance(type, agent, paramHash, layerIndex);
+                
+                agentState.Init();
 
                 _stateDict.Add(stateData.assetIndex, agentState);
             }

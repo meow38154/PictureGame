@@ -1,4 +1,6 @@
-﻿namespace Agents.FSM
+﻿using UnityEngine;
+
+namespace Agents.FSM
 {
     public abstract class AgentState
     {
@@ -13,6 +15,10 @@
             _stateClipHash = stateClipHash;
             _layerIndex = layerIndex;
             _renderer = agent.GetModule<IRenderer>();
+        }
+
+        public virtual void Init()
+        {
         }
 
         public virtual void Enter(float transitionDuration = 0.1f)

@@ -66,6 +66,12 @@ namespace Agents.Players
                 OnJumpKeyReleased?.Invoke();
         }
 
+        public void ClearJumpEvent()
+        {
+            OnJumpKeyPressed = null;
+            OnJumpKeyReleased = null;
+        }
+
         public void OnCapture(InputAction.CallbackContext context)
         {
             if (context.performed)

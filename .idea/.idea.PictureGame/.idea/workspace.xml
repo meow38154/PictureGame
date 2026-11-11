@@ -8,114 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ClickableObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ClickableObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Display.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Display.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Hide.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction Hide.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction idle Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/E_Interaction idle Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Fake_Setting_button Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Fake_Setting_button Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Fake_Setting_button_idle Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Fake_Setting_button_idle Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel_down Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel_down Clip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel_up Clip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Setting_panel_up Clip.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Sprite/UI/Wall_Paper/Defalut_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Sprite/UI/Wall_Paper/Defalut_icon.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Tile/Palette/Map Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Tile/Palette/Map Palette.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/ColliderTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/TestSceneChange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/TestSceneChange.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/AbstractFileSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/AbstractFileSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/DirectoryFileSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/DirectoryFileSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WallPaperFileDataSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WallPaperFileDataSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowFileSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowFileSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/IHoverHighlightActive.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/IHoverHighlightActive.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFileHoverHighlight.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Wall Paper File/WallPaperFileHoverHighlight.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/AbstractWindows.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/AbstractWindows.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/DirectoryWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/GoBackSelectorEventEventAnim.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/GoBackSelectorEventEventAnim.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/IWindowAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/IWindowAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/DirectoryWindowManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/DirectoryWindowManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/WindowController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/MouseGrabbingWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/AbstractWindowOpenEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/AbstractWindowOpenEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/ScreenCaptureEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/ScreenCaptureEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageCloseWindows.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageCloseWindows.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TimeRenderer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TimeRenderer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/WallPaperManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/WallPaperManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/FSM/AgentState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/FSM/AgentState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/FSM/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/FSM/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerJumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/StateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,61 +130,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.68383699522724E-11" />
-      <entry key="MS500" value="0.008531009594550824" />
-      <entry key="S2" value="0.4367802886214626" />
-      <entry key="S5" value="1.1050041625971763" />
-      <entry key="S10" value="2.0469764417111533" />
-      <entry key="S30" value="7.481800735308795" />
-      <entry key="S60" value="16.155695450875985" />
-      <entry key="M2" value="31.21374397644738" />
-      <entry key="M5" value="52.76407138616756" />
-      <entry key="M10" value="65.02099974779158" />
-      <entry key="M15" value="72.89761827102994" />
-      <entry key="M30" value="103.62328377944415" />
-      <entry key="H1" value="186.44504748017778" />
-      <entry key="H2" value="357.6040362446207" />
-      <entry key="H4" value="633.8767618331366" />
-      <entry key="D1" value="1989.5963656331014" />
-      <entry key="W1" value="3976.551078326961" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000000009" />
+      <entry key="S5" value="1.0000012930239357" />
+      <entry key="S10" value="1.0017014376134719" />
+      <entry key="S30" value="1.589108770215165" />
+      <entry key="S60" value="5.210968406939855" />
+      <entry key="M2" value="16.835384544042476" />
+      <entry key="M5" value="52.78448620414946" />
+      <entry key="M10" value="86.8486002058851" />
+      <entry key="M15" value="106.0422033290283" />
+      <entry key="M30" value="148.9142179933291" />
+      <entry key="H1" value="236.7143950587753" />
+      <entry key="H2" value="410.26712465323106" />
+      <entry key="H4" value="689.283929652408" />
+      <entry key="D1" value="2052.7531143708466" />
+      <entry key="W1" value="4045.334099345184" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000005646247956" />
-      <entry key="MS500" value="1.0808174188287492" />
-      <entry key="S2" value="1.8831941584177359" />
-      <entry key="S5" value="2.440574649744388" />
-      <entry key="S10" value="2.709679194032714" />
-      <entry key="S30" value="3.250327648448334" />
-      <entry key="S60" value="4.129267887184107" />
-      <entry key="M2" value="6.007871394724073" />
-      <entry key="M5" value="9.316795926060276" />
-      <entry key="M10" value="11.663643468427676" />
-      <entry key="M15" value="13.939026644271797" />
-      <entry key="M30" value="25.09433784629643" />
-      <entry key="H1" value="56.770094009737775" />
-      <entry key="H2" value="122.93702390505419" />
-      <entry key="H4" value="224.12416702601894" />
-      <entry key="D1" value="723.1425173592228" />
-      <entry key="W1" value="1519.2897501571847" />
+      <entry key="MS100" value="3.9936623953016665E-4" />
+      <entry key="MS500" value="0.20906159997851567" />
+      <entry key="S2" value="0.6761897254099262" />
+      <entry key="S5" value="0.8551218312830622" />
+      <entry key="S10" value="0.9262420064444972" />
+      <entry key="S30" value="1.2430333089012924" />
+      <entry key="S60" value="2.4902783115723897" />
+      <entry key="M2" value="5.567512649550658" />
+      <entry key="M5" value="12.72876798928713" />
+      <entry key="M10" value="19.000741121833652" />
+      <entry key="M15" value="23.026714907908946" />
+      <entry key="M30" value="35.47858364561807" />
+      <entry key="H1" value="67.04316142899428" />
+      <entry key="H2" value="133.0171893334208" />
+      <entry key="H4" value="234.8156355688591" />
+      <entry key="D1" value="736.3280266226765" />
+      <entry key="W1" value="1534.4483971600341" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0693481043640309" />
-      <entry key="MS500" value="0.6342124970408769" />
-      <entry key="S2" value="2.0014465979142417" />
-      <entry key="S5" value="3.3331348831492633" />
-      <entry key="S10" value="4.622114246342106" />
-      <entry key="S30" value="10.656499396580884" />
-      <entry key="S60" value="20.212547566426274" />
-      <entry key="M2" value="37.14161854764004" />
-      <entry key="M5" value="62.01703208555058" />
-      <entry key="M10" value="76.64218966686748" />
-      <entry key="M15" value="86.80311737755153" />
-      <entry key="M30" value="128.6902152293837" />
-      <entry key="H1" value="243.18700259769398" />
-      <entry key="H2" value="480.51161683280594" />
-      <entry key="H4" value="857.9737217283084" />
-      <entry key="D1" value="2712.7235737180445" />
-      <entry key="W1" value="5495.8362666950015" />
+      <entry key="MS100" value="0.0039088736378062065" />
+      <entry key="MS500" value="0.40639800221823624" />
+      <entry key="S2" value="1.2838091728571364" />
+      <entry key="S5" value="1.6683808879814115" />
+      <entry key="S10" value="1.8285825027287848" />
+      <entry key="S30" value="2.7904591026575267" />
+      <entry key="S60" value="7.661544487970067" />
+      <entry key="M2" value="22.355632855822716" />
+      <entry key="M5" value="65.45841408297258" />
+      <entry key="M10" value="105.80258354658831" />
+      <entry key="M15" value="129.02926864886456" />
+      <entry key="M30" value="184.3608847978153" />
+      <entry key="H1" value="303.72708735698114" />
+      <entry key="H2" value="543.2537284049487" />
+      <entry key="H4" value="924.0717268465331" />
+      <entry key="D1" value="2789.0656793570342" />
+      <entry key="W1" value="5579.777906984854" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
