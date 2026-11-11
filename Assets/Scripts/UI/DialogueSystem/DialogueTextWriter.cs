@@ -1,0 +1,57 @@
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+namespace UI.DialogueSystem
+{
+    [RequireComponent(typeof(TextMeshProUGUI))]
+    public class DialogueTextWriter : MonoBehaviour, IDialogueTextWriter
+    {
+        private TextMeshProUGUI _dialogueText;
+        
+        public bool IsWriting {get; private set;}
+        bool _isSkipped = false;
+
+        private void Awake()
+        {
+            _dialogueText = GetComponent<TextMeshProUGUI>();
+            _dialogueText.richText = true;
+        }
+
+        private IEnumerator WriteText(DialogueTextData textData)
+        {
+            _dialogueText.text += $"<size={textData.TextSize * 10}%>";
+            
+            foreach (char c in textData.Text)
+            {
+                _dialogueText.text += $"{c}";
+                if(!_isSkipped)
+                    yield return new WaitForSeconds(0.1f*textData.TextSpeed);
+            }
+            
+            _dialogueText.text += $"</size>";
+        }
+        
+        public void WriteLine(DialogueLineData lineData)
+        {
+            if (_dialogueText == null)
+                return;
+            IsWriting = true;
+            _dialogueText.text = "";
+            
+            foreach (DialogueTextData textData in lineData.DialogueTextData)
+                StartCoroutine(WriteText(textData));
+            
+            IsWriting = false;
+            _isSkipped = false;
+        }
+
+        public void SkipLine()
+        {
+            if (!IsWriting) return;
+            
+            _isSkipped = true;
+            
+        }
+    }
+}
