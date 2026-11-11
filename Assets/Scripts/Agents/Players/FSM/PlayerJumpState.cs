@@ -12,6 +12,12 @@ namespace Agents.Players.FSM
             Debug.Assert(_playerRb != null, "플레이어한테 Rigidbody2D 안 붙였나요??");
         }
 
+        public override void Init()
+        {
+            base.Init();
+            Player.PlayerInput.ClearJumpEvent();
+        }
+
         public override void Enter(float transitionDuration = 0.1f)
         {
             if (!ControlJumper.CanJump)

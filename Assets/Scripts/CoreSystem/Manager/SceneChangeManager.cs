@@ -1,66 +1,59 @@
 ﻿using System;
-using DevLib.AnimatorSystem;
+using Common;
+using CoreSystem.Effect;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 
 namespace CoreSystem.Manager
 {
     public class SceneChangeManager : MonoBehaviour
     {
-        [SerializeField] private string defaultSceneName;
-        [SerializeField] private HashDataSO sceneEnter;
-        [SerializeField] private HashDataSO sceneExit;
+        [SerializeField] private EventChannelSO sceneChangeEvent;
+        [SerializeField] private AssetNameSO sceneStartAnim;
+        [SerializeField] private AssetNameSO sceneEndAnim;
         
-        public static SceneChangeManager Instance { get; private set; }
-
-        private ISceneTransition _transition;
+        private bool _isLoading;
+        private Animator _animator;
 
         private void Awake()
         {
-            ManagerInit();
-            _transition = GetComponent<ISceneTransition>();
+            _animator = GetComponentInChildren<Animator>();
         }
 
-        private async void Start()
+        private void OnEnable()
         {
-            await SceneChangeAsync(defaultSceneName);
+            sceneChangeEvent.AddListener<StringEvent>(HandleChangeScene);
         }
 
-        private void ManagerInit()
+        private void HandleChangeScene(StringEvent stringEvent)
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            Instance = this;
+            StartCoroutine(SceneLoadAnim(stringEvent.Value));
         }
 
-        public async Awaitable SceneChangeAsync(string sceneName)
+        private void OnDisable()
         {
-            bool transitionIsNull = _transition != null;
-            
-            if (transitionIsNull)
-                await _transition.PlayAsync(sceneExit);
-
-            await SceneManager.LoadSceneAsync(sceneName);
-            
-            if (transitionIsNull)
-                await _transition.PlayAsync(sceneEnter);
+            sceneChangeEvent.RemoveListener<StringEvent>(HandleChangeScene);
         }
-        
-        public async Awaitable SceneChangeAsync(int sceneNum)
-        {
-            bool transitionIsNull = _transition != null;
-            
-            if (transitionIsNull)
-                await _transition.PlayAsync(sceneExit);
 
-            await SceneManager.LoadSceneAsync(sceneNum);
-            
-            if (transitionIsNull)
-                await _transition.PlayAsync(sceneEnter);
+        private IEnumerator SceneLoadAnim(string sceneName)
+        {
+            _animator.Play(sceneStartAnim.AssetHash);
+            yield return new WaitForSeconds(GetAnimatorClipTime());
+            ChangeSceneAsync(sceneName);
+            _animator.Play(sceneEndAnim.AssetHash);
+        }
+
+        private float GetAnimatorClipTime()
+        {
+            return _animator.GetCurrentAnimatorStateInfo(0).length;
+        }
+
+        public AsyncOperation ChangeSceneAsync(string sceneName)
+        {
+            return SceneManager.LoadSceneAsync(sceneName);
         }
     }
 }

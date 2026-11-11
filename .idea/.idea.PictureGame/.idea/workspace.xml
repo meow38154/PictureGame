@@ -7,39 +7,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/CommandInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/CommandInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/CommandManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/CommandManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoSaveData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoSaveData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoableObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoableObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/e 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/e 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/e 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/e 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/map (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/map (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/map (1).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/map (1).prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/map.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/map.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerInputSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/CreateEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" afterDir="false" />
-    </list>
+    <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +18,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/C2B142E03112FA743AD424F1/Unity.UIToolkit.SourceGenerator/Unity.UIToolkit.SourceGenerator.UxmlSerializedDataGenerator/DevLib.ObjectPool.Editor.MySplitView.gen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/e4/ed946a5e/Screen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/e7/018916bc/CursorLockMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2df39eb45b3b41f2a1da4c46d177a418b000/ec/283cdaf3/RectTransformUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/68/94d78292/Enum.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,11 +46,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/CommandManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/UndoableModuleOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoSaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Attributes/ReadOnlyAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Editor/ReadOnlyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/UndoableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/FilePath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/SceneStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Visuals.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Condition/ConditionSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Condition/IsGrabbingConditionSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,21 +74,42 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/Stage/NextStageAnimInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/CaptureSelectionModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ICaptureSelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotoSystem/Capture/ScreenCaptureModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/SceneChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ClickableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueForcedTurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueManualTurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/TextRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/ExecuteProgram.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/FileDataLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/SO/WindowClearFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/AbstractWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowCloseManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/Manager/StageWindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/OpenManager/OpenWindowNewTextRenderEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/StageWindows.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Files/Windows/WindowCloseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/DayRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TImeRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Wall_Paper/Taskbar/TaskbarIconManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9abe0f7cac7e/Editor/PSDGameObjectPreviewData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@21a28c3a6c83/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/BuildProcessors/URPPreprocessBuild.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/UIElements/UIToolkitInteroperabilityBridge.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -126,61 +118,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.7997370330660733E-288" />
-      <entry key="MS500" value="3.0861956044653973E-58" />
-      <entry key="S2" value="4.191368663505476E-15" />
-      <entry key="S5" value="1.7739539687738224E-6" />
-      <entry key="S10" value="0.0013319832364249514" />
-      <entry key="S30" value="0.11701286681387874" />
-      <entry key="S60" value="0.5532972508251927" />
-      <entry key="M2" value="3.121154335821789" />
-      <entry key="M5" value="20.42045807494728" />
-      <entry key="M10" value="48.84056253351684" />
-      <entry key="M15" value="73.72759833552959" />
-      <entry key="M30" value="138.89160106185471" />
-      <entry key="H1" value="247.97804843602307" />
-      <entry key="H2" value="416.07809010513364" />
-      <entry key="H4" value="640.0991944994649" />
-      <entry key="D1" value="1744.397867283096" />
-      <entry key="W1" value="2586.856761495336" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000091904" />
-      <entry key="S5" value="1.000038488849128" />
-      <entry key="S10" value="1.006205887493862" />
-      <entry key="S30" value="1.213365741010396" />
-      <entry key="S60" value="1.8382489297877318" />
-      <entry key="M2" value="3.8855249066846733" />
-      <entry key="M5" value="12.539569168012404" />
-      <entry key="M10" value="24.287390567761907" />
-      <entry key="M15" value="33.45699926122438" />
-      <entry key="M30" value="55.27638948504154" />
-      <entry key="H1" value="94.21767595820626" />
-      <entry key="H2" value="161.96945086727044" />
-      <entry key="H4" value="255.3684518675562" />
-      <entry key="D1" value="718.1497996973443" />
-      <entry key="W1" value="1077.5128015939188" />
+      <entry key="S2" value="1.0000000000000009" />
+      <entry key="S5" value="1.0000012930239357" />
+      <entry key="S10" value="1.0017014376134719" />
+      <entry key="S30" value="1.589108770215165" />
+      <entry key="S60" value="5.210968406939855" />
+      <entry key="M2" value="16.835384544042476" />
+      <entry key="M5" value="52.78448620414946" />
+      <entry key="M10" value="86.8486002058851" />
+      <entry key="M15" value="106.0422033290283" />
+      <entry key="M30" value="148.9142179933291" />
+      <entry key="H1" value="236.7143950587753" />
+      <entry key="H2" value="410.26712465323106" />
+      <entry key="H4" value="689.283929652408" />
+      <entry key="D1" value="2052.7531143708466" />
+      <entry key="W1" value="4045.334099345184" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="3.9936623953016665E-4" />
+      <entry key="MS500" value="0.20906159997851567" />
+      <entry key="S2" value="0.6761897254099262" />
+      <entry key="S5" value="0.8551218312830622" />
+      <entry key="S10" value="0.9262420064444972" />
+      <entry key="S30" value="1.2430333089012924" />
+      <entry key="S60" value="2.4902783115723897" />
+      <entry key="M2" value="5.567512649550658" />
+      <entry key="M5" value="12.72876798928713" />
+      <entry key="M10" value="19.000741121833652" />
+      <entry key="M15" value="23.026714907908946" />
+      <entry key="M30" value="35.47858364561807" />
+      <entry key="H1" value="67.04316142899428" />
+      <entry key="H2" value="133.0171893334208" />
+      <entry key="H4" value="234.8156355688591" />
+      <entry key="D1" value="736.3280266226765" />
+      <entry key="W1" value="1534.4483971600341" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.06652313640333499" />
-      <entry key="MS500" value="0.5815600207739254" />
-      <entry key="S2" value="0.8732701910874014" />
-      <entry key="S5" value="0.9472761396899637" />
-      <entry key="S10" value="0.9804073111510728" />
-      <entry key="S30" value="1.3131961816593125" />
-      <entry key="S60" value="2.3698459413693005" />
-      <entry key="M2" value="6.9694866985204404" />
-      <entry key="M5" value="32.897743737970316" />
-      <entry key="M10" value="73.06562300419027" />
-      <entry key="M15" value="107.12715960581176" />
-      <entry key="M30" value="194.12032677164004" />
-      <entry key="H1" value="342.1532964147412" />
-      <entry key="H2" value="578.0088142034422" />
-      <entry key="H4" value="895.4359574064244" />
-      <entry key="D1" value="2462.532634468627" />
-      <entry key="W1" value="3664.3663950890264" />
+      <entry key="MS100" value="0.0039088736378062065" />
+      <entry key="MS500" value="0.40639800221823624" />
+      <entry key="S2" value="1.2838091728571364" />
+      <entry key="S5" value="1.6683808879814115" />
+      <entry key="S10" value="1.8285825027287848" />
+      <entry key="S30" value="2.7904591026575267" />
+      <entry key="S60" value="7.661544487970067" />
+      <entry key="M2" value="22.355632855822716" />
+      <entry key="M5" value="65.45841408297258" />
+      <entry key="M10" value="105.80258354658831" />
+      <entry key="M15" value="129.02926864886456" />
+      <entry key="M30" value="184.3608847978153" />
+      <entry key="H1" value="303.72708735698114" />
+      <entry key="H2" value="543.2537284049487" />
+      <entry key="H4" value="924.0717268465331" />
+      <entry key="D1" value="2789.0656793570342" />
+      <entry key="W1" value="5579.777906984854" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">

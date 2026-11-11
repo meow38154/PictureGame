@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,6 +25,8 @@ namespace Agents.FSM
                 
                 // 런타임에 객체의 형식정보를 들여다보는 기능  
                 AgentState agentState = (AgentState)Activator.CreateInstance(type, agent, paramHash, layerIndex);
+                
+                agentState.Init();
 
                 _stateDict.Add(stateData.assetIndex, agentState);
             }
@@ -42,4 +44,4 @@ namespace Agents.FSM
 
         public void UpdateMachine() => CurrentState?.Update();
     }
-}
+}*/

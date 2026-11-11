@@ -13,7 +13,7 @@ namespace Command.UndoableObjects
     {
         [SerializeField] private EventChannelSO commandInvokeEvent;
 
-        private Stack<UndoSaveData> _undoStack = new();
+        private readonly Stack<UndoSaveData> _undoStack = new();
 
         protected override void Awake()
         {
