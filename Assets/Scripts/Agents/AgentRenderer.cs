@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Agents
 {
+    [RequireComponent(typeof(Animator))]
     public class AgentRenderer : Module, IRenderer
     {
         public Animator Animator { get; private set; }

@@ -47,6 +47,9 @@ TagManager:
   - name: Object
     uniqueID: 1741641529
     locked: 0
+  - name: Mining
+    uniqueID: 3810004087
+    locked: 0
   - name: Item
     uniqueID: 2895648249
     locked: 0

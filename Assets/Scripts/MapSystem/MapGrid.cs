@@ -37,11 +37,11 @@ namespace MapSystem
 
             foreach (IMapPiece piece in pieces)
             {
-                if (piece.Data == null) continue;
+                if (piece.OccupiedCells == null) continue;
 
                 Vector2Int gridPos = WorldToCell(piece.Transform.position);
                 
-                if (TryDeployment(gridPos, piece.Data))
+                if (TryDeployment(gridPos, piece.OccupiedCells))
                 {
                     piece.SetDeployed(gridPos);
                 }
@@ -80,11 +80,11 @@ namespace MapSystem
         }
 
         // 배치 가능 여부
-        public bool CanDeployment(Vector2Int pos, MapPieceSo data)
+        public bool CanDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data)
         {
-            if (data == null || data.OccupiedCells.Count == 0) return false;
+            if (data == null || data.Count == 0) return false;
 
-            foreach (Vector2Int cell in data.OccupiedCells)
+            foreach (Vector2Int cell in data)
             {
                 if (_occupiedCells.Contains(cell + pos)) return false;
             }
@@ -93,21 +93,21 @@ namespace MapSystem
         }
 
         // 배치
-        public bool TryDeployment(Vector2Int pos, MapPieceSo data)
+        public bool TryDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data)
         {
             if (!CanDeployment(pos, data)) return false;
 
-            foreach (Vector2Int cell in data.OccupiedCells) _occupiedCells.Add(cell + pos);
+            foreach (Vector2Int cell in data) _occupiedCells.Add(cell + pos);
 
             return true;
         }
 
         // 제거
-        public void RemoveDeployment(Vector2Int pos, MapPieceSo data)
+        public void RemoveDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data)
         {
             if (data == null) return;
 
-            foreach (Vector2Int cell in data.OccupiedCells) _occupiedCells.Remove(cell + pos);
+            foreach (Vector2Int cell in data) _occupiedCells.Remove(cell + pos);
         }
     }
 }

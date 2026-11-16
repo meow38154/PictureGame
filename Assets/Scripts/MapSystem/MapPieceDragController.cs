@@ -1,6 +1,7 @@
 using System;
 using Agents.Players;
 using Command;
+using Common.Attributes;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace MapSystem
     {
         [Header("References")]
         [SerializeField] private GameObject mapGridObject;
-        [SerializeField] private Camera targetCamera;
+        [ReadOnly, SerializeField] private Camera targetCamera;
 
         [Header("Detection")]
         [SerializeField] private LayerMask pieceLayer;
@@ -86,7 +87,7 @@ namespace MapSystem
             
             IMapPiece piece = hit.GetComponentInParent<IMapPiece>();
 
-            if (piece == null || piece.Data == null || piece.Fixed) return;
+            if (piece?.OccupiedCells == null || piece.Fixed) return;
             
             _selectedPiece = piece;
 
@@ -102,7 +103,7 @@ namespace MapSystem
 
             if (_wasDeployed)
             {
-                mapGrid.RemoveDeployment(_originalGridPosition, piece.Data);
+                mapGrid.RemoveDeployment(_originalGridPosition, piece.OccupiedCells);
 
                 piece.ClearDeployed();
             }
@@ -139,7 +140,7 @@ namespace MapSystem
 
         private void EndDrag()
         {
-            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.Data);
+            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.OccupiedCells);
 
             Vector2Int finalGridPosition = willBeDeployed ? _targetPosition : _originalGridPosition;
 
@@ -167,7 +168,7 @@ namespace MapSystem
             }
             else if (_wasDeployed)
             {
-                if (mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
+                if (_selectedPiece != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
                 {
                     _selectedPiece.SetDeployed(_originalGridPosition);
                 }
@@ -201,7 +202,7 @@ namespace MapSystem
 
             if (_selectedPiece == null) return false;
             
-            MapPieceSo data = _selectedPiece.Data;
+            var data = _selectedPiece.OccupiedCells;
 
             if (mapGrid.CanDeployment(targetPos, data)) return true;
 
@@ -247,7 +248,7 @@ namespace MapSystem
 
             if (_wasDeployed)
             {
-                if (mapGrid != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
+                if (mapGrid != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
                 {
                     _selectedPiece.SetDeployed(_originalGridPosition);
                 }

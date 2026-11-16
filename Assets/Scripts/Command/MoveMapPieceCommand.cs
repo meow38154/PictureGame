@@ -47,14 +47,14 @@ namespace Command
         {
             if (_piece.IsDeployed)
             {
-                _grid.RemoveDeployment(_piece.GridPosition, _piece.Data);
+                _grid.RemoveDeployment(_piece.GridPosition, _piece.OccupiedCells);
 
                 _piece.ClearDeployed();
             }
 
             if (shouldDeploy)
             {
-                if (!_grid.TryDeployment(gridPosition, _piece.Data))
+                if (!_grid.TryDeployment(gridPosition, _piece.OccupiedCells))
                 {
                     Debug.LogWarning("MapPiece deployment failed.");
                     return;

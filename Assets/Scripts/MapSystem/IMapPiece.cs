@@ -1,12 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MapSystem
 {
     public interface IMapPiece
     {
-        MapPieceSo Data { get; }
         bool Fixed { get; }
         Transform Transform { get; }
+        public IReadOnlyList<Vector2Int> OccupiedCells { get; }
         bool IsDeployed { get; }
         bool IsDragging { get; }
         bool IsActive { get; }

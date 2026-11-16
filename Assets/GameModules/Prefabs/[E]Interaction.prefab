@@ -191,7 +191,7 @@ SortingGroup:
   m_GameObject: {fileID: 587043344466260631}
   m_Enabled: 1
   m_SortingLayerID: 439793959
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
@@ -398,7 +398,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 439793959
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
@@ -489,7 +489,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 439793959
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
@@ -662,7 +662,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isActive: 0
+  isActive: 1
 --- !u!1 &5969648700111431969
 GameObject:
   m_ObjectHideFlags: 0

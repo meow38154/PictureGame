@@ -1,4 +1,10 @@
+using System.Collections.Generic;
 using Agents;
+using Common.Attributes;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEngine.SceneManagement;
+#endif
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -15,15 +21,19 @@ namespace MapSystem
         private readonly Color FixedPieceColor = new Color(0.5f, 0.5f, 0.5f, 1f);
 
         private const float DISABLE_COLOR_ALPHA = 0.5f;
+
+        [SerializeField] private MapPieceSo data;
+        [SerializeField] private string pieceName;
         
-        [field: SerializeField] public MapPieceSo Data { get; private set; }
         [field: SerializeField] public bool Fixed { get; private set; }
         public Transform Transform => transform;
+        
 
         public bool IsDeployed { get; private set; }
         public bool IsDragging { get; private set; }
         public bool IsActive { get; private set; } = true;
         public Vector2Int GridPosition { get; private set; }
+        public IReadOnlyList<Vector2Int> OccupiedCells { get; private set; }
 
         private Tilemap _tilemaps;
         private Color _originalColors;
@@ -37,6 +47,8 @@ namespace MapSystem
             _tilemaps = GetComponentInChildren<Tilemap>();
             _collider = GetComponent<Collider2D>();
 
+            OccupiedCells = data.OccupiedCells;
+            
             _originalColors = _tilemaps.color;
         }
 
@@ -110,12 +122,44 @@ namespace MapSystem
             }
         }
 
-        [ContextMenu("File")]
+        [ContextMenu("Update File")]
         public void PrefabDataRefresh()
         {
-            if (Data == null || _tilemaps == null) return;
+            if (data == null || _tilemaps == null) return;
             
-            Data.TileDataRegister(_tilemaps);
+            data.TileDataRegister(_tilemaps);
+        }
+        
+        [ContextMenu("Create File")]
+        public void CreateMapPieceSo()
+        {
+#if UNITY_EDITOR
+            _tilemaps = GetComponentInChildren<Tilemap>();
+
+            if (_tilemaps == null) return;
+
+            MapPieceSo mapPieceSo = ScriptableObject.CreateInstance<MapPieceSo>();
+
+            mapPieceSo.TileDataRegister(_tilemaps);
+
+            string folderPath = $"Assets/GameModules/Piece/{SceneManager.GetActiveScene().name}";
+
+            System.IO.Directory.CreateDirectory(folderPath);
+
+            string path = AssetDatabase.GenerateUniqueAssetPath($"{folderPath}/{(string.IsNullOrEmpty(pieceName) ? gameObject.name : pieceName)}.asset");
+
+            AssetDatabase.CreateAsset(mapPieceSo, path);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            Undo.RecordObject(this, "Assign MapPieceSo");
+
+            data = mapPieceSo;
+
+            EditorUtility.SetDirty(this);
+
+            Debug.Log($"MapPieceSo Created: {path}");
+#endif
         }
     }
 }

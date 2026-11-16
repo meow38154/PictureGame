@@ -23,7 +23,7 @@ namespace Command
 
             foreach (IMapPiece piece in pieces)
             {
-                if (piece == null || piece.Data == null) continue;
+                if (piece == null || piece.OccupiedCells == null) continue;
 
                 _states.Add(new PieceState
                 {
@@ -49,7 +49,7 @@ namespace Command
 
                 if (state.Piece.IsDeployed)
                 {
-                    _grid.RemoveDeployment(state.Piece.GridPosition, state.Piece.Data);
+                    _grid.RemoveDeployment(state.Piece.GridPosition, state.Piece.OccupiedCells);
                     state.Piece.ClearDeployed();
                 }
             }
@@ -62,7 +62,7 @@ namespace Command
 
                 if (!state.IsDeployed) continue;
 
-                if (_grid.TryDeployment(state.GridPosition, state.Piece.Data))
+                if (_grid.TryDeployment(state.GridPosition, state.Piece.OccupiedCells))
                     state.Piece.SetDeployed(state.GridPosition);
                 else
                     Debug.LogWarning($"초기 배치 복원 실패: {state.Piece.Transform.gameObject.name}");
