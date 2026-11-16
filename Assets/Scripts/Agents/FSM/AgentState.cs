@@ -23,6 +23,7 @@ namespace Agents.FSM
 
         public virtual void Enter(float transitionDuration = 0.1f)
         {
+            //Debug.Log($"{GetType().Name} entered");
             _renderer.PlayClip(_stateClipHash, 0.1f, transitionDuration, _layerIndex);
         }
 

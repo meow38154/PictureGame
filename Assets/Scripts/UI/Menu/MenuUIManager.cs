@@ -45,6 +45,11 @@ namespace UI.Menu
             {
                 HandleTextUISelectionChanged(true);
             }
+
+            if (Keyboard.current.enterKey.wasPressedThisFrame)
+            {
+                currentSelectButton.Interact();
+            }
         }
 
         private void HandleTextUISelectionChanged(bool isDown)

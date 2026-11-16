@@ -10,9 +10,11 @@ namespace Agents.Players
 {
     public class PlayerPartFollower : Module, IPartFollower
     {
-        [SerializeField] private EventChannelSO eventChannelSo;
+       // [SerializeField] private EventChannelSO eventChannelSo;
 
-        private bool _canCurrentPartChange = true;
+       // private bool _canCurrentPartChange = true;
+
+       [field: SerializeField] public bool IsActive { get; set; } = true;
 
         private IGroundChecker _groundChecker;
         private Rigidbody2D _playerRb;
@@ -35,14 +37,11 @@ namespace Agents.Players
 
         private void FixedUpdate()
         {
-            if (_playerRb == null || _groundChecker == null)
-                return;
+            if (_playerRb == null || _groundChecker == null) return;
 
-            if (!_canCurrentPartChange)
-                return;
+            //if (!_canCurrentPartChange) return;
 
-            if (_currentPart != null && _currentPart.IsDragging)
-                return;
+            if (_currentPart != null && _currentPart.IsDragging) return;
 
             if (_playerRb.linearVelocityY > 0.05f)
             {
@@ -57,25 +56,21 @@ namespace Agents.Players
         {
             Collider2D col = _groundChecker.CurrentGround;
 
-            return col != null
-                ? col.GetComponentInParent<IMapPiece>()
-                : null;
+            return col != null ? col.GetComponentInParent<IMapPiece>() : null;
         }
 
         private void SetCurrentPart(IMapPiece nextPart)
         {
-            if (_currentPart == nextPart)
-                return;
+            if (_currentPart == nextPart || !IsActive) return;
 
             _currentPart = nextPart;
 
-            Transform parent = _currentPart != null
-                ? _currentPart.Transform
-                : _originalParent;
+            Transform parent = _currentPart != null ? _currentPart.Transform : _originalParent;
 
             _owner.transform.SetParent(parent, true);
         }
 
+        /*
         private void OnEnable()
         {
             if (eventChannelSo != null)
@@ -95,6 +90,6 @@ namespace Agents.Players
         private void HandleChangeCanCurrentPart(BoolEvent evt)
         {
             _canCurrentPartChange = evt.Value;
-        }
+        }*/
     }
 }

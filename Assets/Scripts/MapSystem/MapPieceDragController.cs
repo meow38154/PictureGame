@@ -1,5 +1,7 @@
+using System;
 using Agents.Players;
 using Command;
+using Common.Attributes;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
@@ -11,7 +13,7 @@ namespace MapSystem
     {
         [Header("References")]
         [SerializeField] private GameObject mapGridObject;
-        [SerializeField] private Camera targetCamera;
+        [ReadOnly, SerializeField] private Camera targetCamera;
 
         [Header("Detection")]
         [SerializeField] private LayerMask pieceLayer;
@@ -23,7 +25,7 @@ namespace MapSystem
         [SerializeField, Min(0)] private int searchRadius = 5;
 
         [Header("So")] 
-        [SerializeField] private EventChannelSO dragStateChangedEvent;
+        [SerializeField] private EventChannelSO playerFreezeControllerEvent;
         [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
         [SerializeField] private EventChannelSO commandInvokeEvent;
         [SerializeField] private PlayerInputSO inputSo;
@@ -46,6 +48,11 @@ namespace MapSystem
         {
             targetCamera = Camera.main;
             mapGrid = mapGridObject.GetComponent<IMapGrid>();
+        }
+
+        private void Start()
+        {
+            EndDrag();
         }
 
         private void Update()
@@ -80,9 +87,7 @@ namespace MapSystem
             
             IMapPiece piece = hit.GetComponentInParent<IMapPiece>();
 
-            if (piece == null || piece.Data == null || piece.Fixed) return;
-
-            inputSo.CanMovement = false;
+            if (piece?.OccupiedCells == null || piece.Fixed) return;
             
             _selectedPiece = piece;
 
@@ -98,7 +103,7 @@ namespace MapSystem
 
             if (_wasDeployed)
             {
-                mapGrid.RemoveDeployment(_originalGridPosition, piece.Data);
+                mapGrid.RemoveDeployment(_originalGridPosition, piece.OccupiedCells);
 
                 piece.ClearDeployed();
             }
@@ -106,8 +111,9 @@ namespace MapSystem
             // 드래그 시작
             _selectedPiece.SetDragging(true);
             _selectedPiece.SetPieceActive(false);
+            _selectedPiece.AllFreeze();
             
-            dragStateChangedEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(false));
+            playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(false));
 
             UpdateDrag();
         }
@@ -134,7 +140,7 @@ namespace MapSystem
 
         private void EndDrag()
         {
-            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.Data);
+            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.OccupiedCells);
 
             Vector2Int finalGridPosition = willBeDeployed ? _targetPosition : _originalGridPosition;
 
@@ -142,14 +148,14 @@ namespace MapSystem
 
             finalWorldPosition.z = _originalWorldPosition.z;
             
-            _selectedPiece.Transform.position = _originalWorldPosition;
+            if (_selectedPiece != null)
+                _selectedPiece.Transform.position = _originalWorldPosition;
 
             bool hasChanged = finalWorldPosition != _originalWorldPosition || willBeDeployed != _wasDeployed;
 
             if (hasChanged)
             {
-                ICommand command = new MoveMapPieceCommand(
-                    _selectedPiece, mapGrid, _originalGridPosition, finalGridPosition, 
+                ICommand command = new MoveMapPieceCommand(_selectedPiece, mapGrid, _originalGridPosition, finalGridPosition, 
                     _originalWorldPosition, finalWorldPosition, _wasDeployed, willBeDeployed);
 
                 CommandInvokeEventStruct eventData = new()
@@ -162,22 +168,25 @@ namespace MapSystem
             }
             else if (_wasDeployed)
             {
-                if (mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
+                if (_selectedPiece != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
                 {
                     _selectedPiece.SetDeployed(_originalGridPosition);
                 }
             }
 
-            _selectedPiece.ResetPreview();
-            _selectedPiece.SetDragging(false);
-            _selectedPiece.SetPieceActive(true);
+            if (_selectedPiece != null)
+            {
+                _selectedPiece.ResetPreview();
+                _selectedPiece.SetDragging(false);
+                _selectedPiece.SetPieceActive(true);
+                _selectedPiece.AllUnFreeze();
+            }
 
-            dragStateChangedEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
-
-            inputSo.CanMovement = true;
+            playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
 
             _selectedPiece = null;
         }
+        
         private Vector2Int SnapToGrid(Vector2Int position)
         {
             int size = Mathf.Max(1, sellSize);
@@ -193,7 +202,7 @@ namespace MapSystem
 
             if (_selectedPiece == null) return false;
             
-            MapPieceSo data = _selectedPiece.Data;
+            var data = _selectedPiece.OccupiedCells;
 
             if (mapGrid.CanDeployment(targetPos, data)) return true;
 
@@ -239,7 +248,7 @@ namespace MapSystem
 
             if (_wasDeployed)
             {
-                if (mapGrid != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.Data))
+                if (mapGrid != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
                 {
                     _selectedPiece.SetDeployed(_originalGridPosition);
                 }

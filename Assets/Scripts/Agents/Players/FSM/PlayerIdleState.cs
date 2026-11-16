@@ -18,8 +18,8 @@ namespace Agents.Players.FSM
         public override void Update()
         {
             base.Update();
-            if (TryChangeToFall() || !ControlMovement.Freeze)
-                return;
+            if (TryChangeToFall()) return;
+            
             HandleMovementStateChange(Player.PlayerInput.MovementKey.x);
         }
 

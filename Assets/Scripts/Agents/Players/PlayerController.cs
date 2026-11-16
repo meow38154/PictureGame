@@ -32,7 +32,7 @@ namespace Agents.Players
 
         protected override object CaptureCustomData()
         {
-            return _grabController.CurrentGrabbingObject;
+            return _grabController?.CurrentGrabbingObject;
         }
 
         protected override void RestoreCustomData(object data)

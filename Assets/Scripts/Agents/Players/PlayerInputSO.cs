@@ -50,12 +50,14 @@ namespace Agents.Players
         
         public void OnMove(InputAction.CallbackContext context)
         {
-            if (!CanMovement)
+            /*if (!CanMovement)
             {
                 MovementKey = Vector2.zero;
+                Debug.Log($"{GetType().Name} move {MovementKey}");
                 return;
-            }
+            }*/
             MovementKey = context.ReadValue<Vector2>(); 
+            
         }
 
         public void OnJump(InputAction.CallbackContext context)

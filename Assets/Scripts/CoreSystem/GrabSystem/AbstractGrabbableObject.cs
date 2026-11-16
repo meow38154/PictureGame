@@ -1,4 +1,5 @@
-﻿using Command.UndoableObjects;
+﻿using Agents.Players;
+using Command.UndoableObjects;
 using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using UnityEngine;
@@ -15,26 +16,36 @@ namespace CoreSystem.GrabSystem
         private Collider2D _collider;
         private Rigidbody2D _rb;
 
+        private IPartFollower _partFollower;
+        
         protected override void Awake()
         {
             base.Awake();
             _rb = GetComponent<Rigidbody2D>();
             _collider = GetComponent<Collider2D>();
+            _partFollower = GetModule<IPartFollower>();
         }
 
         public virtual void OnGrabbed()
         {
+            _partFollower.IsActive = false;
             grabEventChannelSo.RaiseEvent(CreateEvents.GrabbableObjectEvent.InitData(this));
             _collider.enabled = false;
-            _rb.bodyType = RigidbodyType2D.Kinematic;
+            ChangeAllRigidbodyType(RigidbodyType2D.Kinematic);
             IsGrabbing = true;
         }
 
         public virtual void OnReleased()
         {
-            _collider.enabled = true;
-            _rb.bodyType = RigidbodyType2D.Dynamic;
+            _partFollower.IsActive = true;
+            _collider.enabled = true; 
+            ChangeAllRigidbodyType(RigidbodyType2D.Dynamic);
             IsGrabbing = false;
+        }
+
+        private void ChangeAllRigidbodyType(RigidbodyType2D type)
+        {
+            _rb.bodyType = type;
         }
     }
 }

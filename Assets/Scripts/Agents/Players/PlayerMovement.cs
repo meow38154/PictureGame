@@ -1,4 +1,5 @@
-﻿using CoreSystem.Events;
+﻿using System;
+using CoreSystem.Events;
 using DevLib.EventChannelSystem;
 using DevLib.ModuleSystem;
 using DG.Tweening;
@@ -8,26 +9,23 @@ namespace Agents.Players
 {
     public class PlayerMovement : Module, IControlMovement
     {
-        [field: SerializeField] public bool Freeze { get; private set; } = true;
         [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
-        [SerializeField] private EventChannelSO dragStateChangedEvent;
-        
+        [SerializeField] private EventChannelSO playerFreezeControllerEvent;
         [SerializeField] private float playerMoveSpeed;
-        private Rigidbody2D _playerRb;
         
-        private IRenderer _renderer;
-        private float _movementDirectionX;
-        private Tween _flipTween;
         private int _currentDirection = 1;
-        private RigidbodyConstraints2D _originalConstraints;
+        private float _movementDirectionX;
+        private Rigidbody2D _playerRb;
+        private IAgentFreezer _freezer;
+        private IRenderer _renderer;
+        private Tween _flipTween;
 
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
+            _freezer = _owner.GetModule<IAgentFreezer>();
             _renderer = _owner.GetModule<IRenderer>();
             _playerRb = _owner.GetComponent<Rigidbody2D>();
-            
-            _originalConstraints = _playerRb.constraints;
         }
 
         private void Start()
@@ -62,40 +60,32 @@ namespace Agents.Players
 
             _flipTween?.Kill();
 
-            _flipTween = rendererTrm.DORotate(new Vector3(0f, targetY, 0f), 0.15f, RotateMode.Fast).SetEase(Ease.OutQuad);
+            _flipTween = rendererTrm.DORotate(new Vector3(0f, targetY, 0f), 0.15f).SetEase(Ease.OutQuad);
         }
         
         private void MovePlayer() 
         {
             if (_playerRb == null) return;
+            
             _playerRb.linearVelocityX = _movementDirectionX * playerMoveSpeed;
         }
 
         private void OnEnable()
         {
-            dragStateChangedEvent.AddListener<BoolEvent>(HandleChangeCanMove);
+            playerFreezeControllerEvent.AddListener<BoolEvent>(HandleFreezeSetting);
         }
 
         private void OnDisable()
         {
-            dragStateChangedEvent.RemoveListener<BoolEvent>(HandleChangeCanMove);
+            playerFreezeControllerEvent.RemoveListener<BoolEvent>(HandleFreezeSetting);
         }
 
-        private void HandleChangeCanMove(BoolEvent obj)
+        private void HandleFreezeSetting(BoolEvent obj)
         {
-            Freeze = obj.Value;
-            
-            if (Freeze)
-            {
-                _playerRb.constraints = _originalConstraints;
-            }
-            else
-            {
-                _playerRb.linearVelocity = Vector2.zero;
-                _playerRb.angularVelocity = 0f;
-                _playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
-            }
+            if (!obj.Value) _freezer.Freeze();
+            else _freezer.UnFreeze();
         }
+
 
         public bool PlayerIsStop()
         {

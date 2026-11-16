@@ -12,25 +12,34 @@ namespace MapSystem
     [CreateAssetMenu(fileName = "base MapPiece So", menuName = "Map/Piece", order = 0)]
     public class MapPieceSo : ScriptableObject
     {
-        [SerializeField] private Tilemap mapPrefabTilemap;
+        //[SerializeField] private Tilemap mapPrefabTilemap;
 
         //에셋에 저장, 수정은 불가
         [ReadOnly, SerializeField] private List<Vector2Int> occupiedCells = new();
         public IReadOnlyList<Vector2Int> OccupiedCells => occupiedCells;
         
-        private void OnValidate()
+        /*private void OnValidate()
         {
             TileDataRegister(mapPrefabTilemap);
-        }
+        }*/
 
+        [ContextMenu("Update")]
+        public void UpdateMap()
+        {
+            //TileDataRegister(mapPrefabTilemap);
+        }
+        
+        
         public void TileDataRegister(Tilemap tilemap)
         {
             //리스트 초기화
             occupiedCells.Clear();
+            
+            //mapPrefabTilemap = tilemap;
 
             if (tilemap == null) return;
 
-            foreach (var pos in mapPrefabTilemap.cellBounds.allPositionsWithin)
+            foreach (var pos in tilemap.cellBounds.allPositionsWithin)
             {
                 //그 부분에 타일 없으면 넘기기
                 if (!tilemap.HasTile(pos)) continue;

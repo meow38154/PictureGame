@@ -33,10 +33,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4402858997148046907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3316954607586200507
 CanvasRenderer:
@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 5375557319802047995}
   - component: {fileID: 651489013601919045}
   - component: {fileID: 7407395897292059869}
+  - component: {fileID: 1126120230816813773}
   m_Layer: 5
   m_Name: Setting Canvas
   m_TagString: Untagged
@@ -268,6 +269,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a209184ca65437684feaeb22f19ed92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoreSystem.DontDestroyOnLoadObject
+--- !u!114 &1126120230816813773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993717614018391149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f22c0125214cb09395047a97e987eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.PanelToggleActive
+  toggleObject: {fileID: 6545161388725725614}
 --- !u!1 &5916857419910323222
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,10 +589,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4402858997148046907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7901006445183356901
 CanvasRenderer:
@@ -956,10 +970,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4402858997148046907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -250}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3713578524454523770
 CanvasRenderer:

@@ -10,7 +10,8 @@ namespace Command
     {
         Execute,
         Redo,
-        Undo
+        Undo,
+        Peek
     }
 
     public struct CommandInvokeEventStruct
@@ -47,7 +48,19 @@ namespace Command
                 case CommandActionType.Execute:
                     ExecuteCommand(obj.Value.Command);
                     break;
+                
+                case  CommandActionType.Peek:
+                    Peek();
+                    break;
             }
+        }
+
+        private void Peek()
+        {
+            if (_undoStack.Count <= 0) return;
+
+            Undo();
+            Redo();
         }
 
         private void ExecuteCommand(ICommand command)
@@ -62,10 +75,17 @@ namespace Command
         private void Undo()
         {
             if (_undoStack.Count <= 0) return;
-            
-            ICommand command = _undoStack.Pop();
-            command.Undo();
-            _redoStack.Push(command);
+
+            if (_undoStack.Count == 1)
+            {
+                ICommand command = _undoStack.Peek();
+                command.Undo();
+                return;
+            }
+
+            ICommand undoCommand = _undoStack.Pop();
+            undoCommand.Undo();
+            _redoStack.Push(undoCommand);
         }
         
         private void Redo()

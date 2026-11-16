@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359033709009073582}
   - component: {fileID: 3178529563159928381}
+  - component: {fileID: 6888941717153515466}
   m_Layer: 5
   m_Name: Current Place Display Panel
   m_TagString: Untagged
@@ -280,6 +281,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &6888941717153515466
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924836454368890119}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6961058858146416286
 GameObject:
   m_ObjectHideFlags: 0
