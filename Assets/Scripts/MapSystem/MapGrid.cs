@@ -11,6 +11,7 @@ namespace MapSystem
     /// </summary>
     public class MapGrid : MonoBehaviour, IMapGrid
     {
+        [SerializeField] private Transform playerTrm;
         [SerializeField] private Grid grid;
         [SerializeField] private EventChannelSO commandInvokeEvent;
         
@@ -84,9 +85,29 @@ namespace MapSystem
         {
             if (data == null || data.Count == 0) return false;
 
+            HashSet<Vector2Int> currentDeploymentCell = new HashSet<Vector2Int>();
+            
             foreach (Vector2Int cell in data)
             {
-                if (_occupiedCells.Contains(cell + pos)) return false;
+                Vector2Int deploymentPos = cell + pos;
+                
+                if (_occupiedCells.Contains(deploymentPos)) return false;
+                currentDeploymentCell.Add(deploymentPos);
+            }
+            
+            Collider2D col = playerTrm.GetComponentInChildren<Collider2D>();
+            
+            Bounds bound = col.bounds;
+
+            Vector2Int boundMin = WorldToCell(bound.min);
+            Vector2Int boundMax = WorldToCell(bound.max);
+
+            for (int x = boundMin.x; x < boundMax.x; x++)
+            {
+                for (int y = boundMin.y; y < boundMax.y; y++)
+                {
+                    if (currentDeploymentCell.Contains(new Vector2Int(x, y))) return false;
+                }
             }
 
             return true;
