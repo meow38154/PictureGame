@@ -6,66 +6,74 @@ namespace Command
 {
     public class InitialMapStateCommand : ICommand
     {
-        private readonly IMapGrid _grid;
-        private readonly List<PieceState> _states = new();
-
-        private struct PieceState
+        private struct MapPieceState
         {
             public IMapPiece Piece;
-            public Vector2Int GridPosition;
+
             public Vector3 WorldPosition;
+            public Vector2Int GridPosition;
+
             public bool IsDeployed;
+            public bool IsActive;
         }
 
-        public InitialMapStateCommand(IMapGrid grid, IMapPiece[] pieces)
-        {
-            _grid = grid;
+        private readonly List<MapPieceState> _initialStates = new();
 
+        public InitialMapStateCommand(IMapGrid mapGrid, IMapPiece[] pieces)
+        {
             foreach (IMapPiece piece in pieces)
             {
-                if (piece == null || piece.OccupiedCells == null) continue;
-
-                _states.Add(new PieceState
+                MapPieceState state = new()
                 {
                     Piece = piece,
-                    GridPosition = piece.GridPosition,
+
                     WorldPosition = piece.Transform.position,
-                    IsDeployed = piece.IsDeployed
-                });
+                    GridPosition = piece.GridPosition,
+
+                    IsDeployed = piece.IsDeployed,
+                    IsActive = piece.IsActive
+                };
+
+                _initialStates.Add(state);
             }
         }
 
         public void Execute()
         {
+            Restore();
         }
 
         public void Undo()
         {
-            Debug.Log("이");
-            
-            foreach (PieceState state in _states)
-            {
-                if (state.Piece == null) continue;
+            Restore();
+        }
 
-                if (state.Piece.IsDeployed)
-                {
-                    _grid.RemoveDeployment(state.Piece.GridPosition, state.Piece.OccupiedCells);
-                    state.Piece.ClearDeployed();
-                }
+        public void Redo()
+        {
+            Restore();
+        }
+
+        private void Restore()
+        {
+            foreach (MapPieceState state in _initialStates)
+            {
+                state.Piece.RemoveDeployment();
             }
 
-            foreach (PieceState state in _states)
+            foreach (MapPieceState state in _initialStates)
             {
-                if (state.Piece == null) continue;
-
                 state.Piece.Transform.position = state.WorldPosition;
 
-                if (!state.IsDeployed) continue;
+                state.Piece.SetDragging(false);
+                state.Piece.SetPieceActive(state.IsActive);
 
-                if (_grid.TryDeployment(state.GridPosition, state.Piece.OccupiedCells))
-                    state.Piece.SetDeployed(state.GridPosition);
-                else
-                    Debug.LogWarning($"초기 배치 복원 실패: {state.Piece.Transform.gameObject.name}");
+                if (state.IsDeployed)
+                {
+                    if (!state.Piece.TryDeployment(state.GridPosition))
+                        Debug.LogError($"초기 배치 복구 실패: {state.Piece.Transform.name}");
+                }
+
+                state.Piece.ResetPreview();
             }
         }
     }

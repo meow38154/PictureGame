@@ -9,16 +9,39 @@
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage 5 Fixation Map Prefab.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage 5 Fixation Map Prefab.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 3.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 3.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage_05/Stage_5 Piece 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Door.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Glitch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Glitch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Stage Selector/Stage File Icon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Stage Selector/Stage File Icon.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_04.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_04.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_05.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_05.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector/Main Camera Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector/Main Camera Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/DisposablePieceDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/DisposablePieceDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Players/PlayerPartFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/InitialMapStateCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/InitialMapStateCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/GlitchDisableTriggerEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/GlitchDisableTriggerEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/AbstractMapPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/AbstractMapPiece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/DisposableMapPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/DisposableMapPiece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPiece.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e4eaf245b924ed1b8c17467295ae042a6ca00/52/3d685569/IApplyRevertPropertyContextMenuItemProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/68/94d78292/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,7 +104,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/UiTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/WorldTrmLock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/TestMessageBoxFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject/TestGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/DefaultMapPiece.cs" root0="FORCE_HIGHLIGHTING" />
@@ -121,61 +143,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000023515359282" />
-      <entry key="S5" value="1.0164704571697387" />
-      <entry key="S10" value="1.3351519216199998" />
-      <entry key="S30" value="3.8791419356380152" />
-      <entry key="S60" value="8.631785930337596" />
-      <entry key="M2" value="17.958180947289904" />
-      <entry key="M5" value="39.17812801972569" />
-      <entry key="M10" value="75.71718408204399" />
-      <entry key="M15" value="107.62771877878498" />
-      <entry key="M30" value="176.96623405270225" />
-      <entry key="H1" value="283.07132512617625" />
-      <entry key="H2" value="467.82335486351445" />
-      <entry key="H4" value="757.3172816269858" />
-      <entry key="D1" value="2145.6320013327027" />
-      <entry key="W1" value="4154.888142865517" />
+      <entry key="MS100" value="1.0014699675267689" />
+      <entry key="MS500" value="1.272287744607957" />
+      <entry key="S2" value="2.016917426996212" />
+      <entry key="S5" value="3.1388208854643507" />
+      <entry key="S10" value="4.876121857613825" />
+      <entry key="S30" value="8.362788413543862" />
+      <entry key="S60" value="9.993444589088321" />
+      <entry key="M2" value="11.659364206550967" />
+      <entry key="M5" value="15.487168101871188" />
+      <entry key="M10" value="18.75274774915824" />
+      <entry key="M15" value="20.86455944571701" />
+      <entry key="M30" value="29.441638651289683" />
+      <entry key="H1" value="70.76400526588871" />
+      <entry key="H2" value="216.11270999238644" />
+      <entry key="H4" value="530.3809759857105" />
+      <entry key="D1" value="2148.992952165459" />
+      <entry key="W1" value="4352.504368332799" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.814436584358097E-63" />
-      <entry key="MS500" value="3.2831148826589947E-13" />
-      <entry key="S2" value="7.575902301811825E-4" />
-      <entry key="S5" value="0.05976035055789016" />
-      <entry key="S10" value="0.2951760269754974" />
-      <entry key="S30" value="1.0673756839607025" />
-      <entry key="S60" value="2.0666622786109965" />
-      <entry key="M2" value="4.204473716008793" />
-      <entry key="M5" value="9.825639553958599" />
-      <entry key="M10" value="19.24471111921974" />
-      <entry key="M15" value="27.177902283688653" />
-      <entry key="M30" value="45.659433693549076" />
-      <entry key="H1" value="79.9413442812837" />
-      <entry key="H2" value="147.1827971683272" />
-      <entry key="H4" value="251.59745507083755" />
-      <entry key="D1" value="761.0672181838875" />
-      <entry key="W1" value="1565.0100489127426" />
+      <entry key="MS100" value="2.043736277465355E-11" />
+      <entry key="MS500" value="0.0072792221039435405" />
+      <entry key="S2" value="0.2920930628546712" />
+      <entry key="S5" value="0.611235397753843" />
+      <entry key="S10" value="0.7818154620767824" />
+      <entry key="S30" value="0.9235640411628541" />
+      <entry key="S60" value="1.0205775557975787" />
+      <entry key="M2" value="1.4494393404752959" />
+      <entry key="M5" value="3.043652201848336" />
+      <entry key="M10" value="4.523400620165129" />
+      <entry key="M15" value="5.443666912801612" />
+      <entry key="M30" value="8.43601245323747" />
+      <entry key="H1" value="20.55772927818496" />
+      <entry key="H2" value="64.884285393281" />
+      <entry key="H4" value="167.57296328320004" />
+      <entry key="D1" value="742.4581664653609" />
+      <entry key="W1" value="1611.992994724377" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.2032611015663076E-5" />
-      <entry key="MS500" value="0.1171151808591282" />
-      <entry key="S2" value="0.585522257135147" />
-      <entry key="S5" value="0.8740942472855979" />
-      <entry key="S10" value="1.498993397968926" />
-      <entry key="S30" value="4.861293552131054" />
-      <entry key="S60" value="10.611749075468362" />
-      <entry key="M2" value="22.035809694048474" />
-      <entry key="M5" value="48.85761410184828" />
-      <entry key="M10" value="94.840981286829" />
-      <entry key="M15" value="134.70454068866164" />
-      <entry key="M30" value="222.55493324766334" />
-      <entry key="H1" value="362.9608242571613" />
-      <entry key="H2" value="614.9644388072538" />
-      <entry key="H4" value="1008.8810408438236" />
-      <entry key="D1" value="2906.6826286098894" />
-      <entry key="W1" value="5719.89342333856" />
+      <entry key="MS100" value="0.008210635716685514" />
+      <entry key="MS500" value="0.4837285972328575" />
+      <entry key="S2" value="1.8005059346332517" />
+      <entry key="S5" value="3.4262972647434777" />
+      <entry key="S10" value="5.448839433705598" />
+      <entry key="S30" value="9.196280483788442" />
+      <entry key="S60" value="10.958071743316976" />
+      <entry key="M2" value="13.039764174787688" />
+      <entry key="M5" value="18.438552949166777" />
+      <entry key="M10" value="23.20176411831885" />
+      <entry key="M15" value="26.249412636600365" />
+      <entry key="M30" value="37.840934497632915" />
+      <entry key="H1" value="91.29585201827871" />
+      <entry key="H2" value="280.9722908811487" />
+      <entry key="H4" value="697.9284461393645" />
+      <entry key="D1" value="2891.4344843874314" />
+      <entry key="W1" value="5964.492385232167" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -226,7 +248,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Test_build12\PictureGame.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Test Build\PictureGame.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\ASUS\Downloads\Test_build12" />
       <option name="PASS_PARENT_ENVS" value="1" />

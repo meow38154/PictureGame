@@ -1,18 +1,17 @@
 ﻿using CoreSystem.Events;
-using CoreSystem.Manager;
-using DevLib.BattleSystem.Feedback;
 using DevLib.EventChannelSystem;
 using UnityEngine;
 
 namespace Feedbacks
 {
-    public class SceneChangeFeedback : AbstractFeedback
+    public class SceneChangeEvent : MonoBehaviour
     {
-        [SerializeField] private string sceneName;
         [SerializeField] private EventChannelSO sceneChangeEvent;
         
-        public override void PlayFeedback()
+        public void ChangeScener(string sceneName)
         {
+            if (sceneChangeEvent == null) return;
+            
             sceneChangeEvent.RaiseEvent(CreateEvents.StringEvent.InitData(sceneName));
         }
     }

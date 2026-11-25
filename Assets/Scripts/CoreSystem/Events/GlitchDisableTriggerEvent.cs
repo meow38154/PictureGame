@@ -1,3 +1,4 @@
+using System;
 using Common;
 using CoreSystem.Triggers;
 using UnityEngine;
@@ -6,11 +7,14 @@ namespace CoreSystem.Events
 {
     public class GlitchDisableTriggerEvent : MonoBehaviour
     {
-        [SerializeField] private Transform objectToDisableGlitch;
-
-        public void Play()
+        private void OnValidate()
         {
-            var colliderTriggers = objectToDisableGlitch.GetComponentsInChildren<ColliderTrigger>();
+            gameObject.name = "GlitchDisableTriggerEvent";
+        }
+
+        public void Play(Transform objectToDisable)
+        {
+            var colliderTriggers = objectToDisable.GetComponentsInChildren<ColliderTrigger>();
 
             foreach (var colliderTrigger in colliderTriggers)
             {

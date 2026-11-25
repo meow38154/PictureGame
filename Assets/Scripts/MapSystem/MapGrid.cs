@@ -11,10 +11,9 @@ namespace MapSystem
     /// </summary>
     public class MapGrid : MonoBehaviour, IMapGrid
     {
-        [SerializeField] private Transform playerTrm;
         [SerializeField] private Grid grid;
         [SerializeField] private EventChannelSO commandInvokeEvent;
-        
+
         private readonly HashSet<Vector2Int> _occupiedCells = new();
 
         private void Awake()
@@ -38,15 +37,14 @@ namespace MapSystem
 
             foreach (IMapPiece piece in pieces)
             {
+                piece.Initialize(this);
+
                 if (piece.OccupiedCells == null) continue;
+                if (!piece.Transform.gameObject.activeInHierarchy) continue;
 
                 Vector2Int gridPos = WorldToCell(piece.Transform.position);
-                
-                if (TryDeployment(gridPos, piece.OccupiedCells))
-                {
-                    piece.SetDeployed(gridPos);
-                }
-                else
+
+                if (!piece.TryDeployment(gridPos))
                 {
                     Debug.LogWarning($"초기 배치 실패: {piece.Transform.gameObject.name}, 위치: {gridPos}", piece.Transform);
                 }
@@ -85,29 +83,11 @@ namespace MapSystem
         {
             if (data == null || data.Count == 0) return false;
 
-            HashSet<Vector2Int> currentDeploymentCell = new HashSet<Vector2Int>();
-            
             foreach (Vector2Int cell in data)
             {
                 Vector2Int deploymentPos = cell + pos;
-                
+
                 if (_occupiedCells.Contains(deploymentPos)) return false;
-                currentDeploymentCell.Add(deploymentPos);
-            }
-            
-            Collider2D col = playerTrm.GetComponentInChildren<Collider2D>();
-            
-            Bounds bound = col.bounds;
-
-            Vector2Int boundMin = WorldToCell(bound.min);
-            Vector2Int boundMax = WorldToCell(bound.max);
-
-            for (int x = boundMin.x; x < boundMax.x; x++)
-            {
-                for (int y = boundMin.y; y < boundMax.y; y++)
-                {
-                    if (currentDeploymentCell.Contains(new Vector2Int(x, y))) return false;
-                }
             }
 
             return true;
