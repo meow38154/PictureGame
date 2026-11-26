@@ -1,4 +1,6 @@
 using System;
+using CoreSystem.Events;
+using DevLib.EventChannelSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +8,10 @@ namespace UI.DialogueSystem
 {
     public class DialogueTrigger : MonoBehaviour
     {
+        //보내는 거
+        [SerializeField] private EventChannelSO dialogueLineDataEvent;
         [SerializeField] private DialogueDataSo dialogueData;
+        
 
         private void Update()
         {
@@ -19,7 +24,7 @@ namespace UI.DialogueSystem
             if (dialogueData == null) 
                 return;
             
-            DialogueManager.Instance.Dialogue(dialogueData);
+            dialogueLineDataEvent.RaiseEvent(CreateEvents.DialogueLineDataEvent.InitData(dialogueData.LineDatas));
         }
     }
 }

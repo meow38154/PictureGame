@@ -21,18 +21,17 @@ namespace UI.DialogueSystem
         private IEnumerator WriteText(DialogueLineData lineData)
         {
 
-            foreach (DialogueTextData textData in lineData.DialogueTextData)
+            foreach (DialogueTextData textData in lineData.dialogueTextData)
             {
-                _dialogueText.text += $"<size={textData.TextSize * 100}%>";
-                foreach (char c in textData.Text)
+                _dialogueText.text += $"<size={textData.textSize * 100}%>";
+                foreach (char c in textData.text)
                 {
                     _dialogueText.text += $"{c}";
                     if(!_isSkipped)
-                        yield return new WaitForSeconds(0.1f*textData.TextSpeed);
+                        yield return new WaitForSeconds(0.1f*textData.textSpeed);
                 }
                 _dialogueText.text += $"</size>";
             }
-            
         }
         
         public void WriteLine(DialogueLineData lineData)
