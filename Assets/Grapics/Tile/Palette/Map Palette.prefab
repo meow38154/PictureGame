@@ -74,6 +74,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741827
+  - first: {x: 4, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -82,13 +92,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d9f1440dcd675c148a7495188795c556, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4095b61b52f5e7641a5d2620ad2a87be, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 70325e7b55a66cb44a5e90f1564c7863, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 7482667652216324306, guid: 694c42de157b2704998d82bc32e5144c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -5367957031033554103, guid: ccf56f8484ef303428fbe05b193baff5, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 3855380114846106552, guid: eee9605a43c9dd74592d7b91735dee15, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -107,13 +121,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: 0, z: 0}
-  m_Size: {x: 3, y: 1, z: 1}
+  m_Size: {x: 6, y: 1, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -282,6 +296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7018266551153398874, guid: 2d351a8ad2504a04d81e614540eaff74, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8083961765452061885, guid: 2d351a8ad2504a04d81e614540eaff74, type: 3}
       propertyPath: m_Name
       value: Glitch
@@ -386,7 +404,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9163428393038427976, guid: 0568939cad748fe4a90d816836122945, type: 3}
   m_PrefabInstance: {fileID: 4622280708350038299}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5703983858755154016
+--- !u!114 &4280124819083825582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

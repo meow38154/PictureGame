@@ -13,7 +13,7 @@ namespace MapSystem
     {
         [SerializeField] private Grid grid;
         [SerializeField] private EventChannelSO commandInvokeEvent;
-        
+
         private readonly HashSet<Vector2Int> _occupiedCells = new();
 
         private void Awake()
@@ -37,15 +37,14 @@ namespace MapSystem
 
             foreach (IMapPiece piece in pieces)
             {
+                piece.Initialize(this);
+
                 if (piece.OccupiedCells == null) continue;
+                if (!piece.Transform.gameObject.activeInHierarchy) continue;
 
                 Vector2Int gridPos = WorldToCell(piece.Transform.position);
-                
-                if (TryDeployment(gridPos, piece.OccupiedCells))
-                {
-                    piece.SetDeployed(gridPos);
-                }
-                else
+
+                if (!piece.TryDeployment(gridPos))
                 {
                     Debug.LogWarning($"초기 배치 실패: {piece.Transform.gameObject.name}, 위치: {gridPos}", piece.Transform);
                 }
@@ -86,7 +85,9 @@ namespace MapSystem
 
             foreach (Vector2Int cell in data)
             {
-                if (_occupiedCells.Contains(cell + pos)) return false;
+                Vector2Int deploymentPos = cell + pos;
+
+                if (_occupiedCells.Contains(deploymentPos)) return false;
             }
 
             return true;

@@ -1,7 +1,5 @@
-
-using System;
-using CoreSystem.Events;
-using DevLib.EventChannelSystem;
+using System.Collections;
+using System.Collections.Generic;
 using DevLib.ModuleSystem;
 using MapSystem;
 using UnityEngine;
@@ -10,17 +8,19 @@ namespace Agents.Players
 {
     public class PlayerPartFollower : Module, IPartFollower
     {
-       // [SerializeField] private EventChannelSO eventChannelSo;
+        [field: SerializeField] public bool IsActive { get; set; } = true;
 
-       // private bool _canCurrentPartChange = true;
-
-       [field: SerializeField] public bool IsActive { get; set; } = true;
+        [SerializeField] private float partReleaseDelay = 0.1f;
+        [SerializeField] private float partEnterDelay = 0.1f;
 
         private IGroundChecker _groundChecker;
         private Rigidbody2D _playerRb;
         private IMapPiece _currentPart;
-        private Transform _originalParent;
-        
+
+        private Coroutine _enterCoroutine;
+
+        private readonly Dictionary<IMapPiece, Coroutine> _releaseCoroutines = new();
+
         public IMapPiece CurrentPart => _currentPart;
 
         public override void Initialize(ModuleOwner owner)
@@ -29,7 +29,6 @@ namespace Agents.Players
 
             _playerRb = owner.GetComponent<Rigidbody2D>();
             _groundChecker = owner.GetModule<IGroundChecker>();
-            _originalParent = owner.transform.parent;
 
             Debug.Assert(_playerRb != null);
             Debug.Assert(_groundChecker != null);
@@ -39,9 +38,7 @@ namespace Agents.Players
         {
             if (_playerRb == null || _groundChecker == null) return;
 
-            //if (!_canCurrentPartChange) return;
-
-            if (_currentPart != null && _currentPart.IsDragging) return;
+            if (_currentPart is { IsDragging: true }) return;
 
             if (_playerRb.linearVelocityY > 0.05f)
             {
@@ -63,33 +60,55 @@ namespace Agents.Players
         {
             if (_currentPart == nextPart || !IsActive) return;
 
+            if (_enterCoroutine != null)
+            {
+                StopCoroutine(_enterCoroutine);
+                _enterCoroutine = null;
+            }
+
+            if (_currentPart != null)
+            {
+                IMapPiece previousPart = _currentPart;
+
+                if (_releaseCoroutines.TryGetValue(previousPart, out Coroutine coroutine)) StopCoroutine(coroutine);
+
+                _releaseCoroutines[previousPart] = StartCoroutine(ReleaseOnPlayer(previousPart));
+            }
+
             _currentPart = nextPart;
 
-            Transform parent = _currentPart != null ? _currentPart.Transform : _originalParent;
+            bool isNull = _currentPart == null;
 
-            _owner.transform.SetParent(parent, true);
+            if (!isNull)
+            {
+                if (_releaseCoroutines.TryGetValue(_currentPart, out Coroutine coroutine))
+                {
+                    StopCoroutine(coroutine);
+                    _releaseCoroutines.Remove(_currentPart);
+                }
+
+                if (!_currentPart.OnPlayer) _enterCoroutine = StartCoroutine(EnterOnPlayer(_currentPart));
+            }
+
+            _owner.transform.SetParent(isNull ? null : _currentPart.Transform, true);
         }
 
-        /*
-        private void OnEnable()
+        private IEnumerator EnterOnPlayer(IMapPiece part)
         {
-            if (eventChannelSo != null)
-                eventChannelSo.AddListener<BoolEvent>(
-                    HandleChangeCanCurrentPart);
+            yield return new WaitForSeconds(partEnterDelay);
+
+            if (part == _currentPart) part.OnPlayer = true;
+
+            _enterCoroutine = null;
         }
 
-        private void OnDisable()
+        private IEnumerator ReleaseOnPlayer(IMapPiece part)
         {
-            if (eventChannelSo != null)
-                eventChannelSo.RemoveListener<BoolEvent>(
-                    HandleChangeCanCurrentPart);
-            
-            _currentPart = null;
-        }
+            yield return new WaitForSeconds(partReleaseDelay);
 
-        private void HandleChangeCanCurrentPart(BoolEvent evt)
-        {
-            _canCurrentPartChange = evt.Value;
-        }*/
+            if (part != _currentPart) part.OnPlayer = false;
+
+            _releaseCoroutines.Remove(part);
+        }
     }
 }

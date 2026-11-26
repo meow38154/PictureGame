@@ -206,19 +206,20 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222851940373622469}
-        m_TargetAssemblyTypeName: Feedbacks.SceneChangeFeedback, Assembly-CSharp
-        m_MethodName: PlayFeedback
-        m_Mode: 1
+      - m_Target: {fileID: 6586274372950057901}
+        m_TargetAssemblyTypeName: Feedbacks.SceneChangeEvent, Assembly-CSharp
+        m_MethodName: ChangeScener
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Stage_01
           m_BoolArgument: 0
         m_CallState: 2
   hoverScaleMultiplier: 0.9
+  clickScaleMultiplier: 0.5
   animDuration: 0.2
 --- !u!61 &8613843168986242071
 BoxCollider2D:
@@ -275,9 +276,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6078606710475881772}
-  - component: {fileID: 7714931642017541731}
+  - component: {fileID: 6586274372950057901}
   m_Layer: 0
-  m_Name: Feedback
+  m_Name: SceneChaneger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,8 +295,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3746792024059609458}
+  m_Children: []
   m_Father: {fileID: 6083251535188551622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -303,7 +303,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7714931642017541731
+--- !u!114 &6586274372950057901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,9 +312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3895043733630946842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa964ef6d8024764b93298ed0d01a2b5, type: 3}
+  m_Script: {fileID: 11500000, guid: dd6fe94810e940d7aa349b451b454ef0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: BattleSystem_assembly::DevLib.BattleSystem.Feedback.FeedbackPlayer
+  m_EditorClassIdentifier: Assembly-CSharp::Feedbacks.SceneChangeEvent
+  sceneChangeEvent: {fileID: 11400000, guid: 8aa6be6675c053b4aa47e023d2275d94, type: 2}
 --- !u!1 &3936125322556935547
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,53 +391,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &5942036907782259483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3746792024059609458}
-  - component: {fileID: 1222851940373622469}
-  m_Layer: 0
-  m_Name: SceneChangerFeedback
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3746792024059609458
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5942036907782259483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6078606710475881772}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1222851940373622469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5942036907782259483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6fe94810e940d7aa349b451b454ef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Feedbacks.SceneChangeFeedback
-  sceneName: Stage_01
-  sceneChangeEvent: {fileID: 11400000, guid: 8aa6be6675c053b4aa47e023d2275d94, type: 2}

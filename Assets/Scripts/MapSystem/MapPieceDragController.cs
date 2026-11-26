@@ -29,21 +29,22 @@ namespace MapSystem
         [SerializeField] private EventChannelSO movementControllerRegisteredEvent;
         [SerializeField] private EventChannelSO commandInvokeEvent;
         [SerializeField] private PlayerInputSO inputSo;
-        
+
         private IMapPiece _selectedPiece;
 
         private Vector3 _originalWorldPosition;
         private Vector2Int _originalGridPosition;
         private Vector2Int _grabCellOffset;
         private Vector2Int _targetPosition;
+        private Vector2Int _lastValidPosition;
 
         private bool _wasDeployed;
         private bool _canPlace;
-        
+
         private IControlMovement _controlMovement;
 
         private IMapGrid mapGrid;
-        
+
         private void Awake()
         {
             targetCamera = Camera.main;
@@ -77,18 +78,19 @@ namespace MapSystem
 
         private void BeginDrag()
         {
-            if (_controlMovement.PlayerIsStop()) return;
-            
+            if (_controlMovement == null || _controlMovement.PlayerIsStop()) return;
+            if (_selectedPiece != null) return;
+
             Vector3 mouseWorld = GetMouseWorldPosition();
 
             Collider2D hit = Physics2D.OverlapPoint(mouseWorld, pieceLayer);
 
             if (hit == null) return;
-            
+
             IMapPiece piece = hit.GetComponentInParent<IMapPiece>();
 
-            if (piece?.OccupiedCells == null || piece.Fixed) return;
-            
+            if (piece?.OccupiedCells == null || piece.Fixed || !piece.IsActive) return;
+
             _selectedPiece = piece;
 
             _originalWorldPosition = piece.Transform.position;
@@ -101,18 +103,15 @@ namespace MapSystem
 
             _grabCellOffset = mouseCell - pieceCell;
 
-            if (_wasDeployed)
-            {
-                mapGrid.RemoveDeployment(_originalGridPosition, piece.OccupiedCells);
+            _selectedPiece.RemoveDeployment();
 
-                piece.ClearDeployed();
-            }
+            _lastValidPosition = pieceCell;
+            _targetPosition = _lastValidPosition;
 
             // 드래그 시작
             _selectedPiece.SetDragging(true);
-            _selectedPiece.SetPieceActive(false);
             _selectedPiece.AllFreeze();
-            
+
             playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(false));
 
             UpdateDrag();
@@ -128,7 +127,8 @@ namespace MapSystem
 
             _canPlace = TryFindNearestPosition(snappedPos, out _targetPosition);
 
-            if (!_canPlace) _targetPosition = snappedPos;
+            if (!_canPlace) _targetPosition = _lastValidPosition;
+            else _lastValidPosition = _targetPosition;
 
             Vector3 worldPos = mapGrid.CellToWorld(_targetPosition);
 
@@ -140,16 +140,23 @@ namespace MapSystem
 
         private void EndDrag()
         {
-            bool willBeDeployed = _canPlace && mapGrid.CanDeployment(_targetPosition, _selectedPiece.OccupiedCells);
+            if (_selectedPiece == null)
+            {
+                playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
+                return;
+            }
 
-            Vector2Int finalGridPosition = willBeDeployed ? _targetPosition : _originalGridPosition;
+            bool canPlace = _canPlace && _selectedPiece.CanDeployment(_targetPosition);
 
-            Vector3 finalWorldPosition = willBeDeployed ? mapGrid.CellToWorld(finalGridPosition) : _originalWorldPosition;
+            bool willBeDeployed = canPlace || _wasDeployed;
+
+            Vector2Int finalGridPosition = canPlace ? _targetPosition : _originalGridPosition;
+
+            Vector3 finalWorldPosition = canPlace ? mapGrid.CellToWorld(finalGridPosition) : _originalWorldPosition;
 
             finalWorldPosition.z = _originalWorldPosition.z;
-            
-            if (_selectedPiece != null)
-                _selectedPiece.Transform.position = _originalWorldPosition;
+
+            _selectedPiece.Transform.position = _originalWorldPosition;
 
             bool hasChanged = finalWorldPosition != _originalWorldPosition || willBeDeployed != _wasDeployed;
 
@@ -168,25 +175,19 @@ namespace MapSystem
             }
             else if (_wasDeployed)
             {
-                if (_selectedPiece != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
-                {
-                    _selectedPiece.SetDeployed(_originalGridPosition);
-                }
+                if (!_selectedPiece.TryDeployment(_originalGridPosition))
+                    Debug.LogError("기존 파츠 배치 복구에 실패했습니다.");
             }
 
-            if (_selectedPiece != null)
-            {
-                _selectedPiece.ResetPreview();
-                _selectedPiece.SetDragging(false);
-                _selectedPiece.SetPieceActive(true);
-                _selectedPiece.AllUnFreeze();
-            }
+            _selectedPiece.SetDragging(false);
+            _selectedPiece.ResetPreview();
+            _selectedPiece.AllUnFreeze();
 
             playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
 
             _selectedPiece = null;
         }
-        
+
         private Vector2Int SnapToGrid(Vector2Int position)
         {
             int size = Mathf.Max(1, sellSize);
@@ -196,41 +197,84 @@ namespace MapSystem
                 Mathf.RoundToInt((float)position.y / size) * size);
         }
 
-        private bool TryFindNearestPosition(Vector2Int targetPos, out Vector2Int result)
+private bool TryFindNearestPosition(Vector2Int targetPos, out Vector2Int result)
+{
+    result = _lastValidPosition;
+
+    if (_selectedPiece == null) return false;
+
+    int size = Mathf.Max(1, sellSize);
+
+    while (result != targetPos)
+    {
+        Vector2Int direction = targetPos - result;
+
+        int moveX = Mathf.Clamp(direction.x, -size, size);
+        int moveY = Mathf.Clamp(direction.y, -size, size);
+
+        Vector2Int horizontal = result + new Vector2Int(moveX, 0);
+        Vector2Int vertical = result + new Vector2Int(0, moveY);
+        Vector2Int diagonal = result + new Vector2Int(moveX, moveY);
+
+        bool canMoveX = moveX != 0 && CanMovePath(result, horizontal);
+        bool canMoveY = moveY != 0 && CanMovePath(result, vertical);
+
+        if (canMoveX && canMoveY)
         {
-            result = targetPos;
-
-            if (_selectedPiece == null) return false;
-            
-            var data = _selectedPiece.OccupiedCells;
-
-            if (mapGrid.CanDeployment(targetPos, data)) return true;
-
-            int size = Mathf.Max(1, sellSize);
-
-            float nearestDistance = float.MaxValue;
-            bool found = false;
-
-            for (int x = -searchRadius; x <= searchRadius; x++)
+            if (CanMovePath(horizontal, diagonal) &&
+                CanMovePath(vertical, diagonal))
             {
-                for (int y = -searchRadius; y <= searchRadius; y++)
-                {
-                    Vector2Int candidate = targetPos + new Vector2Int(x * size, y * size);
-
-                    if (!mapGrid.CanDeployment(candidate, data)) continue;
-
-                    float distance = (candidate - targetPos).sqrMagnitude;
-
-                    if (distance >= nearestDistance) continue;
-
-                    nearestDistance = distance;
-                    result = candidate;
-                    found = true;
-                }
+                result = diagonal;
+                continue;
             }
-
-            return found;
         }
+
+        if (canMoveX && canMoveY)
+        {
+            result = Mathf.Abs(direction.x) >= Mathf.Abs(direction.y)
+                ? horizontal
+                : vertical;
+
+            continue;
+        }
+
+        if (canMoveX)
+        {
+            result = horizontal;
+            continue;
+        }
+
+        if (canMoveY)
+        {
+            result = vertical;
+            continue;
+        }
+
+        break;
+    }
+
+    return _selectedPiece.CanDeployment(result);
+}
+
+private bool CanMovePath(Vector2Int startPos, Vector2Int targetPos)
+{
+    Vector2Int direction = targetPos - startPos;
+
+    int steps = Mathf.Max(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
+
+    for (int i = 1; i <= steps; i++)
+    {
+        float t = (float)i / steps;
+
+        Vector2Int candidate = new Vector2Int(
+            Mathf.RoundToInt(Mathf.Lerp(startPos.x, targetPos.x, t)),
+            Mathf.RoundToInt(Mathf.Lerp(startPos.y, targetPos.y, t)));
+
+        if (!_selectedPiece.CanDeployment(candidate)) return false;
+    }
+
+    return true;
+}
 
         private void OnEnable()
         {
@@ -240,24 +284,26 @@ namespace MapSystem
         private void OnDisable()
         {
             movementControllerRegisteredEvent.RemoveListener<ControlMovementEvent>(HandleSetControlMovement);
-            
+
             if (_selectedPiece == null) return;
 
             _selectedPiece.Transform.position = _originalWorldPosition;
-            _selectedPiece.ResetPreview();
 
             if (_wasDeployed)
             {
-                if (mapGrid != null && mapGrid.TryDeployment(_originalGridPosition, _selectedPiece.OccupiedCells))
-                {
-                    _selectedPiece.SetDeployed(_originalGridPosition);
-                }
+                if (!_selectedPiece.TryDeployment(_originalGridPosition))
+                    Debug.LogError("기존 파츠 배치 복구에 실패했습니다.");
             }
 
             _selectedPiece.SetDragging(false);
+            _selectedPiece.ResetPreview();
+            _selectedPiece.AllUnFreeze();
+
+            playerFreezeControllerEvent.RaiseEvent(CreateEvents.BoolEvent.InitData(true));
+
             _selectedPiece = null;
         }
-        
+
         private void HandleSetControlMovement(ControlMovementEvent obj)
         {
             _controlMovement = obj.Value;
@@ -265,8 +311,10 @@ namespace MapSystem
 
         private void OnValidate()
         {
+            if (mapGridObject == null) return;
+
             if (mapGridObject.TryGetComponent(out IMapGrid _)) return;
-            
+
             Debug.LogError("할당한 오브젝트에 IMapGrid가 없습니다.");
             mapGridObject = null;
         }

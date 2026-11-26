@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867563214720497894, guid: cf09756f11f77c442ada1a368a6a5ed5, type: 3}
       propertyPath: onKeyDownSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5867563214720497894, guid: cf09756f11f77c442ada1a368a6a5ed5, type: 3}
       propertyPath: onKeyDownSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -185,11 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 385683684}
     - target: {fileID: 5867563214720497894, guid: cf09756f11f77c442ada1a368a6a5ed5, type: 3}
       propertyPath: onKeyDownSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayFeedback
+      value: ChangeScener
       objectReference: {fileID: 0}
     - target: {fileID: 5867563214720497894, guid: cf09756f11f77c442ada1a368a6a5ed5, type: 3}
       propertyPath: onKeyDownSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Feedbacks.SceneChangeFeedback, Assembly-CSharp
+      value: Feedbacks.SceneChangeEvent, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5867563214720497894, guid: cf09756f11f77c442ada1a368a6a5ed5, type: 3}
       propertyPath: onKeyDownSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -334,7 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6fe94810e940d7aa349b451b454ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Feedbacks.SceneChangeFeedback
-  sceneName: Stage_02
   sceneChangeEvent: {fileID: 11400000, guid: 8aa6be6675c053b4aa47e023d2275d94, type: 2}
 --- !u!1 &394545868
 GameObject:
@@ -2082,6 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6b4cf1e4614ff0bf80639d2be17c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapSystem.DefaultMapPiece
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   data: {fileID: 11400000, guid: 10ab0ce148c36b74a8ec106401630d19, type: 2}
   pieceName: 
   <Fixed>k__BackingField: 0
@@ -2097,7 +2097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6b4cf1e4614ff0bf80639d2be17c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapSystem.DefaultMapPiece
-  data: {fileID: 11400000, guid: 04c001cfd7205214a86495d18629b2c0, type: 2}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  data: {fileID: 11400000, guid: cd24ef96410a42142accc930b4638613, type: 2}
   pieceName: 
   <Fixed>k__BackingField: 1
 --- !u!1 &3014744023897787260

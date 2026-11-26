@@ -8,65 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dafe2e0-34aa-43fd-9127-8033a995d369" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Mining/TmpTextChanger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/Mining/TmpTextChanger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/GlitchDisableTriggerEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/GlitchDisableTriggerEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/AnimationClipTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/AnimationClipTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Effect/ParticleTargetPosMoving.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoreSystem/Effect/ParticleTargetPosMoving.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PictureGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/Current Piace Display/Current Piace Display Show.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Animations/Current Piace Display/Current Piace Display Show.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Force Undo/Force Undo Anim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Animations/UI/Force Undo/Force Undo Anim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventChannel/DragStateChangedEvent.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/EventChannel/DragStateChangedEvent.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Flip U-shaped Piece Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Flip U-shaped Piece Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Fllp U-shaped Piece.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Fllp U-shaped Piece.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Snake Piece Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Snake Piece Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Snake Piece.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Snake Piece.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Square Piece Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Square Piece Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Square Piece.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Square Piece.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 1 Fixation Map Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 1 Fixation Map Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 1 Fixation Map.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 1 Fixation Map.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 2 Fixation Map Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 2 Fixation Map Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 2 Fixation Map.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/Stage 2 Fixation Map.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/U-shaped Piece Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/U-shaped Piece Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/U-shaped Piece.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Piece/U-shaped Piece.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Map/Map Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Canvas/Current Piace Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/UI/Canvas/Current Piace Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameModules/Prefabs/[E]Interaction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameModules/Prefabs/[E]Interaction.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Font/Simple_font SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grapics/Tile/Palette/Map Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grapics/Tile/Palette/Map Palette.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_03.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_05.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_05.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage Selector.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/InitialMapStateCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/InitialMapStateCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/AbstractMapPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/AbstractMapPiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/IMapPiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceDragController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapSystem/MapPieceSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Force Undo/ForceUndoSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Force Undo/ForceUndoSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_08.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_08.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample/Stage_10.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +31,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e4eaf245b924ed1b8c17467295ae042a6ca00/52/3d685569/IApplyRevertPropertyContextMenuItemProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/68/94d78292/Enum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Agent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentFreezer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/AgentRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSOEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/FSM/Editor/StateListSoEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +40,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/GroundChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/IVfxModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Mining/TmpTextChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/AbstractPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/AbstractPlayerAirState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Agents/Players/FSM/PlayerIdleState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,8 +54,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/CommandInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/CommandManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/InitSaveCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/InitialMapStateCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/MoveMapPieceCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/UndoableObjects/UndoSaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Attributes/ReadOnlyAttribute.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,19 +66,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Condition/IsGrabbingConditionSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/AnimatorExtensions/AnimatorExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/DontDestroyOnLoadObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Events/GlitchDisableTriggerEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Effect/ParticleTargetPosMoving.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/FadeSceneTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/AbstractGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/GrabSystem/IGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/CreateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/SceneChangeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Manager/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/AnimationTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/Triggers/UiTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoreSystem/WorldTrmLock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeUISystem/FakeUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/SceneChangeFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Feedbacks/TestMessageBoxFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrabbableObject/TestGrabbableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapSystem/DefaultMapPiece.cs" root0="FORCE_HIGHLIGHTING" />
@@ -151,13 +93,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueForcedTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/DialogueManualTurn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialoguesSystem/TextRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Force Undo/ForceUndoSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interactions/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PanelToggleActive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StageClearManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TimeScaleChangeEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WindowsVolumeCheckSystem/WindowsVolume.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9abe0f7cac7e/Editor/PSDGameObjectPreviewData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -165,7 +104,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@84bf82d10e47/Runtime/Volume/VolumeComponent.EditorOnly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/BuildProcessors/URPPreprocessBuild.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Runtime/Overrides/ChromaticAberration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/Overrides/BloomEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/UIElements/UIToolkitInteroperabilityBridge.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -177,61 +116,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000002" />
-      <entry key="S2" value="1.0001099778041223" />
-      <entry key="S5" value="1.0261452116060552" />
-      <entry key="S10" value="1.1927731262906365" />
-      <entry key="S30" value="4.06971340497878" />
-      <entry key="S60" value="9.94250298397608" />
-      <entry key="M2" value="17.992819113027263" />
-      <entry key="M5" value="29.995124509331106" />
-      <entry key="M10" value="38.48368715695887" />
-      <entry key="M15" value="42.65957424579069" />
-      <entry key="M30" value="48.70575508945726" />
-      <entry key="H1" value="56.50092640603182" />
-      <entry key="H2" value="82.9023192490898" />
-      <entry key="H4" value="161.8252773067001" />
-      <entry key="D1" value="1434.2025522544127" />
-      <entry key="W1" value="4322.531760649269" />
+      <entry key="MS100" value="1.723906028460681" />
+      <entry key="MS500" value="3.8820111182959427" />
+      <entry key="S2" value="5.946030440441536" />
+      <entry key="S5" value="7.510146212021352" />
+      <entry key="S10" value="9.42094071077455" />
+      <entry key="S30" value="13.117814502707015" />
+      <entry key="S60" value="14.849091827575865" />
+      <entry key="M2" value="16.576139567590097" />
+      <entry key="M5" value="20.443844917914397" />
+      <entry key="M10" value="23.726816236376113" />
+      <entry key="M15" value="25.845432700449127" />
+      <entry key="M30" value="34.42834513269183" />
+      <entry key="H1" value="75.74837617741319" />
+      <entry key="H2" value="221.08909803321728" />
+      <entry key="H4" value="535.3520913470561" />
+      <entry key="D1" value="2153.973477529122" />
+      <entry key="W1" value="4357.498735064172" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0018223300615953272" />
-      <entry key="MS500" value="0.28322097132394963" />
-      <entry key="S2" value="0.7295101721200938" />
-      <entry key="S5" value="0.8814832707584538" />
-      <entry key="S10" value="0.9413958763477043" />
-      <entry key="S30" value="1.2435290485543264" />
-      <entry key="S60" value="2.146695140291024" />
-      <entry key="M2" value="4.315912728295509" />
-      <entry key="M5" value="9.485252612589589" />
-      <entry key="M10" value="14.085011229477683" />
-      <entry key="M15" value="16.959547498864207" />
-      <entry key="M30" value="22.866358707082476" />
-      <entry key="H1" value="30.42890248331607" />
-      <entry key="H2" value="44.03412455255212" />
-      <entry key="H4" value="74.26941307030822" />
-      <entry key="D1" value="530.5212003312232" />
-      <entry key="W1" value="1640.672271802878" />
+      <entry key="MS100" value="8.161992717227198E-15" />
+      <entry key="MS500" value="0.001521805819649414" />
+      <entry key="S2" value="0.19751032796584425" />
+      <entry key="S5" value="0.5226800501025826" />
+      <entry key="S10" value="0.7229661585026187" />
+      <entry key="S30" value="0.899783972973156" />
+      <entry key="S60" value="1.0073528794078914" />
+      <entry key="M2" value="1.4400177792234103" />
+      <entry key="M5" value="3.0357230477647956" />
+      <entry key="M10" value="4.517504721404842" />
+      <entry key="M15" value="5.438935622042339" />
+      <entry key="M30" value="8.432345632261066" />
+      <entry key="H1" value="20.553260952271007" />
+      <entry key="H2" value="64.87723354709368" />
+      <entry key="H4" value="167.5638568341995" />
+      <entry key="D1" value="742.4514417225053" />
+      <entry key="W1" value="1611.990908934815" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.017465083916240645" />
-      <entry key="MS500" value="0.5393769896587832" />
-      <entry key="S2" value="1.371055948082159" />
-      <entry key="S5" value="1.7348273547630972" />
-      <entry key="S10" value="2.0334419926446445" />
-      <entry key="S30" value="5.247589573713142" />
-      <entry key="S60" value="12.012619759459959" />
-      <entry key="M2" value="22.219683445969473" />
-      <entry key="M5" value="39.40006304371287" />
-      <entry key="M10" value="52.51097010522862" />
-      <entry key="M15" value="59.5747997758171" />
-      <entry key="M30" value="71.545752785177" />
-      <entry key="H1" value="86.9144146782882" />
-      <entry key="H2" value="126.92603678219514" />
-      <entry key="H4" value="236.08604213536316" />
-      <entry key="D1" value="1964.713214443905" />
-      <entry key="W1" value="5963.199253095433" />
+      <entry key="MS100" value="1.4836864968166323" />
+      <entry key="MS500" value="3.348433070411692" />
+      <entry key="S2" value="5.611644756644303" />
+      <entry key="S5" value="7.668345741482673" />
+      <entry key="S10" value="9.904415984859726" />
+      <entry key="S30" value="13.913927495140921" />
+      <entry key="S60" value="15.793190966300005" />
+      <entry key="M2" value="17.94353512877587" />
+      <entry key="M5" value="23.385924134822343" />
+      <entry key="M10" value="28.169224536164005" />
+      <entry key="M15" value="31.2250661452814" />
+      <entry key="M30" value="42.82372025314176" />
+      <entry key="H1" value="96.27562527794315" />
+      <entry key="H2" value="285.9415622800619" />
+      <entry key="H4" value="702.8904226955175" />
+      <entry key="D1" value="2896.4082795351387" />
+      <entry key="W1" value="5969.484665377021" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -282,7 +221,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Test_build12\PictureGame.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Test Build\PictureGame.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\ASUS\Downloads\Test_build12" />
       <option name="PASS_PARENT_ENVS" value="1" />
