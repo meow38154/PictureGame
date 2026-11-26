@@ -9,26 +9,35 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage Selector.unity
     guid: 23c465b02f6501546b1b301348a43335
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_01.unity
+    path: Assets/Scenes/Stage/Stage_01.unity
     guid: af753fa0d3177fc488a1b081598d4e3e
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_02.unity
+    path: Assets/Scenes/Stage/Stage_02.unity
     guid: 75a68af799973824f8451d3fcde2c412
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_03.unity
+    path: Assets/Scenes/Stage/Stage_03.unity
     guid: 9b26f339ed30087448d616b391dc9a6f
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_04.unity
+    path: Assets/Scenes/Stage/Stage_04.unity
     guid: 1eb98a748d4f91b47bd31fd4d0830922
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_05.unity
+    path: Assets/Scenes/Stage/Stage_05.unity
     guid: 39d23abaca4f5ef459d87d0be01b09bc
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_08.unity
+    path: Assets/Scenes/Stage/Stage_06.unity
+    guid: 8ea8c84708c7a6144a23c139782f612a
+  - enabled: 1
+    path: Assets/Scenes/Stage/Stage_07.unity
+    guid: 96b3cffb3cf2a344ea229d2273aee886
+  - enabled: 1
+    path: Assets/Scenes/Stage/Stage_08.unity
     guid: efefcf8ec9c1e924e80fae8b71036012
   - enabled: 1
-    path: Assets/Scenes/Sample/Stage_09.unity
+    path: Assets/Scenes/Stage/Stage_09.unity
     guid: c53935e03b0abde428e8f319a5841f20
+  - enabled: 1
+    path: Assets/Scenes/Stage/Stage_10.unity
+    guid: b1f55f1e15f42fe4da15bcad3f340911
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

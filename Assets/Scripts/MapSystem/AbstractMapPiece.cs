@@ -13,6 +13,7 @@ namespace MapSystem
     /// <summary>
     /// 
     /// </summary>
+
     public abstract class AbstractMapPiece : MonoBehaviour, IMapPiece
     {
         private readonly Color NotCanDeploymentColor = new Color(1f, 0.3f, 0.3f, 0.65f);
@@ -26,6 +27,7 @@ namespace MapSystem
         [SerializeField] private string pieceName;
 
         private bool _onPlayer;
+        private bool _wasOnPlayer;
 
         public event Action OnPlayerLand;
         public event Action OnPlayerTakeOff;
@@ -38,7 +40,6 @@ namespace MapSystem
                 if (_onPlayer == value) return;
 
                 _onPlayer = value;
-
                 if (_onPlayer) OnPlayerLand?.Invoke();
                 else OnPlayerTakeOff?.Invoke();
             }
@@ -56,18 +57,18 @@ namespace MapSystem
 
         private IMapGrid _mapGrid;
 
-        protected Tilemap Tilemaps;
+        private Tilemap _tilemaps;
         private Color _originalColors;
         private Collider2D _collider;
 
         protected virtual void Awake()
         {
-            Tilemaps = GetComponentInChildren<Tilemap>();
+            _tilemaps = GetComponentInChildren<Tilemap>();
             _collider = GetComponent<Collider2D>();
 
             OccupiedCells = data.OccupiedCells;
 
-            _originalColors = Tilemaps.color;
+            _originalColors = _tilemaps.color;
         }
 
         public void Initialize(IMapGrid mapGrid)
@@ -76,11 +77,11 @@ namespace MapSystem
             GridPosition = _mapGrid.WorldToCell(transform.position);
         }
 
-        public bool CanDeployment(Vector2Int pos)
+        public bool CanDeployment(Vector2Int pos, bool ignorePlayer = false)
         {
             if (_mapGrid == null || !IsActive) return false;
 
-            return _mapGrid.CanDeployment(pos, OccupiedCells);
+            return _mapGrid.CanDeployment(pos, OccupiedCells, ignorePlayer || (IsDragging ? _wasOnPlayer : OnPlayer));
         }
 
         public bool TryDeployment(Vector2Int pos)
@@ -89,12 +90,13 @@ namespace MapSystem
 
             if (IsDeployed) return GridPosition == pos;
 
-            if (!_mapGrid.TryDeployment(pos, OccupiedCells)) return false;
+            if (!_mapGrid.TryDeployment(pos, OccupiedCells, IsDragging ? _wasOnPlayer : OnPlayer)) return false;
 
             SetDeployed(pos);
 
             return true;
         }
+
 
         public void RemoveDeployment()
         {
@@ -107,10 +109,13 @@ namespace MapSystem
 
         public void SetDragging(bool dragging)
         {
+            if (dragging && !IsDragging) _wasOnPlayer = OnPlayer;
+
             IsDragging = dragging;
 
-            if (_collider != null)
-                _collider.enabled = IsActive && !IsDragging;
+            if (!IsDragging) _wasOnPlayer = false;
+
+            if (_collider != null) _collider.enabled = IsActive && !IsDragging;
 
             ResetPreview();
         }
@@ -130,34 +135,34 @@ namespace MapSystem
         {
             Color color = valid ? CanDeploymentColor : NotCanDeploymentColor;
 
-            Tilemaps.color = color;
+            _tilemaps.color = color;
         }
 
         public void ResetPreview()
         {
-            if (Tilemaps == null) return;
+            if (_tilemaps == null) return;
 
             Color color = _originalColors;
 
-            if (!IsActive || IsDragging)
-                color.a = DISABLE_COLOR_ALPHA;
+            if (!IsActive || IsDragging) color.a = DISABLE_COLOR_ALPHA;
 
-            Tilemaps.color = color;
+            _tilemaps.color = color;
         }
 
         private void OnDisable()
         {
             RemoveDeployment();
             IsDragging = false;
+            _wasOnPlayer = false;
         }
 
         private void OnValidate()
         {
-            Tilemaps = GetComponentInChildren<Tilemap>();
+            _tilemaps = GetComponentInChildren<Tilemap>();
 
-            if (Tilemaps == null) return;
+            if (_tilemaps == null) return;
 
-            Tilemaps.color = Fixed && defaultColor == Color.white ? FixedPieceColor : defaultColor;
+            _tilemaps.color = Fixed && defaultColor == Color.white ? FixedPieceColor : defaultColor;
         }
 
         public void SetPieceActive(bool active)
@@ -166,9 +171,7 @@ namespace MapSystem
                 RemoveDeployment();
 
             IsActive = active;
-
-            if (_collider != null)
-                _collider.enabled = IsActive && !IsDragging;
+            if (_collider != null) _collider.enabled = IsActive && !IsDragging;
 
             ResetPreview();
         }
@@ -195,22 +198,22 @@ namespace MapSystem
         [ContextMenu("Update File")]
         public void PrefabDataRefresh()
         {
-            if (data == null || Tilemaps == null) return;
+            if (data == null || _tilemaps == null) return;
 
-            data.TileDataRegister(Tilemaps);
+            data.TileDataRegister(_tilemaps);
         }
 
         [ContextMenu("Create File")]
         public void CreateMapPieceSo()
         {
 #if UNITY_EDITOR
-            Tilemaps = GetComponentInChildren<Tilemap>();
+            _tilemaps = GetComponentInChildren<Tilemap>();
 
-            if (Tilemaps == null) return;
+            if (_tilemaps == null) return;
 
             MapPieceSo mapPieceSo = ScriptableObject.CreateInstance<MapPieceSo>();
 
-            mapPieceSo.TileDataRegister(Tilemaps);
+            mapPieceSo.TileDataRegister(_tilemaps);
 
             string folderPath = $"Assets/GameModules/Piece/{SceneManager.GetActiveScene().name}";
 

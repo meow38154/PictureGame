@@ -9,10 +9,12 @@ namespace MapSystem
     /// <summary>
     /// 맵의 셀 점유 상태를 관리합니다.
     /// </summary>
+
     public class MapGrid : MonoBehaviour, IMapGrid
     {
         [SerializeField] private Grid grid;
         [SerializeField] private EventChannelSO commandInvokeEvent;
+        [SerializeField] private Collider2D col;
 
         private readonly HashSet<Vector2Int> _occupiedCells = new();
 
@@ -79,7 +81,7 @@ namespace MapSystem
         }
 
         // 배치 가능 여부
-        public bool CanDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data)
+        public bool CanDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data, bool ignorePlayer = false)
         {
             if (data == null || data.Count == 0) return false;
 
@@ -88,15 +90,31 @@ namespace MapSystem
                 Vector2Int deploymentPos = cell + pos;
 
                 if (_occupiedCells.Contains(deploymentPos)) return false;
+
+                if (ignorePlayer) continue;
+                if (col == null || !col.enabled || !col.gameObject.activeInHierarchy) continue;
+
+                Vector3 cellMin = CellToWorld(deploymentPos);
+                Vector3 cellMax = CellToWorld(deploymentPos + Vector2Int.one);
+
+                Bounds bounds = col.bounds;
+
+                if (cellMin.x < bounds.max.x &&
+                    cellMax.x > bounds.min.x &&
+                    cellMin.y < bounds.max.y &&
+                    cellMax.y > bounds.min.y)
+                {
+                    return false;
+                }
             }
 
             return true;
         }
 
         // 배치
-        public bool TryDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data)
+        public bool TryDeployment(Vector2Int pos, IReadOnlyList<Vector2Int> data, bool ignorePlayer = false)
         {
-            if (!CanDeployment(pos, data)) return false;
+            if (!CanDeployment(pos, data, ignorePlayer)) return false;
 
             foreach (Vector2Int cell in data) _occupiedCells.Add(cell + pos);
 

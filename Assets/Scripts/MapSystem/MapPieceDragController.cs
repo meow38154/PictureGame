@@ -21,8 +21,8 @@ namespace MapSystem
         [Header("Grid Settings")]
         [SerializeField, Min(1)] private int sellSize = 2;
 
-        [Header("Placement")]
-        [SerializeField, Min(0)] private int searchRadius = 5;
+       // [Header("Placement")]
+       // [SerializeField, Min(0)] private int searchRadius = 5;
 
         [Header("So")] 
         [SerializeField] private EventChannelSO playerFreezeControllerEvent;
@@ -197,84 +197,79 @@ namespace MapSystem
                 Mathf.RoundToInt((float)position.y / size) * size);
         }
 
-private bool TryFindNearestPosition(Vector2Int targetPos, out Vector2Int result)
-{
-    result = _lastValidPosition;
-
-    if (_selectedPiece == null) return false;
-
-    int size = Mathf.Max(1, sellSize);
-
-    while (result != targetPos)
-    {
-        Vector2Int direction = targetPos - result;
-
-        int moveX = Mathf.Clamp(direction.x, -size, size);
-        int moveY = Mathf.Clamp(direction.y, -size, size);
-
-        Vector2Int horizontal = result + new Vector2Int(moveX, 0);
-        Vector2Int vertical = result + new Vector2Int(0, moveY);
-        Vector2Int diagonal = result + new Vector2Int(moveX, moveY);
-
-        bool canMoveX = moveX != 0 && CanMovePath(result, horizontal);
-        bool canMoveY = moveY != 0 && CanMovePath(result, vertical);
-
-        if (canMoveX && canMoveY)
+        private bool TryFindNearestPosition(Vector2Int targetPos, out Vector2Int result)
         {
-            if (CanMovePath(horizontal, diagonal) &&
-                CanMovePath(vertical, diagonal))
+            result = _lastValidPosition;
+
+            if (_selectedPiece == null) return false;
+
+            int size = Mathf.Max(1, sellSize);
+
+            while (result != targetPos)
             {
-                result = diagonal;
-                continue;
+                Vector2Int direction = targetPos - result;
+
+                int moveX = Mathf.Clamp(direction.x, -size, size);
+                int moveY = Mathf.Clamp(direction.y, -size, size);
+
+                Vector2Int horizontal = result + new Vector2Int(moveX, 0);
+                Vector2Int vertical = result + new Vector2Int(0, moveY);
+                Vector2Int diagonal = result + new Vector2Int(moveX, moveY);
+
+                bool canMoveX = moveX != 0 && CanMovePath(result, horizontal);
+                bool canMoveY = moveY != 0 && CanMovePath(result, vertical);
+
+                if (canMoveX && canMoveY)
+                {
+                    if (CanMovePath(horizontal, diagonal) && CanMovePath(vertical, diagonal))
+                    {
+                        result = diagonal;
+                        continue;
+                    }
+                }
+
+                if (canMoveX && canMoveY)
+                {
+                    result = Mathf.Abs(direction.x) >= Mathf.Abs(direction.y) ? horizontal : vertical;
+
+                    continue;
+                }
+
+                if (canMoveX)
+                {
+                    result = horizontal;
+                    continue;
+                }
+
+                if (canMoveY)
+                {
+                    result = vertical;
+                    continue;
+                }
+
+                break;
             }
+
+            return _selectedPiece.CanDeployment(result);
         }
 
-        if (canMoveX && canMoveY)
+        private bool CanMovePath(Vector2Int startPos, Vector2Int targetPos)
         {
-            result = Mathf.Abs(direction.x) >= Mathf.Abs(direction.y)
-                ? horizontal
-                : vertical;
+            Vector2Int direction = targetPos - startPos;
 
-            continue;
+            int steps = Mathf.Max(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
+
+            for (int i = 1; i <= steps; i++)
+            {
+                float t = (float)i / steps;
+
+                Vector2Int candidate = new Vector2Int(Mathf.RoundToInt(Mathf.Lerp(startPos.x, targetPos.x, t)), Mathf.RoundToInt(Mathf.Lerp(startPos.y, targetPos.y, t)));
+
+                if (!_selectedPiece.CanDeployment(candidate)) return false;
+            }
+
+            return true;
         }
-
-        if (canMoveX)
-        {
-            result = horizontal;
-            continue;
-        }
-
-        if (canMoveY)
-        {
-            result = vertical;
-            continue;
-        }
-
-        break;
-    }
-
-    return _selectedPiece.CanDeployment(result);
-}
-
-private bool CanMovePath(Vector2Int startPos, Vector2Int targetPos)
-{
-    Vector2Int direction = targetPos - startPos;
-
-    int steps = Mathf.Max(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
-
-    for (int i = 1; i <= steps; i++)
-    {
-        float t = (float)i / steps;
-
-        Vector2Int candidate = new Vector2Int(
-            Mathf.RoundToInt(Mathf.Lerp(startPos.x, targetPos.x, t)),
-            Mathf.RoundToInt(Mathf.Lerp(startPos.y, targetPos.y, t)));
-
-        if (!_selectedPiece.CanDeployment(candidate)) return false;
-    }
-
-    return true;
-}
 
         private void OnEnable()
         {
@@ -291,8 +286,7 @@ private bool CanMovePath(Vector2Int startPos, Vector2Int targetPos)
 
             if (_wasDeployed)
             {
-                if (!_selectedPiece.TryDeployment(_originalGridPosition))
-                    Debug.LogError("기존 파츠 배치 복구에 실패했습니다.");
+                if (!_selectedPiece.TryDeployment(_originalGridPosition)) Debug.LogError("기존 파츠 배치 복구에 실패했습니다.");
             }
 
             _selectedPiece.SetDragging(false);
