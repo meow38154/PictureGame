@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cd9bd2f6b04dcd83d05edb358a65cf, type: 3}
+  m_Name: 'Stage 13_4 Piece '
+  m_EditorClassIdentifier: Assembly-CSharp::MapSystem.MapPieceSo
+  occupiedCells:
+  - {x: 18, y: 26}
+  - {x: 19, y: 26}
+  - {x: 20, y: 26}
+  - {x: 21, y: 26}
+  - {x: 22, y: 26}
+  - {x: 23, y: 26}
+  - {x: 24, y: 26}
+  - {x: 25, y: 26}
+  - {x: 18, y: 27}
+  - {x: 19, y: 27}
+  - {x: 20, y: 27}
+  - {x: 21, y: 27}
+  - {x: 22, y: 27}
+  - {x: 23, y: 27}
+  - {x: 24, y: 27}
+  - {x: 25, y: 27}
+  - {x: 20, y: 28}
+  - {x: 21, y: 28}
+  - {x: 22, y: 28}
+  - {x: 23, y: 28}
+  - {x: 20, y: 29}
+  - {x: 21, y: 29}
+  - {x: 22, y: 29}
+  - {x: 23, y: 29}
